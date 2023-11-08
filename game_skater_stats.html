@@ -7,22 +7,28 @@
     <title>Group 25</title>
    <!-- <link rel="stylesheet" href="renk.css"> -->
     <style>
+        body {
+            margin: 0; /* Reset margin to remove default spacing */
+            padding: 0; /* Reset padding to remove default spacing */
+            position: relative; /* Establish a positioning context for absolute positioning */
+        }
+
         .image-container {
             position: absolute;
             top: 0;
             right: 0;
+            width: 200px; /* Set a fixed width for the image container */
         }
 
         img {
-            max-width: 100%;
-            height: auto;
+            max-width: 100%; /* Set the image width to 100% of its container */
+            height: auto; /* Maintain the image's aspect ratio */
         }
 
         .image-container p {
             text-align: center; /* Center the text within the image container */
             font-weight: bold; /* Make the text bold */
-			font-style: italic; /* Make the text cursive (italic) */
-            
+            font-style: italic; /* Make the text cursive (italic) */
         }
 
         footer {
@@ -30,7 +36,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-         <!--   background-color: #FFF; /* Optional background color */ -->
+            background-color: #FFF; /* Optional background color */
             text-align: center; /* Center the content within the footer */
         }
     </style>
@@ -43,7 +49,7 @@
 
    
     <div class="image-container">
-        <img src="C:\Users\Selin\Desktop\nhl.png">
+        <img src="C:\Users\Selin\Documents\GitHub\DatabaseSystemsGroup25\img\05_NHL_Shield.svg.webp">
         <p>National Hockey League</p>
     </div>
 
