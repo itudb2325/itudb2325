@@ -1,9 +1,4 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group 25</title>
-   <!-- <link rel="stylesheet" href="renk.css"> -->
-    <style>
+
         body {
             margin: 0; /* Reset margin to remove default spacing */
             padding: 0; /* Reset padding to remove default spacing */
@@ -36,4 +31,4 @@
             background-color: #FFF; /* Optional background color */
             text-align: center; /* Center the content within the footer */
         }
-    </style>
+    
