@@ -1,59 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <!-- Selin Durmuş, 150220771 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group 25</title>
-   <!-- <link rel="stylesheet" href="renk.css"> -->
-    <style>
-        body {
-            margin: 0; /* Reset margin to remove default spacing */
-            padding: 0; /* Reset padding to remove default spacing */
-            position: relative; /* Establish a positioning context for absolute positioning */
-        }
+    <title>Game Skater Statistics</title>
+    <link rel="stylesheet" href="..\stylesfile\style.css"> 
 
-        .image-container {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 200px; /* Set a fixed width for the image container */
-        }
-
-        img {
-            max-width: 100%; /* Set the image width to 100% of its container */
-            height: auto; /* Maintain the image's aspect ratio */
-        }
-
-        .image-container p {
-            text-align: center; /* Center the text within the image container */
-            font-weight: bold; /* Make the text bold */
-            font-style: italic; /* Make the text cursive (italic) */
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #FFF; /* Optional background color */
-            text-align: center; /* Center the content within the footer */
-        }
-    </style>
-</head>
-
-<body>
-  
-    <h1>Game Skater Statistics</h1>
-    <p>Skater statistics who play in NHL &#128512;</p>
 
    
     <div class="image-container">
-        <img src="C:\Users\Selin\Documents\GitHub\DatabaseSystemsGroup25\img\05_NHL_Shield.svg.webp">
+        <img src="..\img\05_NHL_Shield.svg.webp">
         <p>National Hockey League</p>
     </div>
 
-    <a href="index.html" style="background-color: #FF5733; color: white; padding: 5px 10px; text-decoration: none; border-radius: 5px;"><b>Go back to Home Page</b></a>
+    <body>
+  
+    <h1>Game Skater Statistics</h1>
+    <p>Skater statistics who play in NHL &#128512;</p>
+		<body>
+		<header>
+			<img class="logo" src="..\img\05_NHL_Shield.svg.webp">
+			<hr>
+			<h1 class="mainheader">National Hockey League</h1>
+		</header>
+		<hr>
+		<div class="menu">
+			<a href="index.html"><b>HOME PAGE</b></a>
+			<a href="game_teams_stats.html"><b>GAME TEAMS STATS</b></a>
+			<a class="active" href="game_skater_stats.html"><b>GAME SKATER STATS</b></a>
+			<a href="game_goalie_stats.html"><b>GAME GOALIE STATS</b></a>
+			<a href="game_plays.html"><b>GAME PLAYS</b></a>
+		</div>
 
 </body>
 <footer>
