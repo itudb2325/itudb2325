@@ -2,6 +2,8 @@ body {
 	margin: 0; /* Reset margin to remove default spacing */
 	padding: 0; /* Reset padding to remove default spacing */
 	position: relative; /* Establish a positioning context for absolute positioning */
+	background-image: url(https://c4.wallpaperflare.com/wallpaper/828/921/194/hockey-ice-zing-snow-wallpaper-preview.jpg);
+	background-size: 100%;
 }
 .image-container {
 	position: absolute;
