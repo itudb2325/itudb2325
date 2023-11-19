@@ -117,3 +117,8 @@ footer {
 	height: 35px;
 	width: 35px;
 }
+p {
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	background-color: white;
+}
