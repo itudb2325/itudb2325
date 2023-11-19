@@ -1,15 +1,54 @@
-<!DOCTYPE html>
-<html>
-	<head>
-  		<title>Goalie Stats</title>
-	</head>
+{% extends "base.html" %}
+{% block title %} Goalie Stats {% endblock %}
 
-	<body>
-  	<header>
-      		<h1>Game Teams Stats</h1>
-  	</header>
-  	<a href="index.html"><b>Go back to Home Page</b></a>
-	</body>
-</html>
+{% block content %}
+    <h1>This is the goalie statistics page</h1>
+    
+    {% if 'game_goalie_stats' %}
+          <table class="table" id="game_goalie_stats">
+            <tr>
+              <th>ID</th>
+              <th>Game ID</th>
+              <th>Player ID</th>
+              <th>Team ID</th>
+              <th>timeOnIce</th>
+              <th>assists</th>
+              <th>goals</th>
+              <th>pim</th>
+              <th>shots</th>
+              <th>saves</th>
+              <th>powerPlaySaves</th>
+              <th>shortHandedSaves</th>
+              <th>evenSaves</th>
+              <th>shortHandedShotsAgainst</th>
+              <th>evenShotsAgainst</th>
+              <th>powerPlayShotsAgainst</th>
+              <th>decision</th>
+            </tr>
+            {% for u in const %}
+            <tr>
+              <td>{{ u[0] }}</td>
+              <td>{{ u[1] }}</td>
+              <td>{{ u[2] }}</td>
+              <td>{{ u[3] }}</td>
+              <td>{{ u[4] }}</td>
+              <td>{{ u[5] }}</td>
+              <td>{{ u[6] }}</td>
+              <td>{{ u[7] }}</td>
+              <td>{{ u[8] }}</td>
+              <td>{{ u[9] }}</td>
+              <td>{{ u[10] }}</td>
+              <td>{{ u[11] }}</td>
+              <td>{{ u[12] }}</td>
+              <td>{{ u[13] }}</td>
+              <td>{{ u[14] }}</td>
+              <td>{{ u[15] }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+       {% endif %}
+
+{% endblock %}
+
 
 <!-- Erblina Nivokazi 150200917 -->
