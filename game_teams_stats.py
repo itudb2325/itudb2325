@@ -49,6 +49,14 @@ with open("\nhl-db\game_teams_stats.csv", 'r') as file:
     for row in reader:
         cursor.execute(insert, row)
 
+    select = '''
+                SELECT team_id, HoA, won, head_coach, goals, shots, hits, blocked 
+                FROM game_teams_stats  
+                WHERE game_id LIKE '2017%';
+            '''
+    
+    cursor.execute(select)
+
     connection.commit()
 
 cursor.close()
