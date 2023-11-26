@@ -55,6 +55,13 @@ with open("\nhl-db\game_teams_stats.csv", 'r') as file:
                 WHERE game_id LIKE '2017%';
             '''
     
+    select = '''
+                SELECT team_id, HoA, won, head_coach, goals, shots, hits, blocked 
+                FROM game_teams_stats  
+                WHERE game_id LIKE '2017%'
+                ORDER BY game_id;
+            '''
+    
     cursor.execute(select)
 
     connection.commit()
