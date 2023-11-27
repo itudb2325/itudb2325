@@ -4,6 +4,61 @@
 {% block content %}
     <h1>This is the goalie statistics page</h1>
     
+    <form action="{{ url_for('upload_goalie_stats') }}" method="post">
+      <label for="id">ID:</label>
+<input type="text" id="id" name="id" required><br>
+
+<label for="game_id">Game ID:</label>
+<input type="text" id="game_id" name="game_id" required><br>
+
+<label for="player_id">Player ID:</label>
+<input type="text" id="player_id" name="player_id" required><br>
+
+<label for="team_id">Team ID:</label>
+<input type="text" id="team_id" name="team_id" required><br>
+
+<label for="timeOnIce">Time On Ice:</label>
+<input type="text" id="timeOnIce" name="timeOnIce" required><br>
+
+<label for="shots">Shots:</label>
+<input type="text" id="shots" name="shots" required><br>
+
+<label for="saves">Saves:</label>
+<input type="text" id="saves" name="saves" required><br>
+
+<label for="powerPlaySaves">Power Play Saves:</label>
+<input type="text" id="powerPlaySaves" name="powerPlaySaves" required><br>
+
+<label for="shortHandedSaves">Short-Handed Saves:</label>
+<input type="text" id="shortHandedSaves" name="shortHandedSaves" required><br>
+
+<label for="evenSaves">Even Saves:</label>
+<input type="text" id="evenSaves" name="evenSaves" required><br>
+
+<label for="shortHandedShotsAgainst">Short-Handed Shots Against:</label>
+<input type="text" id="shortHandedShotsAgainst" name="shortHandedShotsAgainst" required><br>
+
+<label for="evenShotsAgainst">Even Shots Against:</label>
+<input type="text" id="evenShotsAgainst" name="evenShotsAgainst" required><br>
+
+<label for="powerPlayShotsAgainst">Power Play Shots Against:</label>
+<input type="text" id="powerPlayShotsAgainst" name="powerPlayShotsAgainst" required><br>
+
+<label for="decision">Decision:</label>
+<input type="text" id="decision" name="decision" required><br>
+
+      <!-- Repeat for other columns -->
+
+      <input type="submit" value="Upload">
+    </form>
+
+  <!-- Form for deleting records -->
+    <form action="{{ url_for('delete_goalie_stats') }}" method="post">
+        <label for="gameIdToDelete">Delete Records by Game ID:</label>
+        <input type="number" name="gameIdToDelete" required>
+        <button type="submit">Delete</button>
+    </form>
+    
     {% if 'goalie_stats' %}
           <table class="table" id="game_goalie_stats">
             <tr>
