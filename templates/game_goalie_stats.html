@@ -4,7 +4,7 @@
 {% block content %}
     <h1>This is the goalie statistics page</h1>
     
-    {% if 'game_goalie_stats' %}
+    {% if 'goalie_stats' %}
           <table class="table" id="game_goalie_stats">
             <tr>
               <th>ID</th>
@@ -12,9 +12,6 @@
               <th>Player ID</th>
               <th>Team ID</th>
               <th>timeOnIce</th>
-              <th>assists</th>
-              <th>goals</th>
-              <th>pim</th>
               <th>shots</th>
               <th>saves</th>
               <th>powerPlaySaves</th>
@@ -25,6 +22,25 @@
               <th>powerPlayShotsAgainst</th>
               <th>decision</th>
             </tr>
+            {% for goalie in goalie_stats %}
+            <tr>
+                <td>{{ goalie.id }}</td>
+                <td>{{ goalie.game_id }}</td>
+                <td>{{ goalie.player_id }}</td>
+                <td>{{ goalie.team_id }}</td>
+                <td>{{ goalie.timeOnIce }}</td>
+                <td>{{ goalie.shots }}</td>
+                <td>{{ goalie.saves }}</td>
+                <td>{{ goalie.powerPlaySaves }}</td>
+                <td>{{ goalie.shortHandedSaves }}</td>
+                <td>{{ goalie.evenSaves }}</td>
+                <td>{{ goalie.shortHandedShotsAgainst}}</td>
+                <td>{{ goalie.evenShotsAgainst}}</td>
+                <td>{{ goalie.powerPlayShotsAgainst}}</td>
+                <td>{{ goalie.decision}}</td>
+              
+            </tr>
+            {% endfor %}
             {% for u in const %}
             <tr>
               <td>{{ u[0] }}</td>

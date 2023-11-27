@@ -1,7 +1,7 @@
 import csv
 import MySQLdb
 
-with open("\nhl-db\game_teams_stats.csv", 'r') as file:
+with open("nhl-db\game_teams_stats.csv", 'r') as file:
     reader = csv.reader(file)
 
     connection = MySQLdb.connect(
