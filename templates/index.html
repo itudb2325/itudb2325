@@ -2,12 +2,12 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 <header>
-	<img class="logo" src="..\img\05_NHL_Shield.svg.webp">
+	<img src="{{ user_image }}" alt="nhl logo" class="logo">
 	<hr>
 	<a href="https://www.facebook.com/NHL"><img class="socials" title="NHL Official Facebook Page" src="..\img\facebook_logo.png"></a>
 	<a href="https://twitter.com/nhl"><img class="socials" title="NHL Official X Page" src="..\img\x_logo.png"></a>
 	<a href="https://www.instagram.com/nhl"><img class="socials" title="NHL Official Instagram Page" src="..\img\instagram_logo.png"></a>
-	<a href="https://www.youtube.com/nhl"><img class="socials" title="NHL Official YouTube Page" src="..\img\youtube_logo.png"></a>
+	<a href="https://www.youtube.com/nhl"><img class="socials" title="NHL Official YouTube Page" src="{{youtube}}"></a>
 	<h1 class="mainheader">National Hockey League</h1>
 </header>
 <hr>
