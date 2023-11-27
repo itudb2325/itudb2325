@@ -2,12 +2,9 @@ import mysql.connector
 import pandas as pd
 from config import MYSQL_CONFIG
 
-
-# Connect to MySQL using the configuration from config.py
 conn = mysql.connector.connect(**MYSQL_CONFIG)
 cursor = conn.cursor()
 
-# Create game_goalie_stats table
 cursor.execute("DROP TABLE IF EXISTS game_goalie_stats")
 game_goalie_stats_query = '''
     CREATE TABLE game_goalie_stats(
@@ -29,7 +26,6 @@ game_goalie_stats_query = '''
 '''
 cursor.execute(game_goalie_stats_query)
 
-# Read data from CSV
 const_df = pd.read_csv('nhl-db/game_goalie_stats.csv', usecols=[
     'id',
     'game_id',
@@ -47,7 +43,6 @@ const_df = pd.read_csv('nhl-db/game_goalie_stats.csv', usecols=[
     'decision'
 ])
 
-# Insert data into MySQL table using executemany
 insert_query = '''
     INSERT INTO game_goalie_stats
     (id, game_id, player_id, team_id, timeOnIce, shots, saves,
@@ -61,16 +56,13 @@ game_goalie_stats_df = sorted_game_goalie_stats_df.head(12)
 data_to_insert = game_goalie_stats_df.where(pd.notna(game_goalie_stats_df), None).to_numpy().tolist()
 cursor.executemany(insert_query, data_to_insert)
 
-# Commit and close connection
 conn.commit()
 conn.close()
 
 def upload_goalie_stats(new_data_df):
-    # Connect to MySQL using the configuration from config.py
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor()
 
-    # Insert data into MySQL table using executemany
     insert_query = '''
         INSERT INTO game_goalie_stats
         (id, game_id, player_id, team_id, timeOnIce, shots, saves,
@@ -81,19 +73,15 @@ def upload_goalie_stats(new_data_df):
     data_to_insert = new_data_df.where(pd.notna(new_data_df), None).to_numpy().tolist()
     cursor.executemany(insert_query, data_to_insert)
 
-    # Commit and close connection
     conn.commit()
     conn.close()
 
 def delete_goalie_stats_by_game_id(game_id):
-    # Connect to MySQL using the configuration from config.py
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor()
 
-    # Delete records based on game_id
     delete_query = "DELETE FROM game_goalie_stats WHERE game_id = %s"
     cursor.execute(delete_query, (game_id,))
 
-    # Commit and close connection
     conn.commit()
     conn.close()

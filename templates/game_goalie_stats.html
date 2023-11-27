@@ -47,12 +47,10 @@
 <label for="decision">Decision:</label>
 <input type="text" id="decision" name="decision" required><br>
 
-      <!-- Repeat for other columns -->
 
       <input type="submit" value="Upload">
     </form>
 
-  <!-- Form for deleting records -->
     <form action="{{ url_for('delete_goalie_stats') }}" method="post">
         <label for="gameIdToDelete">Delete Records by Game ID:</label>
         <input type="number" name="gameIdToDelete" required>

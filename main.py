@@ -3,7 +3,6 @@ from flask import Flask
 import views
 from views import index_page, configure_app
 
-# ... your existing imports ...
 
 def create_app():
     app = Flask(__name__)
