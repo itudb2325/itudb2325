@@ -1,0 +1,100 @@
+"play_id","game_id","team_id_for","team_id_against","event","secondaryType","x","y","period","periodType","periodTime","periodTimeRemaining","dateTime","goals_away","goals_home","description","st_x","st_y"
+"2016020045_1","2016020045",NA,NA,"Game Scheduled",NA,NA,NA,"1","REGULAR",0,1200,2016-10-18 23:40:58,0,0,"Game Scheduled",NA,NA
+"2016020045_2","2016020045",NA,NA,"Period Ready",NA,NA,NA,"1","REGULAR",0,1200,2016-10-19 01:35:28,0,0,"Period Ready",NA,NA
+"2016020045_3","2016020045",NA,NA,"Period Start",NA,NA,NA,"1","REGULAR",0,1200,2016-10-19 01:40:50,0,0,"Period Start",NA,NA
+"2016020045_4","2016020045","16","4","Faceoff",NA,0,0,"1","REGULAR",0,1200,2016-10-19 01:40:50,0,0,"Jonathan Toews faceoff won against Claude Giroux",0,0
+"2016020045_5","2016020045","16","4","Shot","Wrist Shot",-71,9,"1","REGULAR",54,1146,2016-10-19 01:41:44,0,0,"Artem Anisimov Wrist Shot saved by Michal Neuvirth",71,-9
+"2016020045_6","2016020045","16","4","Goal","Wrap-around",-88,5,"1","REGULAR",56,1144,2016-10-19 01:41:48,0,1,"Patrick Kane (1) Wrap-around, assists: Artem Anisimov (2), Brent Seabrook (2)",88,-5
+"2016020045_7","2016020045","4","16","Faceoff",NA,0,0,"1","REGULAR",58,1142,2016-10-19 01:42:30,0,1,"Pierre-Edouard Bellemare faceoff won against Nick Schmaltz",0,0
+"2016020045_8","2016020045","4","16","Shot","Wrist Shot",56,-7,"1","REGULAR",69,1131,2016-10-19 01:42:41,0,1,"Dale Weise Wrist Shot saved by Corey Crawford",56,-7
+"2016020045_9","2016020045","16","4","Takeaway",NA,11,21,"1","REGULAR",78,1122,2016-10-19 01:42:49,0,1,"Takeaway by Nick Schmaltz",-11,-21
+"2016020045_10","2016020045","16","4","Hit",NA,-68,37,"1","REGULAR",88,1112,2016-10-19 01:43:04,0,1,"Vinnie Hinostroza hit Brandon Manning",68,-37
+"2016020045_11","2016020045","16","4","Hit",NA,99,-1,"1","REGULAR",106,1094,2016-10-19 01:43:18,0,1,"Michal Kempny hit Roman Lyubimov",-99,1
+"2016020045_12","2016020045","16","4","Shot","Slap Shot",-37,-24,"1","REGULAR",133,1067,2016-10-19 01:43:45,0,1,"Duncan Keith Slap Shot saved by Michal Neuvirth",37,24
+"2016020045_13","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",133,1067,2016-10-19 01:43:57,0,1,"Goalie Stopped",NA,NA
+"2016020045_14","2016020045","16","4","Faceoff",NA,-69,-22,"1","REGULAR",133,1067,2016-10-19 01:44:14,0,1,"Jonathan Toews faceoff won against Claude Giroux",69,22
+"2016020045_15","2016020045","4","16","Blocked Shot",NA,-71,11,"1","REGULAR",144,1056,2016-10-19 01:44:30,0,1,"Andrew MacDonald blocked shot from Tyler Motte",-71,11
+"2016020045_16","2016020045","16","4","Giveaway",NA,50,36,"1","REGULAR",158,1042,2016-10-19 01:44:44,0,1,"Giveaway by Richard Panik",-50,-36
+"2016020045_17","2016020045","4","16","Shot","Wrist Shot",57,-20,"1","REGULAR",168,1032,2016-10-19 01:44:54,0,1,"Wayne Simmonds Wrist Shot saved by Corey Crawford",57,-20
+"2016020045_18","2016020045","16","4","Giveaway",NA,78,-9,"1","REGULAR",170,1030,2016-10-19 01:45:02,0,1,"Giveaway by Niklas Hjalmarsson",-78,9
+"2016020045_19","2016020045","4","16","Shot","Slap Shot",34,14,"1","REGULAR",171,1029,2016-10-19 01:45:01,0,1,"Shayne Gostisbehere Slap Shot saved by Corey Crawford",34,14
+"2016020045_20","2016020045","4","16","Shot","Wrist Shot",78,2,"1","REGULAR",172,1028,2016-10-19 01:45:10,0,1,"Michael Raffl Wrist Shot saved by Corey Crawford",78,2
+"2016020045_21","2016020045","4","16","Missed Shot",NA,72,-5,"1","REGULAR",175,1025,2016-10-19 01:45:01,0,1,"Wayne Simmonds - Goalpost",72,-5
+"2016020045_22","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",175,1025,2016-10-19 01:45:08,0,1,"Goalie Stopped",NA,NA
+"2016020045_23","2016020045","16","4","Faceoff",NA,69,22,"1","REGULAR",175,1025,2016-10-19 01:45:29,0,1,"Marcus Kruger faceoff won against Sean Couturier",-69,-22
+"2016020045_24","2016020045","4","16","Hit",NA,-91,-35,"1","REGULAR",235,965,2016-10-19 01:46:41,0,1,"Mark Streit hit Vinnie Hinostroza",-91,-35
+"2016020045_25","2016020045","4","16","Hit",NA,54,36,"1","REGULAR",297,903,2016-10-19 01:47:43,0,1,"Wayne Simmonds hit Jordin Tootoo",54,36
+"2016020045_26","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",315,885,2016-10-19 01:48:03,0,1,"Icing",NA,NA
+"2016020045_27","2016020045","4","16","Faceoff",NA,69,22,"1","REGULAR",315,885,2016-10-19 01:48:17,0,1,"Boyd Gordon faceoff won against Jonathan Toews",69,22
+"2016020045_28","2016020045","16","4","Blocked Shot",NA,46,2,"1","REGULAR",318,882,2016-10-19 01:48:27,0,1,"Tyler Motte blocked shot from Brandon Manning",-46,-2
+"2016020045_29","2016020045","4","16","Hit",NA,98,-14,"1","REGULAR",325,875,2016-10-19 01:48:33,0,1,"Roman Lyubimov hit Brian Campbell",98,-14
+"2016020045_30","2016020045","16","4","Giveaway",NA,71,1,"1","REGULAR",326,874,2016-10-19 01:48:38,0,1,"Giveaway by Gustav Forsling",-71,-1
+"2016020045_31","2016020045","4","16","Shot","Wrist Shot",61,17,"1","REGULAR",328,872,2016-10-19 01:48:38,0,1,"Chris VandeVelde Wrist Shot saved by Corey Crawford",61,17
+"2016020045_32","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",333,867,2016-10-19 01:48:44,0,1,"Offside",NA,NA
+"2016020045_33","2016020045","16","4","Faceoff",NA,-20,22,"1","REGULAR",333,867,2016-10-19 01:49:02,0,1,"Artem Anisimov faceoff won against Sean Couturier",20,-22
+"2016020045_34","2016020045","4","16","Missed Shot",NA,79,26,"1","REGULAR",353,847,2016-10-19 01:49:26,0,1,"Travis Konecny - Wide of Net",79,26
+"2016020045_35","2016020045","16","4","Takeaway",NA,38,-36,"1","REGULAR",367,833,2016-10-19 01:49:40,0,1,"Takeaway by Artemi Panarin",-38,36
+"2016020045_36","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",369,831,2016-10-19 01:49:46,0,1,"Icing",NA,NA
+"2016020045_37","2016020045","4","16","Faceoff",NA,69,-22,"1","REGULAR",369,831,2016-10-19 01:49:59,0,1,"Claude Giroux faceoff won against Artem Anisimov",69,-22
+"2016020045_38","2016020045","4","16","Shot","Wrist Shot",44,-33,"1","REGULAR",373,827,2016-10-19 01:50:14,0,1,"Shayne Gostisbehere Wrist Shot saved by Corey Crawford",44,-33
+"2016020045_39","2016020045","16","4","Hit",NA,92,12,"1","REGULAR",375,825,2016-10-19 01:50:15,0,1,"Brent Seabrook hit Wayne Simmonds",-92,-12
+"2016020045_40","2016020045","4","16","Giveaway",NA,-91,26,"1","REGULAR",386,814,2016-10-19 01:50:26,0,1,"Giveaway by Andrew MacDonald",-91,26
+"2016020045_41","2016020045","16","4","Penalty","Hooking",8,17,"1","REGULAR",397,803,2016-10-19 01:50:44,0,1,"Tyler Motte Hooking against Claude Giroux",-8,-17
+"2016020045_42","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",397,803,2016-10-19 01:50:44,0,1,"TV timeout",NA,NA
+"2016020045_43","2016020045","4","16","Faceoff",NA,69,22,"1","REGULAR",397,803,2016-10-19 01:52:29,0,1,"Claude Giroux faceoff won against Marcus Kruger",69,22
+"2016020045_44","2016020045","4","16","Missed Shot",NA,44,11,"1","REGULAR",408,792,2016-10-19 01:53:15,0,1,"Claude Giroux - Wide of Net",44,11
+"2016020045_45","2016020045","16","4","Blocked Shot",NA,78,-8,"1","REGULAR",414,786,2016-10-19 01:53:21,0,1,"Niklas Hjalmarsson blocked shot from Shayne Gostisbehere",-78,8
+"2016020045_46","2016020045","4","16","Missed Shot",NA,74,0,"1","REGULAR",488,712,2016-10-19 01:54:36,0,1,"Dale Weise - Wide of Net",74,0
+"2016020045_47","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",552,648,2016-10-19 01:55:42,0,1,"Icing",NA,NA
+"2016020045_48","2016020045","4","16","Faceoff",NA,69,22,"1","REGULAR",552,648,2016-10-19 01:55:57,0,1,"Boyd Gordon faceoff won against Artem Anisimov",69,22
+"2016020045_49","2016020045","4","16","Hit",NA,93,33,"1","REGULAR",561,639,2016-10-19 01:56:24,0,1,"Michael Raffl hit Brian Campbell",93,33
+"2016020045_50","2016020045","16","4","Blocked Shot",NA,63,5,"1","REGULAR",584,616,2016-10-19 01:56:46,0,1,"Gustav Forsling blocked shot from Brandon Manning",-63,-5
+"2016020045_51","2016020045","16","4","Shot","Wrist Shot",-75,-15,"1","REGULAR",605,595,2016-10-19 01:57:07,0,1,"Marian Hossa Wrist Shot saved by Michal Neuvirth",75,15
+"2016020045_52","2016020045","16","4","Giveaway",NA,84,32,"1","REGULAR",614,586,2016-10-19 01:57:17,0,1,"Giveaway by Brent Seabrook",-84,-32
+"2016020045_53","2016020045","16","4","Takeaway",NA,-94,14,"1","REGULAR",638,562,2016-10-19 01:57:41,0,1,"Takeaway by Richard Panik",94,-14
+"2016020045_54","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",658,542,2016-10-19 01:58:05,0,1,"Offside",NA,NA
+"2016020045_55","2016020045","16","4","Faceoff",NA,20,22,"1","REGULAR",658,542,2016-10-19 02:00:12,0,1,"Jonathan Toews faceoff won against Claude Giroux",-20,-22
+"2016020045_56","2016020045","4","16","Hit",NA,98,-25,"1","REGULAR",668,532,2016-10-19 02:00:27,0,1,"Michael Raffl hit Niklas Hjalmarsson",98,-25
+"2016020045_57","2016020045","4","16","Hit",NA,94,23,"1","REGULAR",675,525,2016-10-19 02:00:34,0,1,"Michael Raffl hit Niklas Hjalmarsson",94,23
+"2016020045_58","2016020045","16","4","Shot","Wrist Shot",-75,20,"1","REGULAR",689,511,2016-10-19 02:00:48,0,1,"Tyler Motte Wrist Shot saved by Michal Neuvirth",75,-20
+"2016020045_59","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",689,511,2016-10-19 02:00:51,0,1,"Goalie Stopped",NA,NA
+"2016020045_60","2016020045","4","16","Faceoff",NA,-69,22,"1","REGULAR",689,511,2016-10-19 02:01:12,0,1,"Pierre-Edouard Bellemare faceoff won against Nick Schmaltz",-69,22
+"2016020045_61","2016020045","4","16","Hit",NA,13,40,"1","REGULAR",699,501,2016-10-19 02:01:29,0,1,"Brandon Manning hit Marian Hossa",13,40
+"2016020045_62","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",699,501,2016-10-19 02:01:33,0,1,"Puck in Benches",NA,NA
+"2016020045_63","2016020045","4","16","Faceoff",NA,20,22,"1","REGULAR",699,501,2016-10-19 02:01:44,0,1,"Pierre-Edouard Bellemare faceoff won against Nick Schmaltz",20,22
+"2016020045_64","2016020045","16","4","Giveaway",NA,95,-1,"1","REGULAR",710,490,2016-10-19 02:02:06,0,1,"Giveaway by Brian Campbell",-95,1
+"2016020045_65","2016020045","4","16","Hit",NA,93,34,"1","REGULAR",736,464,2016-10-19 02:02:31,0,1,"Matt Read hit Brian Campbell",93,34
+"2016020045_66","2016020045","4","16","Giveaway",NA,-39,-18,"1","REGULAR",747,453,2016-10-19 02:02:41,0,1,"Giveaway by Mark Streit",-39,-18
+"2016020045_67","2016020045","4","16","Shot","Tip-In",76,-29,"1","REGULAR",759,441,2016-10-19 02:02:54,0,1,"Mark Streit Tip-In saved by Corey Crawford",76,-29
+"2016020045_68","2016020045","16","4","Shot","Wrist Shot",-67,29,"1","REGULAR",769,431,2016-10-19 02:03:08,0,1,"Patrick Kane Wrist Shot saved by Michal Neuvirth",67,-29
+"2016020045_69","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",770,430,2016-10-19 02:03:06,0,1,"Goalie Stopped",NA,NA
+"2016020045_70","2016020045","4","16","Faceoff",NA,-69,22,"1","REGULAR",770,430,2016-10-19 02:03:28,0,1,"Claude Giroux faceoff won against Jonathan Toews",-69,22
+"2016020045_71","2016020045","16","4","Shot","Wrist Shot",-37,-32,"1","REGULAR",789,411,2016-10-19 02:03:55,0,1,"Duncan Keith Wrist Shot saved by Michal Neuvirth",37,32
+"2016020045_72","2016020045","4","16","Hit",NA,-46,-37,"1","REGULAR",793,407,2016-10-19 02:03:59,0,1,"Wayne Simmonds hit Tyler Motte",-46,-37
+"2016020045_73","2016020045","16","4","Hit",NA,73,40,"1","REGULAR",806,394,2016-10-19 02:04:12,0,1,"Richard Panik hit Wayne Simmonds",-73,-40
+"2016020045_74","2016020045","4","16","Shot","Wrist Shot",45,30,"1","REGULAR",808,392,2016-10-19 02:04:14,0,1,"Brandon Manning Wrist Shot saved by Corey Crawford",45,30
+"2016020045_75","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",808,392,2016-10-19 02:04:16,0,1,"Goalie Stopped",NA,NA
+"2016020045_76","2016020045","16","4","Faceoff",NA,69,22,"1","REGULAR",808,392,2016-10-19 02:04:35,0,1,"Marcus Kruger faceoff won against Boyd Gordon",-69,-22
+"2016020045_77","2016020045","4","16","Hit",NA,36,-37,"1","REGULAR",813,387,2016-10-19 02:04:49,0,1,"Brandon Manning hit Dennis Rasmussen",36,-37
+"2016020045_78","2016020045","16","4","Giveaway",NA,97,5,"1","REGULAR",833,367,2016-10-19 02:05:09,0,1,"Giveaway by Brian Campbell",-97,-5
+"2016020045_79","2016020045","4","16","Giveaway",NA,-69,-37,"1","REGULAR",855,345,2016-10-19 02:05:44,0,1,"Giveaway by Chris VandeVelde",-69,-37
+"2016020045_80","2016020045","4","16","Blocked Shot",NA,-77,-4,"1","REGULAR",856,344,2016-10-19 02:05:43,0,1,"Nick Schultz blocked shot from Gustav Forsling",-77,-4
+"2016020045_81","2016020045","16","4","Shot","Wrist Shot",-77,-6,"1","REGULAR",858,342,2016-10-19 02:05:35,0,1,"Jordin Tootoo Wrist Shot saved by Michal Neuvirth",77,6
+"2016020045_82","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",858,342,2016-10-19 02:05:53,0,1,"Goalie Stopped",NA,NA
+"2016020045_83","2016020045","4","16","Faceoff",NA,-69,-22,"1","REGULAR",858,342,2016-10-19 02:07:39,0,1,"Sean Couturier faceoff won against Artem Anisimov",-69,-22
+"2016020045_84","2016020045","16","4","Shot","Snap Shot",-46,-10,"1","REGULAR",911,289,2016-10-19 02:08:47,0,1,"Niklas Hjalmarsson Snap Shot saved by Michal Neuvirth",46,10
+"2016020045_85","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",930,270,2016-10-19 02:09:16,0,1,"Icing",NA,NA
+"2016020045_86","2016020045","16","4","Faceoff",NA,69,22,"1","REGULAR",930,270,2016-10-19 02:09:24,0,1,"Jonathan Toews faceoff won against Claude Giroux",-69,-22
+"2016020045_87","2016020045","4","16","Hit",NA,-87,35,"1","REGULAR",950,250,2016-10-19 02:09:53,0,1,"Wayne Simmonds hit Richard Panik",-87,35
+"2016020045_88","2016020045","16","4","Hit",NA,55,37,"1","REGULAR",964,236,2016-10-19 02:10:06,0,1,"Tyler Motte hit Wayne Simmonds",-55,-37
+"2016020045_89","2016020045","4","16","Hit",NA,10,35,"1","REGULAR",973,227,2016-10-19 02:10:23,0,1,"Dale Weise hit Richard Panik",10,35
+"2016020045_90","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",1001,199,2016-10-19 02:10:48,0,1,"Icing",NA,NA
+"2016020045_91","2016020045","16","4","Faceoff",NA,69,22,"1","REGULAR",1001,199,2016-10-19 02:10:59,0,1,"Nick Schmaltz faceoff won against Boyd Gordon",-69,-22
+"2016020045_92","2016020045","4","16","Hit",NA,92,33,"1","REGULAR",1012,188,2016-10-19 02:11:19,0,1,"Roman Lyubimov hit Brian Campbell",92,33
+"2016020045_93","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",1018,182,2016-10-19 02:11:26,0,1,"Offside",NA,NA
+"2016020045_94","2016020045","16","4","Faceoff",NA,20,22,"1","REGULAR",1018,182,2016-10-19 02:11:39,0,1,"Marcus Kruger faceoff won against Boyd Gordon",-20,-22
+"2016020045_95","2016020045","4","16","Takeaway",NA,48,37,"1","REGULAR",1030,170,2016-10-19 02:11:56,0,1,"Takeaway by Boyd Gordon",48,37
+"2016020045_96","2016020045","4","16","Giveaway",NA,-39,-17,"1","REGULAR",1046,154,2016-10-19 02:12:13,0,1,"Giveaway by Ivan Provorov",-39,-17
+"2016020045_97","2016020045","16","4","Goal","Backhand",-76,1,"1","REGULAR",1046,154,2016-10-19 02:12:13,0,2,"Dennis Rasmussen (1) Backhand, assists: none",76,-1
+"2016020045_98","2016020045","4","16","Faceoff",NA,0,0,"1","REGULAR",1046,154,2016-10-19 02:12:37,0,2,"Sean Couturier faceoff won against Artem Anisimov",0,0
+"2016020045_99","2016020045","4","16","Blocked Shot",NA,-72,-14,"1","REGULAR",1068,132,2016-10-19 02:13:35,0,2,"Shayne Gostisbehere blocked shot from Michal Kempny",-72,-14
