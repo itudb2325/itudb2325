@@ -112,11 +112,21 @@ footer {
 .socials {
 	float: right;
 	padding: 15px;
-	height: 35px;
-	width: 35px;
+	height: 65px;
+	width: 65px;
 }
 p {
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
 	background-color: white;
+}
+
+.right-button {
+	float: right; /* Move the button to the right */
+	margin-top: 10px; /* Add space above the button */
+	margin-bottom: 10px; /* Add space below the button */
+}
+  
+.button-container {
+	text-align: right; /* Align content to the right within the cell */
 }

@@ -1,103 +1,63 @@
 {% extends "base.html" %}
-{% block title %} Goalie Stats {% endblock %}
 
+<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+{% block title %}Home{% endblock %}
 {% block content %}
-    <h1>This is the goalie statistics page</h1>
-    
-    <form action="{{ url_for('upload_goalie_stats') }}" method="post">
-      <label for="id">ID:</label>
-<input type="text" id="id" name="id" required><br>
-
-<label for="game_id">Game ID:</label>
-<input type="text" id="game_id" name="game_id" required><br>
-
-<label for="player_id">Player ID:</label>
-<input type="text" id="player_id" name="player_id" required><br>
-
-<label for="team_id">Team ID:</label>
-<input type="text" id="team_id" name="team_id" required><br>
-
-<label for="timeOnIce">Time On Ice:</label>
-<input type="text" id="timeOnIce" name="timeOnIce" required><br>
-
-<label for="shots">Shots:</label>
-<input type="text" id="shots" name="shots" required><br>
-
-<label for="saves">Saves:</label>
-<input type="text" id="saves" name="saves" required><br>
-
-<label for="powerPlaySaves">Power Play Saves:</label>
-<input type="text" id="powerPlaySaves" name="powerPlaySaves" required><br>
-
-<label for="shortHandedSaves">Short-Handed Saves:</label>
-<input type="text" id="shortHandedSaves" name="shortHandedSaves" required><br>
-
-<label for="evenSaves">Even Saves:</label>
-<input type="text" id="evenSaves" name="evenSaves" required><br>
-
-<label for="shortHandedShotsAgainst">Short-Handed Shots Against:</label>
-<input type="text" id="shortHandedShotsAgainst" name="shortHandedShotsAgainst" required><br>
-
-<label for="evenShotsAgainst">Even Shots Against:</label>
-<input type="text" id="evenShotsAgainst" name="evenShotsAgainst" required><br>
-
-<label for="powerPlayShotsAgainst">Power Play Shots Against:</label>
-<input type="text" id="powerPlayShotsAgainst" name="powerPlayShotsAgainst" required><br>
-
-<label for="decision">Decision:</label>
-<input type="text" id="decision" name="decision" required><br>
-
-
-      <input type="submit" value="Upload">
-    </form>
-
-    <form action="{{ url_for('delete_goalie_stats') }}" method="post">
-        <label for="gameIdToDelete">Delete Records by Game ID:</label>
-        <input type="number" name="gameIdToDelete" required>
-        <button type="submit">Delete</button>
-    </form>
-    
-    {% if 'goalie_stats' %}
-          <table class="table" id="game_goalie_stats">
-            <tr>
-              <th>ID</th>
-              <th>Game ID</th>
-              <th>Player ID</th>
-              <th>Team ID</th>
-              <th>timeOnIce</th>
-              <th>shots</th>
-              <th>saves</th>
-              <th>powerPlaySaves</th>
-              <th>shortHandedSaves</th>
-              <th>evenSaves</th>
-              <th>shortHandedShotsAgainst</th>
-              <th>evenShotsAgainst</th>
-              <th>powerPlayShotsAgainst</th>
-              <th>decision</th>
-            </tr>
-            {% for goalie in goalie_stats %}
-            <tr>
-                <td>{{ goalie.id }}</td>
-                <td>{{ goalie.game_id }}</td>
-                <td>{{ goalie.player_id }}</td>
-                <td>{{ goalie.team_id }}</td>
-                <td>{{ goalie.timeOnIce }}</td>
-                <td>{{ goalie.shots }}</td>
-                <td>{{ goalie.saves }}</td>
-                <td>{{ goalie.powerPlaySaves }}</td>
-                <td>{{ goalie.shortHandedSaves }}</td>
-                <td>{{ goalie.evenSaves }}</td>
-                <td>{{ goalie.shortHandedShotsAgainst}}</td>
-                <td>{{ goalie.evenShotsAgainst}}</td>
-                <td>{{ goalie.powerPlayShotsAgainst}}</td>
-                <td>{{ goalie.decision}}</td>
-              
-            </tr>
-            {% endfor %}
-          </table>
-       {% endif %}
-
+<div class="container">
+    <div class="row">
+        <div class="col md-12">
+          <td class="button-container"> 
+            <a name="create_goalie" id="create_goalie" class="btn btn-dark right-button" 
+               href="{{ url_for('create_goalie') }}" role="button">Create Goalie</a>
+          </td>
+            <table class="table table-striped table-hover" id="game_goalie_stats">
+                <tr>
+                    <th>ID</th>
+                    <th>Game ID</th>
+                    <th>Player ID</th>
+                    <th>Team ID</th>
+                    <th>Time On Ice</th>
+                    <th>Shots</th>
+                    <th>Saves</th>
+                    <th>PowerPlay Saves</th>
+                    <th>Even Saves</th>
+                    <th>Even Shots Against</th>
+                    <th>PowerPlay Shots Against</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                {% for goalie in goalie_stats %}
+                <tr>
+                    <td>{{ goalie.id }}</td>
+                    <td>{{ goalie.game_id }}</td>
+                    <td>{{ goalie.player_id }}</td>
+                    <td>{{ goalie.team_id }}</td>
+                    <td>{{ goalie.timeOnIce }}</td>
+                    <td>{{ goalie.shots }}</td>
+                    <td>{{ goalie.saves }}</td>
+                    <td>{{ goalie.powerPlaySaves }}</td>
+                    <td>{{ goalie.evenSaves }}</td>
+                    <td>{{ goalie.evenShotsAgainst}}</td>
+                    <td>{{ goalie.powerPlayShotsAgainst}}</td>
+                    <td>
+                        <a name="update_goalie" id="update_goalie" class="btn btn-outline-secondary btn-sm" 
+                           href="{{ url_for('update_goalie', id=goalie.id)  }}" role="button">Update</a>
+                     </td>         
+                    <td>
+                        <form method="post" action="{{ url_for('delete_goalie_stats') }}">
+                            <input type="hidden" name="id" value="{{ goalie.id }}">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
 
-<!-- Erblina Nivokazi 150200917 -->
+<script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
+

@@ -2,7 +2,7 @@ from flask import Flask, current_app, abort, render_template, request, redirect,
 import mysql.connector
 import pandas as pd
 from config import MYSQL_CONFIG  # Assuming you have a configuration file
-from game_goalie_stats import delete_goalie_stats_by_game_id
+from game_goalie_stats import delete_goalie_stats_by_id, create_goalie_stats, update_goalie_stats
 import os
 
 def configure_app(app):
@@ -50,8 +50,16 @@ def game_teams_stats():
 
 def get_goalie_stats():
     conn = mysql.connector.connect(**MYSQL_CONFIG)
-    cursor = conn.cursor(dictionary=True)  # Use dictionary cursor for easier handling of results
+    cursor = conn.cursor(dictionary=True)  
     cursor.execute("SELECT * FROM game_goalie_stats")
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+def get_goalie_stats_by_id(id):
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)  # Use dictionary cursor for easier handling of results
+    cursor.execute("SELECT * FROM game_goalie_stats WHERE id = %s", (id,))
     results = cursor.fetchall()
     conn.close()
     return results
@@ -60,34 +68,54 @@ def game_goalie_stats():
     goalie_stats = get_goalie_stats()
     return render_template("game_goalie_stats.html", goalie_stats=goalie_stats)
 
-def upload_goalie_stats():
-    if request.method == 'POST':
-        # Get form data
-        game_id = request.form.get('game_id')
-        # Repeat the above line for each column
-
-        # Create a dictionary with column names and form data
-        new_data_dict = {
-            'game_id': game_id,
-            # Repeat the above line for each column
-        }
-
-        # Convert the dictionary to a DataFrame
-        new_data_df = pd.DataFrame([new_data_dict])
-
-        # Call the function to upload the new data
-        upload_goalie_stats(new_data_df)
-
-    # Redirect to the goalie stats page after the upload
-    return redirect(url_for('game_goalie_stats'))
-
 def delete_goalie_stats():
     if request.method == 'POST':
-        # Get the game_id to delete
-        game_id_to_delete = request.form.get('gameIdToDelete')
+        id = request.form.get('id')
+        delete_goalie_stats_by_id(id)
 
-        # Call the function to delete records by game_id
-        delete_goalie_stats_by_game_id(game_id_to_delete)
-
-    # Redirect to the goalie stats page after the delete
     return redirect(url_for('game_goalie_stats'))
+
+def update_goalie(id):
+    if request.method == 'GET':
+        goalie_stats = get_goalie_stats_by_id(id)
+        return render_template('update_goalie.html', id=id, goalie_stats=goalie_stats)
+
+    else:
+        game_id = request.form.get('game_id')
+        player_id = request.form.get('player_id')
+        team_id = request.form.get('team_id')
+        timeOnIce = request.form.get('timeOnIce')
+        shots = request.form.get('shots')
+        saves = request.form.get('saves')
+        powerPlaySaves = request.form.get('powerPlaySaves')
+        evenSaves = request.form.get('evenSaves')
+        evenShotsAgainst = request.form.get('evenShotsAgainst')
+        powerPlayShotsAgainst = request.form.get('powerPlayShotsAgainst')
+
+        update_goalie_stats(id, game_id, player_id, team_id, timeOnIce, 
+                            shots, saves, powerPlaySaves, evenSaves, 
+                            evenShotsAgainst, powerPlayShotsAgainst)
+
+        return redirect(url_for('game_goalie_stats'))
+
+def create_goalie():
+    if request.method == 'GET':
+        return render_template('create_goalie.html')
+
+    else:
+        game_id = request.form.get('game_id')
+        player_id = request.form.get('player_id')
+        team_id = request.form.get('team_id')
+        timeOnIce = request.form.get('timeOnIce')
+        shots = request.form.get('shots')
+        saves = request.form.get('saves')
+        powerPlaySaves = request.form.get('powerPlaySaves')
+        evenSaves = request.form.get('evenSaves')
+        evenShotsAgainst = request.form.get('evenShotsAgainst')
+        powerPlayShotsAgainst = request.form.get('powerPlayShotsAgainst')
+
+        create_goalie_stats(game_id, player_id, team_id, timeOnIce, 
+                            shots, saves, powerPlaySaves, evenSaves, 
+                            evenShotsAgainst, powerPlayShotsAgainst)
+
+        return redirect(url_for('game_goalie_stats'))
