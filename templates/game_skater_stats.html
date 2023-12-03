@@ -1,42 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block title %} Game Skater Stats {% endblock %}
 
-<head>
-<!-- Selin Durmuş, 150220771 -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Skater Statistics</title>
-    <link rel="stylesheet" href="..\stylesfile\style.css"> 
+{% block content %}
+
+<!-- Selin Durmuş 150220771 -->
+
+<!-- Header -->
+<h2 class="shadow">Game Skater Stats</h2>
 
 
-   
-    <body>
-  
-    <h1>Game Skater Statistics</h1>
-    <p>Skater statistics who play in NHL &#128512;</p>
-		<body>
-		<header>
-			<img class="logo" src="..\img\05_NHL_Shield.svg.webp">
-			<hr>
-				
-			<a href="https://www.facebook.com/NHL"><img class="socials" title="NHL Official Facebook Page" src="..\img\facebook_logo.png"></a>
-			<a href="https://twitter.com/nhl"><img class="socials" title="NHL Official X Page" src="..\img\x_logo.png"></a>
-			<a href="https://www.instagram.com/nhl"><img class="socials" title="NHL Official Instagram Page" src="..\img\instagram_logo.png"></a>
-			<a href="https://www.youtube.com/nhl"><img class="socials" title="NHL Official YouTube Page" src="..\img\youtube_logo.png"></a>
-			
-			<h1 class="mainheader">National Hockey League</h1>
-		</header>
-		<hr>
-		<div class="menu">
-			<a href="index.html"><b>HOME PAGE</b></a>
-			<a href="game_teams_stats.html"><b>GAME TEAMS STATS</b></a>
-			<a class="active" href="game_skater_stats.html"><b>GAME SKATER STATS</b></a>
-			<a href="game_goalie_stats.html"><b>GAME GOALIE STATS</b></a>
-			<a href="game_plays.html"><b>GAME PLAYS</b></a>
-		</div>
 
-</body>
-<footer>
-    <h3><b><i>Database Systems Project</i></b></h3>
-</footer>
-</html>
+{% endblock %}
