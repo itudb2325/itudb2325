@@ -34,7 +34,7 @@ create = '''
 
 cursor.execute(create)
 
-const_df = pd.read_csv('nhl-db/game_teams_stats.csv', usecols=[
+const_df = pd.read_csv('nhl-db/game_teams_stats_1.csv', usecols=[
     "game_id",
     "team_id",
     "HoA",
@@ -58,7 +58,7 @@ const_df.replace(['', 'NA'], None, inplace=True)
 const_df = const_df.where(pd.notna(const_df), None)
 data_to_insert = const_df.to_records(index=False).tolist()
 data_to_insert = [tuple(None if pd.isna(value) else value for value in row) for row in data_to_insert]
-
+data_to_insert = data_to_insert[:50]
 
 insert = '''
             INSERT INTO game_teams_stats (game_id, team_id, HoA, won, settled_in, head_coach, goals, shots, hits, pim, powerPlayOpportunities, powerPlayGoals, faceOffWinPercentage, giveaways, takeaways, blocked, startRinkSide) 

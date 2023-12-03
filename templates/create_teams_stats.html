@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block title %} Create Teams Stats {% endblock %}
+
+{% block content %}
+
+<div class="panel-heading">
+   <h2>Create Teams <a class="pull-right btn btn-success" href="/">Back</a></h2>
+</div>
+
+<div class="p-3 mb-2 bg-secondary-subtle text-emphasis-secondary">
+
+    <form action="{{ url_for('create_teams_stats') }}" method="POST">
+    
+       <div class="mb-3 row">
+       <label for="game_id" class="col-sm-2 col-form-label text-sm-end">Game ID:</label>
+       <div class="col-sm-6">
+          <input class="input is-hovered" type="text" name="game_id" id="game_id" value="{{ game_id }}">
+       </div>
+    </div>
+    
+    <div class="mb-3 row">
+       <label for="team_id" class="col-sm-2 col-form-label text-sm-end">Team ID:</label>
+       <div class="col-sm-6">
+          <input class="input is-hovered" type="text" name="team_id" id="team_id" value="{{ team_id }}">
+       </div>
+    </div>
+    
+    <div class="mb-3 row">
+       <label for="HoA" class="col-sm-2 col-form-label text-sm-end">HoA:</label>
+       <div class="col-sm-6">
+          <input class="input is-hovered" type="text" name="HoA" id="HoA" value="{{ HoA }}">
+       </div>
+    </div>
+    
+    <div class="mb-3 row">
+       <label for="won" class="col-sm-2 col-form-label text-sm-end">Won:</label>
+       <div class="col-sm-6">
+          <input class="input is-hovered" type="text" name="won" id="won" value="{{ won }}">
+       </div>
+    </div>
+
+    <div class="mb-3 row">
+       <label for="saves" class="col-sm-2 col-form-label text-sm-end">Settled in:</label>
+       <div class="col-sm-6">
+          <input class="input is-hovered" type="text" name="settled_in" id="settled_in" value="{{ settled_in }}">
+       </div>
+    </div>
+    
+    <div class="mb-3 row">
+       <label for="powerPlaySaves" class="col-sm-2 col-form-label text-sm-end">Head coach:</label>
+       <div class="col-sm-6">
+          <input class="input is-hovered" type="text" name="head_coach" id="head_coach" value="{{ head_coach }}">
+       </div>
+    </div>
+    
+    <div class="mb-3 row">
+       <label for="evenSaves" class="col-sm-2 col-form-label text-sm-end">Goals:</label>
+       <div class="col-sm-6">
+          <input class="input is-hovered" type="text" name="goals" id="goals" value="{{ goals }}">
+       </div>
+    </div>
+
+    <div class="mb-3 row">
+       <label for="evenShotsAgainst" class="col-sm-2 col-form-label text-sm-end">Shots:</label>
+       <div class="col-sm-6">
+          <input class="input is-hovered" type="text" name="shots" id="shots" value="{{ shots }}">
+       </div>
+    </div>
+    
+    <div class="mb-3 row">
+       <label for="powerPlayShotsAgainst" class="col-sm-2 col-form-label text-sm-end">Hits:</label>
+       <div class="col-sm-6">
+          <input class="input is-hovered" type="text" name="hits" id="hits" value="{{ hits }}">
+       </div>
+    </div>
+
+     <div class="mb-3 row">
+        <label for="powerPlayShotsAgainst" class="col-sm-2 col-form-label text-sm-end">Pim:</label>
+        <div class="col-sm-6">
+           <input class="input is-hovered" type="text" name="pim" id="pim" value="{{ pim }}">
+        </div>
+     </div>
+
+     <div class="mb-3 row">
+        <label for="powerPlayShotsAgainst" class="col-sm-2 col-form-label text-sm-end">Power Play Opportunities:</label>
+        <div class="col-sm-6">
+           <input class="input is-hovered" type="text" name="powerPlayOpportunities" id="powerPlayOpportunities" value="{{ powerPlayOpportunities }}">
+        </div>
+     </div>
+
+     <div class="mb-3 row">
+        <label for="powerPlayShotsAgainst" class="col-sm-2 col-form-label text-sm-end">Power Play Goals:</label>
+        <div class="col-sm-6">
+           <input class="input is-hovered" type="text" name="powerPlayGoals" id="powerPlayGoals" value="{{ powerPlayGoals }}">
+        </div>
+     </div>
+
+     <div class="mb-3 row">
+        <label for="powerPlayShotsAgainst" class="col-sm-2 col-form-label text-sm-end">FaceOff Win Percentage:</label>
+        <div class="col-sm-6">
+           <input class="input is-hovered" type="text" name="faceOffWinPercentage" id="faceOffWinPercentage" value="{{ faceOffWinPercentage }}">
+        </div>
+     </div>
+
+     <div class="mb-3 row">
+        <label for="powerPlayShotsAgainst" class="col-sm-2 col-form-label text-sm-end">Giveaways:</label>
+        <div class="col-sm-6">
+           <input class="input is-hovered" type="text" name="giveaways" id="giveaways" value="{{ giveaways }}">
+        </div>
+     </div>
+
+     <div class="mb-3 row">
+        <label for="powerPlayShotsAgainst" class="col-sm-2 col-form-label text-sm-end">Takeaways:</label>
+        <div class="col-sm-6">
+           <input class="input is-hovered" type="text" name="takeaways" id="takeaways" value="{{ takeaways }}">
+        </div>
+     </div>
+
+     <div class="mb-3 row">
+        <label for="powerPlayShotsAgainst" class="col-sm-2 col-form-label text-sm-end">Blocked:</label>
+        <div class="col-sm-6">
+           <input class="input is-hovered" type="text" name="blocked" id="blocked" value="{{ blocked }}">
+        </div>
+     </div>
+
+     <div class="mb-3 row">
+        <label for="powerPlayShotsAgainst" class="col-sm-2 col-form-label text-sm-end">Start Rink Side:</label>
+        <div class="col-sm-6">
+           <input class="input is-hovered" type="text" name="startRinkSide" id="startRinkSide" value="{{ startRinkSide }}">
+        </div>
+     </div>
+
+    <button type="submit" class="btn btn-outline-primary">Create Teams</button>
+    </form>
+    </div> 
+
+<script>
+        const location_html = window.location.href.split('/')[4]
+
+        console.log(location_html) 
+</script>
+
+{% endblock %}
