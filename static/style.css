@@ -149,7 +149,8 @@ footer {
 p {
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
-	background-color: white;
+	font-size: large;
+
 }
 
 .right-button {
