@@ -1,11 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@1,800&family=Poppins:wght@300&display=swap');
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
 body {
-	margin: 0; /* Reset margin to remove default spacing */
-	padding: 0; /* Reset padding to remove default spacing */
-	position: relative; /* Establish a positioning context for absolute positioning */
-	background-image: url(https://c4.wallpaperflare.com/wallpaper/828/921/194/hockey-ice-zing-snow-wallpaper-preview.jpg);
+	margin: 0px; /* Reset margin to remove default spacing */
+	padding: 0px; /* Reset padding to remove default spacing */
+	
+	background-image: url('img/background2.jpg');
+	background-color: #585858e8;
 	background-size: 100%;
 }
+
+header {
+	margin-top: 0px;
+	padding: 0px;
+	padding-top: 0px;
+	background-image: url('img/header2.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 200px;
+	text-align: center;
+	position: top;
+  }
+  
+header h1 {
+	margin-top: 0px;
+	margin-left: 200px;
+	margin-right: 200px; 
+}
+
+h1{
+	margin-top: 0px !important;
+}
+
 .image-container {
 	position: absolute;
 	top: 0;
@@ -34,8 +65,9 @@ footer {
 }
 .logo {
 	float: left;
-	padding: 7px;
-	height: 75px;
+	margin-left: 50px;
+	padding: 10px;
+	height: 150px;
 }
 .menu {
     overflow: hidden;
@@ -65,12 +97,11 @@ footer {
 	text-align: center;
 }
 .mainheader {
+	margin-top: 40px;
 	font-family: 'Advent Pro', sans-serif;
-	text-shadow:
-		0.075em 0.075em 0.075em #FFFFFF,
-		-0.075em 0.075em 0.075em #FFFFFF,
-		-0.075em -0.075em 0.075em #FFFFFF,
-		0.075em -0.075em 0.075em #FFFFFF;
+	position: center;
+	color:black;
+	font-size: 60px;
 }
 .tg {
 	border-collapse: collapse;

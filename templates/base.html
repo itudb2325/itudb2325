@@ -11,18 +11,18 @@
 
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"/> -->
     <link rel="icon" href="{{ icon }}">
+
   </head>
   <body>
     <header>
       <img src="{{ url_for('static', filename = 'img/05_NHL_Shield.svg.webp') }}" alt="nhl logo" class="logo">
-	    <hr>
+	    
 	    <a href="https://www.facebook.com/NHL"><img class="socials" title="NHL Official Facebook Page" src="{{ url_for('static', filename = 'img/facebook_logo.png') }}"></a>
 	    <a href="https://twitter.com/nhl"><img class="socials" title="NHL Official X Page" src="{{ url_for('static', filename = 'img/x_logo.png') }}"></a>
 	    <a href="https://www.instagram.com/nhl"><img class="socials" title="NHL Official Instagram Page" src="{{ url_for('static', filename = 'img/instagram_logo.png') }}"></a>
 	    <a href="https://www.youtube.com/nhl"><img class="socials" title="NHL Official YouTube Page" src="{{ url_for('static', filename = 'img/youtube_logo.png') }}"></a>
 	    <h1 class="mainheader">       National Hockey League</h1>
     </header>
-    <hr>
 
     <div class="menu">
 			<a class="{% if active_page == 'index' %}active{% endif %}" href="{{ url_for('index_page') }}"><b>HOME PAGE</b></a>
@@ -31,6 +31,10 @@
 			<a href="{{ url_for('game_goalie_stats') }}"><b>GAME GOALIE STATS</b></a>
 			<a class="{% if active_page == 'game_plays' %}active{% endif %}" href="{{ url_for('game_plays') }}"><b>GAME PLAYS</b></a>
 		</div>
+
+    <hr>
+
+    
 
     <main>
       <section class="section">
