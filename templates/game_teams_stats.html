@@ -1,29 +1,76 @@
-<!-- @author: Farida Mammadova 150180907 -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Teams Stats</title>
-    <link rel="stylesheet" href="..\stylesfile\style.css">
-		<link rel="icon" href="..\img\05_NHL_Shield.svg.webp">
-  </head>
-  <body>
-    <header>
-      <img class="logo" src="..\img\05_NHL_Shield.svg.webp" onClick="location.href='index.html'">
-			<hr>
-			<h1 class="mainheader">National Hockey League</h1>
-    </header>
-    <hr>
-    <div class="menu">
-			<a href="index.html"><b>Home Page</b></a>
-			<a class="active" href="game_teams_stats.html"><b>Game Teams Stats</b></a>
-			<a href="game_skater_stats.html"><b>Game Skater Stats</b></a>
-			<a href="game_goalie_stats.html"><b>Game Goalie Stats</b></a>
-			<a href="game_plays.html"><b>Game Plays</b></a>
-		</div>
-    <div>
-      <h2 class="pageheader">Game Team Stats</h2>
+{% extends "base.html" %}
+
+<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col md-12">
+          <td class="button-container"> 
+            <a name="create_teams_stats" id="create_teams_stats" class="btn btn-dark right-button" 
+               href="{{ url_for('game_teams_stats') }}" role="button">Create Teams</a>
+          </td>
+            <table class="table table-striped table-hover" id="game_teams_stats">
+                <tr>
+                    <th>ID</th>
+                    <th>Game ID</th>
+                    <th>Team ID</th>
+                    <th>HoA</th>
+                    <th>Won</th>
+                    <th>Settled in</th>
+                    <th>Head coach</th>
+                    <th>Goals</th>
+                    <th>Shots</th>
+                    <th>Hits</th>
+                    <th>Pim</th>
+                    <th>Power Play Opportunities</th>
+                    <th>Power Play Goals</th>
+                    <th>FaceOff Win Percentage</th>
+                    <th>Giveaways</th>
+                    <th>Takeaways</th>
+                    <th>Blocked</th>
+                    <th>Start Rink Side</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                {% for teams in teams_stats %}
+                <tr>
+                    <td>{{ teams.id }}</td>
+                    <td>{{ teams.game_id }}</td>
+                    <td>{{ teams.team_id }}</td>
+                    <td>{{ teams.HoA }}</td>
+                    <td>{{ teams.won }}</td>
+                    <td>{{ teams.settled_in }}</td>
+                    <td>{{ teams.head_coach }}</td>
+                    <td>{{ teams.goals }}</td>
+                    <td>{{ teams.shots }}</td>
+                    <td>{{ teams.hits}}</td>
+                    <td>{{ teams.pim}}</td>
+                    <td>{{ teams.powerPlayOpportunities}}</td>
+                    <td>{{ teams.powerPlayGoals}}</td>
+                    <td>{{ teams.faceOffWinPercentage}}</td>
+                    <td>{{ teams.giveaways}}</td>
+                    <td>{{ teams.takeaways}}</td>
+                    <td>{{ teams.blocked}}</td>
+                    <td>{{ teams.startRinkSide}}</td>
+                    <td>
+                        <a name="update_teams_stats" id="update_teams_stats" class="btn btn-outline-secondary btn-sm" 
+                           href="{{ url_for('game_teams_stats', id=teams.id)  }}" role="button">Update</a>
+                     </td>         
+                    <td>
+                        <form method="post" action="{{ url_for('game_teams_stats') }}">
+                            <input type="hidden" name="id" value="{{ teams.id }}">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
     </div>
-  </body>
-</html>
+</div>
+{% endblock %}
+
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+
+<script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>

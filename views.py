@@ -3,6 +3,7 @@ import mysql.connector
 import pandas as pd
 from config import MYSQL_CONFIG  # Assuming you have a configuration file
 from game_goalie_stats import delete_goalie_stats_by_id, create_goalie_stats, update_goalie_stats
+from game_teams_stats import delete_teams_stats_by_id, create_teams_stats, update_teams_stats
 import os
 
 def configure_app(app):
@@ -44,9 +45,6 @@ def game_plays():
 
 def game_skater_stats():
     return render_template("game_skater_stats.html")
-
-def game_teams_stats():
-    return render_template("game_teams_stats.html")
 
 def get_goalie_stats():
     conn = mysql.connector.connect(**MYSQL_CONFIG)
@@ -119,3 +117,88 @@ def create_goalie():
                             evenShotsAgainst, powerPlayShotsAgainst)
 
         return redirect(url_for('game_goalie_stats'))
+    
+
+# Game Teams Stats
+
+def get_teams_stats():
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)  
+    cursor.execute("SELECT * FROM game_teams_stats")
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+def get_teams_stats_by_id(id):
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)  # Use dictionary cursor for easier handling of results
+    cursor.execute("SELECT * FROM game_teams_stats WHERE id = %s", (id,))
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+def game_teams_stats():
+    teams_stats = get_teams_stats()
+    return render_template("game_teams_stats.html", teams_stats=teams_stats)
+
+def delete_teams_stats():
+    if request.method == 'POST':
+        id = request.form.get('id')
+        delete_teams_stats_by_id(id)
+
+    return redirect(url_for('game_teams_stats'))
+
+def update_teams(id):
+    if request.method == 'GET':
+        teams_stats = get_teams_stats_by_id(id)
+        return render_template('update_teams_stats.html', id=id, teams_stats=teams_stats)
+
+    else:
+        game_id = request.form.get('game_id')
+        team_id = request.form.get('team_id')
+        HoA = request.form.get('HoA')
+        won = request.form.get('won')
+        settled_in = request.form.get('settled_in')
+        head_coach = request.form.get('head_coach')
+        goals = request.form.get('goals')
+        shots = request.form.get('shots')
+        hits = request.form.get('hits')        
+        pim = request.form.get('pim')
+        powerPlayOpportunities = request.form.get('powerPlayOpportunities')
+        powerPlayGoals = request.form.get('powerPlayGoals')
+        faceOffWinPercentage = request.form.get('faceOffWinPercentage')
+        giveaways = request.form.get('giveaways')
+        takeaways = request.form.get('takeaways')
+        blocked = request.form.get('blocked')
+        startRinkSide = request.form.get('startRinkSide')
+
+        update_teams_stats(id,game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide)
+
+        return redirect(url_for('game_teams_stats'))
+
+def create_teams():
+    if request.method == 'GET':
+        return render_template('create_teams_stats.html')
+
+    else:
+        game_id = request.form.get('game_id')
+        team_id = request.form.get('team_id')
+        HoA = request.form.get('HoA')
+        won = request.form.get('won')
+        settled_in = request.form.get('settled_in')
+        head_coach = request.form.get('head_coach')
+        goals = request.form.get('goals')
+        shots = request.form.get('shots')
+        hits = request.form.get('hits')        
+        pim = request.form.get('pim')
+        powerPlayOpportunities = request.form.get('powerPlayOpportunities')
+        powerPlayGoals = request.form.get('powerPlayGoals')
+        faceOffWinPercentage = request.form.get('faceOffWinPercentage')
+        giveaways = request.form.get('giveaways')
+        takeaways = request.form.get('takeaways')
+        blocked = request.form.get('blocked')
+        startRinkSide = request.form.get('startRinkSide')
+
+        create_teams_stats(game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide)
+
+        return redirect(url_for('game_teams_stats'))
