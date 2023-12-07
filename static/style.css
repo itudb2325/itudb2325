@@ -6,30 +6,25 @@
 	box-sizing: border-box;
 }
 
-  /* Styling for the audio player button */
-  audio {
+audio {
 	margin-top: 20px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-  }
-  
-  audio::-webkit-media-controls-play-button {
+}
+audio::-webkit-media-controls-play-button {
 	display: none;
-  }
-  
-  audio::-webkit-media-controls-play-button {
+}
+audio::-webkit-media-controls-play-button {
 	display: initial;
-  }
-  
-  audio::-webkit-media-controls-panel {
+}
+audio::-webkit-media-controls-panel {
 	border-radius: 50%; 
 	color: #fff;
 	font-size: 20px; 
 	padding: 15px; 
 	cursor: pointer; 
-  }
-  
+}
 body {
 	margin: 0px; 
 	padding: 0px; 
@@ -46,15 +41,12 @@ header {
 	background-image: url('img/header2.jpg');
 	background-size: cover;
 	background-position: center;
-	height: 200px;
+	height: 120px;
 	text-align: center;
-	position: top;
-  }
+}
   
 header h1 {
 	margin-top: 0px;
-	margin-left: 200px;
-	margin-right: 200px; 
 }
 
 h1{
@@ -91,7 +83,7 @@ footer {
 	float: left;
 	margin-left: 50px;
 	padding: 10px;
-	height: 150px;
+	height: 120px;
 }
 .menu {
     overflow: hidden;
@@ -121,9 +113,9 @@ footer {
 	text-align: center;
 }
 .mainheader {
-	margin-top: 40px;
+	margin-top: 100px;
 	font-family: 'Advent Pro', sans-serif;
-	position: center;
+    text-align: center; /* Center the text */
 	color:black;
 	font-size: 60px;
 }
@@ -165,8 +157,9 @@ footer {
     text-align: center;
 }
 .socials {
+	margin-top: 22px;
 	float: right;
-	padding: 15px;
+	padding: 5px;
 	height: 65px;
 	width: 65px;
 }

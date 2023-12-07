@@ -16,16 +16,15 @@
   <body>
     <header>
       <img src="{{ url_for('static', filename = 'img/05_NHL_Shield.svg.webp') }}" alt="nhl logo" class="logo">
-	    
 	    <a href="https://www.facebook.com/NHL"><img class="socials" title="NHL Official Facebook Page" src="{{ url_for('static', filename = 'img/facebook_logo.png') }}"></a>
 	    <a href="https://twitter.com/nhl"><img class="socials" title="NHL Official X Page" src="{{ url_for('static', filename = 'img/x_logo.png') }}"></a>
 	    <a href="https://www.instagram.com/nhl"><img class="socials" title="NHL Official Instagram Page" src="{{ url_for('static', filename = 'img/instagram_logo.png') }}"></a>
 	    <a href="https://www.youtube.com/nhl"><img class="socials" title="NHL Official YouTube Page" src="{{ url_for('static', filename = 'img/youtube_logo.png') }}"></a>
-	    <h1 class="mainheader">       National Hockey League</h1>
-
-   
+	    
+      <h1 class="mainheader">National Hockey League</h1>
     </header>
 
+ 
     <div class="menu">
 			<a class="{% if active_page == 'index' %}active{% endif %}" href="{{ url_for('index_page') }}"><b>HOME PAGE</b></a>
 			<a href="{{ url_for('game_teams_stats') }}"><b>GAME TEAMS STATS</b></a>
