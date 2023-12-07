@@ -12,6 +12,7 @@ mycursor.execute("DROP TABLE IF EXISTS game_skater_stats")
 
 create_game_skater_stats_table = '''
     CREATE table game_skater_stats(
+        id INT AUTO_INCREMENT PRIMARY KEY,
       
         game_id INT,
         player_id INT NOT NULL, 
@@ -73,10 +74,9 @@ csv_file= pd.read_csv('nhl-db/game_skater_stats.csv', usecols=[
 
 ])
 
+# Replace empty and 'NA' values with None
 csv_file.replace(['', 'NA'], None, inplace=True)
 csv_file = csv_file.where(pd.notna(csv_file), None)
-data_to_insert = csv_file.to_records(index=False).tolist()
-data_to_insert = [tuple(None if pd.isna(value) else value for value in row) for row in data_to_insert]
 
 
 
@@ -109,7 +109,10 @@ insert_query = '''
 
 
 '''
-
+# Convert DataFrame to records and insert into MySQL
+data_to_insert = csv_file.to_records(index=False).tolist()
+data_to_insert = [tuple(None if pd.isna(value) else value for value in row) for row in data_to_insert]
 mycursor.executemany(insert_query, data_to_insert)
 
+# Commit the changes
 mydb.commit()
