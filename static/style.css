@@ -6,9 +6,33 @@
 	box-sizing: border-box;
 }
 
+  /* Styling for the audio player button */
+  audio {
+	margin-top: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+  audio::-webkit-media-controls-play-button {
+	display: none;
+  }
+  
+  audio::-webkit-media-controls-play-button {
+	display: initial;
+  }
+  
+  audio::-webkit-media-controls-panel {
+	border-radius: 50%; 
+	color: #fff;
+	font-size: 20px; 
+	padding: 15px; 
+	cursor: pointer; 
+  }
+  
 body {
-	margin: 0px; /* Reset margin to remove default spacing */
-	padding: 0px; /* Reset padding to remove default spacing */
+	margin: 0px; 
+	padding: 0px; 
 	
 	background-image: url('img/background2.jpg');
 	background-color: #585858e8;

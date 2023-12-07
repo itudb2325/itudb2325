@@ -22,6 +22,8 @@
 	    <a href="https://www.instagram.com/nhl"><img class="socials" title="NHL Official Instagram Page" src="{{ url_for('static', filename = 'img/instagram_logo.png') }}"></a>
 	    <a href="https://www.youtube.com/nhl"><img class="socials" title="NHL Official YouTube Page" src="{{ url_for('static', filename = 'img/youtube_logo.png') }}"></a>
 	    <h1 class="mainheader">       National Hockey League</h1>
+
+   
     </header>
 
     <div class="menu">
@@ -43,6 +45,9 @@
         </div>
       </section>
     </main>
-
+    <audio controls autoplay>
+      <source src="{{ url_for('static', filename='nhlmusic.mp3') }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
   </body>
 </html>
