@@ -41,16 +41,21 @@ header {
 	background-image: url('img/header2.jpg');
 	background-size: cover;
 	background-position: center;
-	height: 120px;
+	height: 120x;
 	text-align: center;
-}
-  
-header h1 {
-	margin-top: 0px;
+    display: block;
 }
 
-h1{
-	margin-top: 0px !important;
+h1 {
+	margin-top: 3% !important;
+	text-align: center;
+	display: inline-block;
+}
+
+h2 {
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	padding: 1%;
 }
 
 .image-container {
@@ -91,7 +96,7 @@ footer {
 }
 .menu a {
 	width: 20%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     float: left;
     color: white;
     text-align: center;
@@ -109,13 +114,11 @@ footer {
     color: white;
 }
 .pageheader {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif !important;
 	text-align: center;
 }
 .mainheader {
-	margin-top: 100px;
-	font-family: 'Advent Pro', sans-serif;
-    text-align: center; /* Center the text */
+	font-family: 'Advent Pro', sans-serif !important;
 	color:black;
 	font-size: 60px;
 }
@@ -147,12 +150,12 @@ footer {
 	padding: 10px 5px;
 	word-break: normal;
 }
-.shadow {
+.shadow2 {
     text-shadow:
-		0.075em 0.075em 0.075em #FFFFFF,
-		-0.075em 0.075em 0.075em #FFFFFF,
-		-0.075em -0.075em 0.075em #FFFFFF,
-		0.075em -0.075em 0.075em #FFFFFF;
+		0.075em 0.075em 0.1em #FFFFFF,
+		-0.075em 0.075em 0.1em #FFFFFF,
+		-0.075em -0.075em 0.1em #FFFFFF,
+		0.075em -0.075em 0.1em #FFFFFF;
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
@@ -167,7 +170,7 @@ p {
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
 	font-size: large;
-
+	color: white;
 }
 
 .right-button {
@@ -178,4 +181,52 @@ p {
   
 .button-container {
 	text-align: right; /* Align content to the right within the cell */
+}
+
+
+/******** Dividing the page into three columns ********/
+.column1.side2 {
+	float: left;
+	width: 15%;
+	padding: 10px;
+	background-color: #f0f8ff50;
+}
+
+.column1.side2 p {
+	text-align: left;
+}
+
+.column1.middle2 {
+	float: left;
+	margin: auto;
+	width: 70%;
+	padding: 10px;
+}
+
+.column1.header_side {
+	float: left;
+	width: 30%;
+}
+
+.column1.header_middle {
+	float: left;
+	width: 40%;
+}
+
+.row2::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 600px) {
+	.column.side, .column.middle {
+		width: 100%;
+	}
+}
+/******************************************************/
+
+.main_side_col_header {
+	font-size: 20px;
+	padding: 20px;
 }
