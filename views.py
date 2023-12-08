@@ -39,12 +39,32 @@ def index_page():
     image_paths = generate_image_paths()
     return render_template('index.html', **image_paths, active_page = 'index')
 
+# Game Plays
+
 def game_plays():
-    image_paths = generate_image_paths()
-    return render_template("game_plays.html", **image_paths, active_page = 'game_plays')
+    game_plays = get_game_plays()
+    return render_template("game_plays.html", active_page = 'game_plays', game_plays = game_plays)
+
+def get_game_plays():
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)
+    game_plays_query = '''
+        SELECT date_time as game_date, team_id_for as team1, team_id_against as team2 FROM game_plays
+    '''
+
+    #, game_schedule_time, game_finish_time, number_of_goals, number_of_face_offs, number_of_shots, number_of_missed_shots, number_of_takeaways
+
+    cursor.execute(game_plays_query)
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+# Game Skater Stats
 
 def game_skater_stats():
     return render_template("game_skater_stats.html")
+
+# Game Goalie Stats
 
 def get_goalie_stats():
     conn = mysql.connector.connect(**MYSQL_CONFIG)

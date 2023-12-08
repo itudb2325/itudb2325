@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% block title %} Goalie Stats {% endblock %}
-
+<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+{% block title %} Game Plays {% endblock %}
 {% block content %}
 
 <!-- Gülşah Yorulmaz 150200093 -->
@@ -9,22 +9,39 @@
 <h2 class="shadow2">Game Plays</h2>
 
 <!-- Table for Game Plays -->
-<table class="tg">
-	<thead>
-		<tr>
-			<td class="tg-0lax">Game Date</td>
-			<td class="tg-0lax">Team 1</td>
-			<td class="tg-0lax">Team 2</td>
-			<td class="tg-0lax">Game Schedule Time</td>
-			<td class="tg-0lax">Game Finish Time</td>
-			<td class="tg-0lax">Number of Goals</td>
-			<td class="tg-0lax">Number of Face-offs</td>
-			<td class="tg-0lax">Number of Shots</td>
-			<td class="tg-0lax">Number of Missed Shots</td>
-			<td class="tg-0lax">Number of Takeaways</td
-		</tr>
-	</thead>
-</table>
 
-
+<div class="container">
+    <div class="row">
+        <div class="col md-12">
+            <table class="table table-striped table-hover" id="game_plays">
+                <tr>
+                    <th>Game Date</th>
+                    <th>Team 1</th>
+                    <th>Team 2</th>
+                    <!-- <th>Game Schedule Time</th>
+                    <th>Game Finish Time</th>
+                    <th>Number of Goals</th>
+                    <th>Number of Face-offs</th>
+                    <th>Number of Shots</th>
+                    <th>Number of Missed Shots</th>
+                    <th>Number of Takeaways</th> -->
+                </tr>
+                {% for game_play in game_plays %}
+                <tr>
+                    <td>{{ game_play.game_date }}</td>
+                    <td>{{ game_play.team1 }}</td>
+                    <td>{{ game_play.team2 }}</td>
+                    <!-- <td>{{ game_play.game_schedule_time }}</td>
+                    <td>{{ game_play.game_finish_time }}</td>
+                    <td>{{ game_play.number_of_goals }}</td>
+                    <td>{{ game_play.number_of_face_offs }}</td>
+                    <td>{{ game_play.number_of_shots }}</td>
+                    <td>{{ game_play.number_of_missed_shots }}</td>
+                    <td>{{ game_play.number_of_takeaways}}</td> -->
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
 {% endblock %}

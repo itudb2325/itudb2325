@@ -166,7 +166,7 @@ footer {
 	height: 65px;
 	width: 65px;
 }
-p {
+p, ul {
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
 	font-size: large;
@@ -192,7 +192,7 @@ p {
 	background-color: #f0f8ff50;
 }
 
-.column1.side2 p {
+.column1.side2 p, .column1.side2 ul {
 	text-align: left;
 }
 
