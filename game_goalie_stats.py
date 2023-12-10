@@ -51,8 +51,6 @@ game_goalie_stats_df = sorted_game_goalie_stats_df.head(50)
 data_to_insert = game_goalie_stats_df.where(pd.notna(game_goalie_stats_df), None).to_numpy().tolist()
 cursor.executemany(insert_query, data_to_insert)
 
-
-
 #creating the player_info table
 
 #Filtering the player_id column in player_info
@@ -97,6 +95,16 @@ player_info_df = sorted_player_info_df.head(50)
 
 data_to_insert = player_info_df.where(pd.notna(player_info_df), None).to_numpy().tolist()
 cursor.executemany(insert_query, data_to_insert)
+
+foreign_key_query = '''
+ALTER TABLE game_goalie_stats
+ADD CONSTRAINT my_foreign_key
+FOREIGN KEY (player_id)
+REFERENCES player_info(player_id)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+'''
+cursor.execute(foreign_key_query)
 
 
 #creating the team_info table
