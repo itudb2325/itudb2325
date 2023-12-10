@@ -2,21 +2,7 @@ import mysql.connector
 import pandas as pd
 from config import MYSQL_CONFIG
 
-class GoalieStats:
-    def __init__(self, id, game_id, player_id, team_id, timeOnIce, shots, saves,
-                 powerPlaySaves, evenSaves, evenShotsAgainst, powerPlayShotsAgainst):
-        self.id = id
-        self.game_id = game_id
-        self.player_id = player_id
-        self.team_id = team_id
-        self.timeOnIce = timeOnIce
-        self.shots = shots
-        self.saves = saves
-        self.powerPlaySaves = powerPlaySaves
-        self.evenSaves = evenSaves
-        self.evenShotsAgainst = evenShotsAgainst
-        self.powerPlayShotsAgainst = powerPlayShotsAgainst
-
+#The game_goalie_stats table
 conn = mysql.connector.connect(**MYSQL_CONFIG)
 cursor = conn.cursor()
 
@@ -65,8 +51,107 @@ game_goalie_stats_df = sorted_game_goalie_stats_df.head(50)
 data_to_insert = game_goalie_stats_df.where(pd.notna(game_goalie_stats_df), None).to_numpy().tolist()
 cursor.executemany(insert_query, data_to_insert)
 
+
+
+#creating the player_info table
+
+#Filtering the player_id column in player_info
+cursor.execute("SELECT DISTINCT player_id FROM game_goalie_stats")
+existing_player_ids = [row[0] for row in cursor.fetchall()]
+
+cursor.execute("DROP TABLE IF EXISTS player_info")
+player_info_query = '''
+    CREATE TABLE player_info(
+        player_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+        firstName varchar(20),
+        lastName varchar(20),
+        nationality varchar(10),
+        birthCity varchar(40),
+        primaryPosition varchar(10),
+        height_cm double
+    )
+'''
+cursor.execute(player_info_query)
+
+const_df = pd.read_csv('nhl-db/player_info.csv', usecols=[
+    'player_id',
+    'firstName',
+    'lastName',
+    'nationality',
+    'birthCity',
+    'primaryPosition',
+    'height_cm'
+])
+
+# Filter rows based on existing_player_ids
+filtered_player_info_df = const_df[const_df['player_id'].isin(existing_player_ids)]
+
+insert_query = '''
+    INSERT INTO player_info
+    (player_id, firstName, lastName, nationality, birthCity, 
+    primaryPosition, height_cm)
+    VALUES (%s, %s, %s, %s, %s, %s, %s)
+'''
+sorted_player_info_df = filtered_player_info_df.sort_values(by=["player_id"], ascending=True)
+player_info_df = sorted_player_info_df.head(50)
+
+data_to_insert = player_info_df.where(pd.notna(player_info_df), None).to_numpy().tolist()
+cursor.executemany(insert_query, data_to_insert)
+
+
+#creating the team_info table
+#Doing the same filtering
+cursor.execute("SELECT DISTINCT team_id FROM game_goalie_stats")
+existing_team_ids = [row[0] for row in cursor.fetchall()]
+
+cursor.execute("DROP TABLE IF EXISTS team_info")
+team_info_query = '''
+    CREATE TABLE team_info(
+        team_id INT NOT NULL PRIMARY KEY,
+        franchiseId INT,
+        shortName varchar(30),
+        teamName varchar(30),
+        abbreviation varchar(10)
+    )
+'''
+cursor.execute(team_info_query)
+
+const_df = pd.read_csv('nhl-db/team_info.csv', usecols=[
+    'team_id',
+    'franchiseId',
+    'shortName',
+    'teamName',
+    'abbreviation'
+])
+
+# Filter rows based on existing_team_ids
+filtered_team_info_df = const_df[const_df['team_id'].isin(existing_team_ids)]
+
+insert_query = '''
+    INSERT INTO team_info
+    (team_id, franchiseId, shortName, teamName, abbreviation)
+    VALUES (%s, %s, %s, %s, %s)
+'''
+sorted_team_info_df = filtered_team_info_df.sort_values(by=["team_id"], ascending=True)
+team_info_df = sorted_team_info_df.head(50)
+
+data_to_insert = team_info_df.where(pd.notna(team_info_df), None).to_numpy().tolist()
+cursor.executemany(insert_query, data_to_insert)
+
+foreign_key_query = '''
+ALTER TABLE game_goalie_stats
+ADD CONSTRAINT my_foreign_key2
+FOREIGN KEY (team_id)
+REFERENCES team_info(team_id)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+'''
+cursor.execute(foreign_key_query)
+
 conn.commit()
+cursor.close()
 conn.close()
+
 
 def create_goalie_stats(game_id, player_id, team_id, timeOnIce,
                         shots, saves, powerPlaySaves,
@@ -102,12 +187,35 @@ def update_goalie_stats(id, game_id, player_id, team_id,
     conn.commit()
     conn.close()
 
+def update_player(player_id, firstName, lastName, nationality, birthCity, 
+    primaryPosition, height_cm):
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor()
+
+    update_query = '''UPDATE player_info SET firstName = %s, lastName = %s, nationality = %s, birthCity = %s, 
+    primaryPosition = %s, height_cm = %s WHERE player_id = %s'''
+    cursor.execute(update_query, (firstName, lastName, nationality, birthCity, 
+    primaryPosition, height_cm, player_id,))
+
+    conn.commit()
+    conn.close()
+
 def delete_goalie_stats_by_id(id):
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor()
 
     delete_query = '''DELETE FROM game_goalie_stats WHERE id = %s'''
     cursor.execute(delete_query, (id,))
+
+    conn.commit()
+    conn.close()
+
+def delete_player_by_id(player_id):
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor()
+
+    delete_query = '''DELETE FROM player_info WHERE player_id = %s'''
+    cursor.execute(delete_query, (player_id,))
 
     conn.commit()
     conn.close()

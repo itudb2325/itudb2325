@@ -6,10 +6,17 @@
 <div class="container">
     <div class="row">
         <div class="col md-12">
-          <td class="button-container"> 
-            <a name="create_goalie" id="create_goalie" class="btn btn-dark right-button" 
-               href="{{ url_for('create_goalie') }}" role="button">Create Goalie</a>
-          </td>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <form action="{{ url_for('search_goalie_stats') }}" method="post" class="input-group mb-3">
+                        <input type="text" class="form-control" value="{{ search }}" placeholder="game ID.." id="search" name="search">
+                        <button type="submit" class="btn btn-secondary">Search</button>
+                    </form>
+                </div>
+                <div>
+                    <a name="create_goalie" id="create_goalie" class="btn btn-dark float-right" href="{{ url_for('create_goalie') }}" role="button">Create Goalie</a>
+                </div>
+            </div>
             <table class="table table-striped table-hover" id="game_goalie_stats">
                 <tr>
                     <th>ID</th>
@@ -46,6 +53,47 @@
                     <td>
                         <form method="post" action="{{ url_for('delete_goalie_stats') }}">
                             <input type="hidden" name="id" value="{{ goalie.id }}">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col md-12">
+            <table class="table table-striped table-hover" id="player_info">
+                <tr>
+                    <th>Player ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Nationality</th>
+                    <th>Birth City</th>
+                    <th>Primary Position</th>
+                    <th>Height in cm</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                {% for player in player_info %}
+                <tr>
+                    <td>{{ player.player_id }}</td>
+                    <td>{{ player.firstName }}</td>
+                    <td>{{ player.lastName }}</td>
+                    <td>{{ player.nationality }}</td>
+                    <td>{{ player.birthCity }}</td>
+                    <td>{{ player.primaryPosition }}</td>
+                    <td>{{ player.height_cm }}</td>
+                    <td>
+                        <a name="update_player_info" id="update_player_info" class="btn btn-outline-secondary btn-sm" 
+                           href="{{ url_for('update_player_info', player_id=player.player_id)  }}" role="button">Update</a>
+                     </td> 
+                    <td>
+                        <form method="post" action="{{ url_for('delete_player') }}">
+                            <input type="hidden" name="player_id" value="{{ player.player_id }}">
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                         </form>
                     </td>

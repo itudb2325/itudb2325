@@ -2,7 +2,7 @@ from flask import Flask, current_app, abort, render_template, request, redirect,
 import mysql.connector
 import pandas as pd
 from config import MYSQL_CONFIG  # Assuming you have a configuration file
-from game_goalie_stats import delete_goalie_stats_by_id, create_goalie_stats, update_goalie_stats
+from game_goalie_stats import delete_goalie_stats_by_id, delete_player_by_id, create_goalie_stats, update_goalie_stats, update_player
 from game_teams_stats import delete_teams_stats_by_id, create_teams_stats, update_teams_stats
 import os
 
@@ -46,10 +46,21 @@ def game_plays():
 def game_skater_stats():
     return render_template("game_skater_stats.html")
 
+
+#Game Goalie Stats Table
+
 def get_goalie_stats():
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor(dictionary=True)  
     cursor.execute("SELECT * FROM game_goalie_stats")
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+def get_player_info():
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)  
+    cursor.execute("SELECT * FROM player_info")
     results = cursor.fetchall()
     conn.close()
     return results
@@ -62,14 +73,30 @@ def get_goalie_stats_by_id(id):
     conn.close()
     return results
 
+def get_player_info_by_id(player_id):
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)  
+    cursor.execute("SELECT * FROM player_info WHERE player_id = %s", (player_id,))
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
 def game_goalie_stats():
     goalie_stats = get_goalie_stats()
-    return render_template("game_goalie_stats.html", goalie_stats=goalie_stats)
+    player_info = get_player_info()
+    return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, player_info=player_info)
 
 def delete_goalie_stats():
     if request.method == 'POST':
         id = request.form.get('id')
         delete_goalie_stats_by_id(id)
+
+    return redirect(url_for('game_goalie_stats'))
+
+def delete_player():
+    if request.method == 'POST':
+        player_id = request.form.get('player_id')
+        delete_player_by_id(player_id)
 
     return redirect(url_for('game_goalie_stats'))
 
@@ -95,6 +122,24 @@ def update_goalie(id):
                             evenShotsAgainst, powerPlayShotsAgainst)
 
         return redirect(url_for('game_goalie_stats'))
+    
+def update_player_info(player_id):
+    if request.method == 'GET':
+        player_info = get_player_info_by_id(player_id)
+        return render_template('update_player.html', player_id=player_id, player_info=player_info)
+
+    else:
+        firstName = request.form.get('firstName')
+        lastName = request.form.get('lastName')
+        nationality = request.form.get('nationality')
+        birthCity = request.form.get('birthCity')
+        primaryPosition = request.form.get('primaryPosition')
+        height_cm = request.form.get('height_cm')
+        
+        update_player(player_id, firstName, lastName, nationality, birthCity, 
+    primaryPosition, height_cm)
+
+        return redirect(url_for('game_goalie_stats'))
 
 def create_goalie():
     if request.method == 'GET':
@@ -117,6 +162,25 @@ def create_goalie():
                             evenShotsAgainst, powerPlayShotsAgainst)
 
         return redirect(url_for('game_goalie_stats'))
+    
+    
+def search_by_game_id(game_id):
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)  
+    cursor.execute("SELECT * FROM game_goalie_stats WHERE game_id LIKE %s", (str(game_id) + '%',))
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+def search_goalie_stats():
+    if request.method == 'POST':
+        search_val = request.form.get('search')
+        goalie_stats = search_by_game_id(search_val)
+        player_info = get_player_info()
+        return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, player_info=player_info)
+
+    return render_template("game_goalie_stats.html")
+
     
 
 # Game Teams Stats
