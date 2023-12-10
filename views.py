@@ -3,7 +3,7 @@ import mysql.connector
 import pandas as pd
 from config import MYSQL_CONFIG  # Assuming you have a configuration file
 from game_goalie_stats import delete_goalie_stats_by_id, delete_player_by_id, create_goalie_stats, update_goalie_stats, update_player
-from game_teams_stats import delete_teams_stats_by_id, create_teams_stats, update_teams_stats
+from game_teams_stats import delete_teams_stats_by_id, create_teams, update_teams
 import os
 
 def configure_app(app):
@@ -39,15 +39,34 @@ def index_page():
     image_paths = generate_image_paths()
     return render_template('index.html', **image_paths, active_page = 'index')
 
+# Game Plays
+
 def game_plays():
-    image_paths = generate_image_paths()
-    return render_template("game_plays.html", **image_paths, active_page = 'game_plays')
+    game_plays = get_game_plays()
+    return render_template("game_plays.html", active_page = 'game_plays', game_plays = game_plays)
+
+def get_game_plays():
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)
+    game_plays_query = '''
+        SELECT date_time as game_date, team_id_for as team1, team_id_against as team2 FROM game_plays
+    '''
+
+    #, game_schedule_time, game_finish_time, number_of_goals, number_of_face_offs, number_of_shots, number_of_missed_shots, number_of_takeaways
+
+    cursor.execute(game_plays_query)
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+# Game Skater Stats
 
 def game_skater_stats():
     return render_template("game_skater_stats.html")
 
 
 #Game Goalie Stats Table
+# Game Goalie Stats
 
 def get_goalie_stats():
     conn = mysql.connector.connect(**MYSQL_CONFIG)
@@ -212,7 +231,7 @@ def delete_teams_stats():
 
     return redirect(url_for('game_teams_stats'))
 
-def update_teams(id):
+def update_teams_stats(id):
     if request.method == 'GET':
         teams_stats = get_teams_stats_by_id(id)
         return render_template('update_teams_stats.html', id=id, teams_stats=teams_stats)
@@ -236,11 +255,11 @@ def update_teams(id):
         blocked = request.form.get('blocked')
         startRinkSide = request.form.get('startRinkSide')
 
-        update_teams_stats(id,game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide)
+        update_teams(id,game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide)
 
         return redirect(url_for('game_teams_stats'))
 
-def create_teams():
+def create_teams_stats():
     if request.method == 'GET':
         return render_template('create_teams_stats.html')
 
@@ -263,6 +282,6 @@ def create_teams():
         blocked = request.form.get('blocked')
         startRinkSide = request.form.get('startRinkSide')
 
-        create_teams_stats(game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide)
+        create_teams(game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide)
 
         return redirect(url_for('game_teams_stats'))

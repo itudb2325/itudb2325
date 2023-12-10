@@ -2,10 +2,76 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 
-<!-- Header -->
-<h2 class="shadow">Home Page</h2>
+<div class="row2">
+    <div class="column1 side2">
+        <h2 class="main_side_col_header shadow2">About NHL</h2>
+        <p>The National Hockey League (NHL) is a professional ice hockey league in North America comprising 32 teams—25
+            in the United States and 7 in Canada. The NHL is one of the major professional sports leagues in the United States
+            and Canada and is considered to be the top ranked professional ice hockey league in the world.</p>
+    </div>
 
-<p>This website was created to provide information about the National Hockey League (NHL).</p>
+    <div class="column1 middle2">
+        <!-- Header -->
+        <h2 class="shadow2">Home Page</h2>
+        
+        <p>This website was created to provide information about the National Hockey League (NHL).</p>
+
+        <audio controls autoplay>
+            <source src="{{ url_for('static', filename='nhlmusic.mp3') }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="column1 side2">
+        <h2 class="main_side_col_header shadow2">Teams</h2>
+        <ul>
+            <li>Atlantic Division</li>
+            <ul>
+                <li>Boston Bruins</li>
+                <li>Buffalo Sabres</li>
+                <li>Detroit Red Wings</li>
+                <li>Florida Panthers</li>
+                <li>Montreal Canadiens</li>
+                <li>Ottawa Senators</li>
+                <li>Tampa Bay Lightning</li>
+                <li>Toronto Maple Leafs</li>
+            </ul>
+            <li>Metropolitan Division</li>
+            <ul>
+                <li>Carolina Hurricanes</li>
+                <li>Columbus Blue Jackets</li>
+                <li>New Jersey Devils</li>
+                <li>New York Islanders</li>
+                <li>New York Rangers</li>
+                <li>Philadelphia Flyers</li>
+                <li>Pittsburgh Penguins</li>
+                <li>Washington Capitals</li>
+            </ul>
+            <li>Central Division</li>
+            <ul>
+                <li>Arizona Coyoters</li>
+                <li>Chicago Blackhawks</li>
+                <li>Colorado Avalanche</li>
+                <li>Dallas Stars</li>
+                <li>Minnesota Wild</li>
+                <li>Nashville Predators</li>
+                <li>St. Louis Blues</li>
+                <li>Winnipeg Jets</li>
+            </ul>
+            <li>Pacific Division</li>
+            <ul>
+                <li>Anaheim Ducks</li>
+                <li>Calgary Flames</li>
+                <li>Edmonton Oilers</li>
+                <li>Los Angeles Kings</li>
+                <li>San Jose Sharks</li>
+                <li>Seattle Kraken</li>
+                <li>Vancouver Canucks</li>
+                <li>Vegas Golden Knights</li>
+            </ul>
+        </ul>
+    </div>
+</div>
 
 {% endblock %}
 
