@@ -103,7 +103,7 @@ def get_player_info_by_id(player_id):
 def game_goalie_stats():
     goalie_stats = get_goalie_stats()
     player_info = get_player_info()
-    return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, player_info=player_info)
+    return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, player_info=player_info, active_page = 'game_goalie_stats')
 
 def delete_goalie_stats():
     if request.method == 'POST':

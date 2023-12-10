@@ -30,10 +30,8 @@ create_game_plays_table = '''
         goals_home INT,
         description VARCHAR(255),
         st_x INT,
-        st_y INT,
+        st_y INT
 
-        FOREIGN KEY (team_id_for) REFERENCES team_info(team_id),
-        FOREIGN KEY (team_id_against) REFERENCES team_info(team_id)
     )
 '''
 

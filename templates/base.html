@@ -13,7 +13,7 @@
     </head>
     <body>
         <header>
-            <div class="row2">
+            <div class="row">
                 <div class="column1 header_side">
                     <img src="{{ url_for('static', filename = 'img/05_NHL_Shield.svg.webp') }}" alt="nhl logo" class="logo">
                 </div>
@@ -35,7 +35,7 @@
             <a class="{% if active_page == 'index' %}active{% endif %}" href="{{ url_for('index_page') }}"><b>HOME PAGE</b></a>
             <a href="{{ url_for('game_teams_stats') }}"><b>GAME TEAMS STATS</b></a>
             <a href="{{ url_for('game_skater_stats') }}"><b>GAME SKATER STATS</b></a>
-            <a href="{{ url_for('game_goalie_stats') }}"><b>GAME GOALIE STATS</b></a>
+            <a class="{% if active_page == 'game_goalie_stats' %}active{% endif %}" href="{{ url_for('game_goalie_stats') }}"><b>GAME GOALIE STATS</b></a>
             <a class="{% if active_page == 'game_plays' %}active{% endif %}" href="{{ url_for('game_plays') }}"><b>GAME PLAYS</b></a>
         </div>
 
