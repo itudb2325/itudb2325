@@ -72,13 +72,13 @@ connection.commit()
 cursor.close()
 connection.close()
 
-def create_teams_stats(game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide):
+def create_teams(game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide):
     connection = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = connection.cursor()
 
     create = '''
                     INSERT INTO game_teams_stats(game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 '''
     cursor.execute(create, (game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide))
 
@@ -86,7 +86,7 @@ def create_teams_stats(game_id,team_id,HoA,won,settled_in,head_coach,goals,shots
     cursor.close()
     connection.close()
 
-def update_teams_stats(id,game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide):
+def update_teams(id,game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide):
     connection = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = connection.cursor()
 

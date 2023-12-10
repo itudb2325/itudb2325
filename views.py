@@ -3,7 +3,7 @@ import mysql.connector
 import pandas as pd
 from config import MYSQL_CONFIG  # Assuming you have a configuration file
 from game_goalie_stats import delete_goalie_stats_by_id, create_goalie_stats, update_goalie_stats
-from game_teams_stats import delete_teams_stats_by_id, create_teams_stats, update_teams_stats
+from game_teams_stats import delete_teams_stats_by_id, create_teams, update_teams
 import os
 
 def configure_app(app):
@@ -168,7 +168,7 @@ def delete_teams_stats():
 
     return redirect(url_for('game_teams_stats'))
 
-def update_teams(id):
+def update_teams_stats(id):
     if request.method == 'GET':
         teams_stats = get_teams_stats_by_id(id)
         return render_template('update_teams_stats.html', id=id, teams_stats=teams_stats)
@@ -192,11 +192,11 @@ def update_teams(id):
         blocked = request.form.get('blocked')
         startRinkSide = request.form.get('startRinkSide')
 
-        update_teams_stats(id,game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide)
+        update_teams(id,game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide)
 
         return redirect(url_for('game_teams_stats'))
 
-def create_teams():
+def create_teams_stats():
     if request.method == 'GET':
         return render_template('create_teams_stats.html')
 
@@ -219,6 +219,6 @@ def create_teams():
         blocked = request.form.get('blocked')
         startRinkSide = request.form.get('startRinkSide')
 
-        create_teams_stats(game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide)
+        create_teams(game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide)
 
         return redirect(url_for('game_teams_stats'))

@@ -8,7 +8,7 @@
         <div class="col md-12">
           <td class="button-container"> 
             <a name="create_teams_stats" id="create_teams_stats" class="btn btn-dark right-button" 
-               href="{{ url_for('game_teams_stats') }}" role="button">Create Teams</a>
+               href="{{ url_for('create_teams_stats') }}" role="button">Create Teams</a>
           </td>
             <table class="table table-striped table-hover" id="game_teams_stats">
                 <tr>
@@ -55,10 +55,10 @@
                     <td>{{ teams.startRinkSide}}</td>
                     <td>
                         <a name="update_teams_stats" id="update_teams_stats" class="btn btn-outline-secondary btn-sm" 
-                           href="{{ url_for('game_teams_stats', id=teams.id)  }}" role="button">Update</a>
+                           href="{{ url_for('update_teams_stats', id=teams.id)  }}" role="button">Update</a>
                      </td>         
                     <td>
-                        <form method="post" action="{{ url_for('game_teams_stats') }}">
+                        <form method="post" action="{{ url_for('delete_teams_stats') }}">
                             <input type="hidden" name="id" value="{{ teams.id }}">
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                         </form>
