@@ -1,0 +1,10 @@
+01.11.2023 - Week 5
+    - I created my page (game_plays.html) and added html components.
+11.11.2023 - Week 6
+    - I added a navbar and developed my page.
+19.11.2023 - Week 7
+    - I added a table to my page and revised the previous style choises. I also edited index.html to obtain a better visual.
+01.12.2023 - Week 9
+    - I connected the project to the database, created my table inside the database, and added my dataset to the project.
+08.12.2023 - Week 10
+    - I displayed the data from my table on my webpage and beautified base.html.
