@@ -1,8 +1,18 @@
 {% extends "base.html" %}
+
+<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
 {% block title %} Game Skater Stats {% endblock %}
-
 {% block content %}
-
+<div class="container" style="margin-top: 15px;">
+    <div class="row">
+        <div class="col md-12">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <form action="{{ url_for('game_skater_stats') }}" method="post" class="input-group mb-3">
+                        <input type="text" class="form-control" value="{{ search }}" placeholder="game ID.." id="search" name="search">
+                        <button type="submit" class="btn btn-secondary">Search</button>
+                    </form>
+                </div>
 <!-- Selin Durmuş 150220771 -->
 
 <!-- Header -->
