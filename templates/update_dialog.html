@@ -1,17 +1,18 @@
 <dialog id="dialog_{{ goalie.id }}" class="dialog-style">
         <div class="modal-dialog">
           <div class="modal-content">
-    
-    <div class="d-flex justify-content-around align-items-center">
-        <h2 class="modal-title">Update Goalie number {{goalie.id}}</h2>
-        <button id="closeDialog_{{ goalie.id }}" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        
-     </div>
+
+            <h2 class="goalie-info-header">
+                <div data-bs-theme="dark" class="d-flex justify-content-around align-items-center">
+                    <h2 class="modal-title">Update Goalie number {{goalie.id}}</h2>
+                    <button id="closeDialog_{{ goalie.id }}" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </h2>
     <form action="{{ url_for('update_goalie', id=goalie.id) }}" method="POST" class="form-style">
 
         <div class="input-group mb-3">
         <label for="game_id" class="input-group-text">Game ID:</label>
-        <div class="col-2">
+        <div class="col-6">
            <input class="form-control" type="text" name="game_id" id="game_id" value="{{ goalie_stats[goalie.id-1].game_id }}">
         </div>
      </div>
@@ -79,7 +80,7 @@
         </div>
      </div>
      <div class="modal-footer">
-        <button type="submit" class="btn btn-outline-primary">Update Goalie</button>
+        <button type="submit" class="btn btn-dark">Update Goalie</button>
      </div>
     </form>
 </div>

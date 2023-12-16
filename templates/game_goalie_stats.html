@@ -109,6 +109,7 @@
     </div>
 </div>
 
+
 <script>
     function openDialog(goalieId) {
         const dialog = document.getElementById("dialog_" + goalieId);
@@ -132,6 +133,11 @@
         document.getElementById('dialog').showModal();
     }
 
+
+    document.getElementById('closeDialog').addEventListener('click', function () {
+       
+        document.getElementById('dialog').close();
+    });
 
 </script>
 

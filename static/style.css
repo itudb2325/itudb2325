@@ -243,10 +243,17 @@ p, ul {
 
 .dialog-style {
 	margin: auto;
-	margin-bottom: 200px;
 	width: 600px;
 	height: 500px;
 	overflow-x: hidden;
+	background-color: rgb(205, 187, 149);
+}
+
+.dialog-header {
+	background-color: #ffac1cc4;
+    color: #292828; 
+    padding: 10px; 
+	font-size: 23px;
 }
 
 .dialog-style-infogoalie{

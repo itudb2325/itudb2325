@@ -1,8 +1,10 @@
 <dialog id="dialog" class="dialog-style">
-    <div class="d-flex justify-content-around align-items-center">
-        <h2> Create Goalie</h2>
-        <button id="closeDialog" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-     </div>
+    <h2 class="goalie-info-header">
+        <div data-bs-theme="dark" class="d-flex justify-content-around align-items-center">
+            <h2> Create Goalie</h2>
+            <button id="closeDialog" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+    </h2>
     <form action="{{ url_for('create_goalie') }}" method="POST" class="form-style">
         
         <div class="input-group mb-3">
@@ -74,7 +76,7 @@
            <input class="form-control" type="text" name="powerPlayShotsAgainst" id="powerPlayShotsAgainst" value="{{ powerPlayShotsAgainst }}">
         </div>
      </div>
-     <button type="submit" class="btn btn-outline-primary">Create Goalie</button>
+     <button type="submit" class="btn btn-dark">Create Goalie</button>
      </form>
      
   </dialog>
