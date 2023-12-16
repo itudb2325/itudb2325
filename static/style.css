@@ -58,6 +58,14 @@ h2 {
 	padding: 1%;
 }
 
+h3 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 7px;
+	text-align: center;
+	padding: 1%;
+}
+
+
 .image-container {
 	position: absolute;
 	top: 0;
@@ -230,4 +238,42 @@ p, ul {
 .main_side_col_header {
 	font-size: 20px;
 	padding: 20px;
+}
+
+
+.dialog-style {
+	margin: auto;
+	margin-bottom: 200px;
+	width: 600px;
+	height: 500px;
+	overflow-x: hidden;
+}
+
+.dialog-style-infogoalie{
+	margin: auto;
+	width: 600px;
+	height: 510px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.form-style {
+	margin: 30px;
+}
+
+.goalie-info-header {
+    background-color: #242424; 
+    color: #fff; 
+    padding: 10px; 
+	font-size: 23px;
+}
+
+.goalie-pic {
+	position: center;
+	height: 180px;
+}
+
+.goalie-name-div {
+    background-color: #e08e00;
+    color: #ffffff; 
 }

@@ -1,0 +1,48 @@
+<dialog id="infoDialog_{{ goalie.id }}" class="dialog-style-infogoalie">
+    <h2 class="goalie-info-header">
+        <div data-bs-theme="dark" class="d-flex justify-content-around align-items-center">
+            <h2>Info for Goalie Stats with Id - {{goalie.id}} </h2>
+            <button id="closeInfoDialog_{{ goalie.id }}" class="btn-close" aria-label="Close"></button>
+        </div>
+    </h2>
+    
+    <div class="d-flex justify-content-center">
+        <div>
+            <a><img class="goalie-pic" title="goalie" src="{{ url_for('static', filename = 'img/goalie.png') }}"></a>
+        </div>
+        <div class="d-flex flex-column mb-3">
+            <h3>Goalie: </h3>
+            <h3>{{goalie_info[goalie.id-1][4]}} {{goalie_info[goalie.id-1][5]}}</h3>
+            <h3>{{goalie_info[goalie.id-1][6]}}</h3>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <h3>Team: </h3>
+        <h3>{{goalie_info[goalie.id-1][7]}}</h3>
+        <h3>{{goalie_info[goalie.id-1][8]}}</h3>
+    </div>
+
+    <div class="d-flex justify-content-between" style="background-color: rgb(144, 144, 144);">
+        <div class="d-flex flex-column mb-3">
+            <h3>Home Team: </h3>
+            <h3>{{goalie_info[goalie.id-1][2]}}</h3>
+        </div>
+        <div class="d-flex flex-column mb-3">
+            <h3>Result: </h3>
+            <h3>{{goalie_info[goalie.id-1][3]}}</h3>
+        </div>
+        <div class="d-flex flex-column mb-3">
+            <h3>Away Team: </h3>
+            <h3>{{goalie_info[goalie.id-1][1]}}</h3>
+        </div>
+    </div>
+    
+    <h3 style="background-color: rgb(255, 215, 121);">Game Venue: {{goalie_info[goalie.id-1][0]}}</h3>
+
+
+</dialog>
+
+<p>
+    <button class="btn btn-dark float-right" onclick="openInfoDialog('{{ goalie.id }}')">Info</button>
+  </p>
+<p id="dialogStatus"></p>

@@ -1,0 +1,86 @@
+<dialog id="dialog" class="dialog-style">
+    <div class="d-flex justify-content-around align-items-center">
+        <h2> Create Goalie</h2>
+        <button id="closeDialog" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+    <form action="{{ url_for('create_goalie') }}" method="POST" class="form-style">
+        
+        <div class="input-group mb-3">
+        <label for="game_id" class="input-group-text">Game ID:</label>
+        <div class="col-6">
+           <input class="form-control" type="text" name="game_id" id="game_id" value="{{ game_id }}">
+        </div>
+     </div>
+     
+     <div class="input-group mb-3">
+        <label for="player_id" class="input-group-text">Player ID:</label>
+        <div class="col-6">
+           <input class="form-control" type="text" name="player_id" id="player_id" value="{{ player_id }}">
+        </div>
+     </div>
+     
+     <div class="input-group mb-3">
+        <label for="team_id" class="input-group-text">Team ID:</label>
+        <div class="col-6">
+           <input class="form-control" type="text" name="team_id" id="team_id" value="{{ team_id }}">
+        </div>
+     </div>
+     
+     <div class="input-group mb-3">
+        <label for="timeOnIce" class="input-group-text">Time On Ice:</label>
+        <div class="col-6">
+           <input class="form-control" type="text" name="timeOnIce" id="timeOnIce" value="{{ timeOnIce }}">
+        </div>
+     </div>
+     
+     <div class="input-group mb-3">
+        <label for="shots" class="input-group-text">Shots:</label>
+        <div class="col-6">
+           <input class="form-control" type="text" name="shots" id="shots" value="{{ shots }}">
+        </div>
+     </div>
+     
+     <div class="input-group mb-3">
+        <label for="saves" class="input-group-text">Saves:</label>
+        <div class="col-6">
+           <input class="form-control" type="text" name="saves" id="saves" value="{{ saves }}">
+        </div>
+     </div>
+     
+     <div class="input-group mb-3">
+        <label for="powerPlaySaves" class="input-group-text">Power Play Saves:</label>
+        <div class="col-6">
+           <input class="form-control" type="text" name="powerPlaySaves" id="powerPlaySaves" value="{{ powerPlaySaves }}">
+        </div>
+     </div>
+     
+     <div class="input-group mb-3">
+        <label for="evenSaves" class="input-group-text">Even Saves:</label>
+        <div class="col-6">
+           <input class="form-control" type="text" name="evenSaves" id="evenSaves" value="{{ evenSaves }}">
+        </div>
+     </div>
+     
+     <div class="input-group mb-3">
+        <label for="evenShotsAgainst" class="input-group-text">Even Shots Against:</label>
+        <div class="col-6">
+           <input class="form-control" type="text" name="evenShotsAgainst" id="evenShotsAgainst" value="{{ evenShotsAgainst }}">
+        </div>
+     </div>
+     
+     <div class="input-group mb-3">
+        <label for="powerPlayShotsAgainst" class="input-group-text">Power Play Shots Against:</label>
+        <div class="col-6">
+           <input class="form-control" type="text" name="powerPlayShotsAgainst" id="powerPlayShotsAgainst" value="{{ powerPlayShotsAgainst }}">
+        </div>
+     </div>
+     <button type="submit" class="btn btn-outline-primary">Create Goalie</button>
+     </form>
+     
+  </dialog>
+
+  
+  <p>
+    <button class="btn btn-dark float-right" onclick="openCreateDialog()">Create Goalie</button>
+  </p>
+  <p id="dialogStatus"></p>

@@ -91,7 +91,7 @@ insert_query = '''
     VALUES (%s, %s, %s, %s, %s, %s, %s)
 '''
 sorted_player_info_df = filtered_player_info_df.sort_values(by=["player_id"], ascending=True)
-player_info_df = sorted_player_info_df.head(50)
+player_info_df = sorted_player_info_df
 
 data_to_insert = player_info_df.where(pd.notna(player_info_df), None).to_numpy().tolist()
 cursor.executemany(insert_query, data_to_insert)
@@ -117,8 +117,8 @@ team_info_query = '''
     CREATE TABLE team_info(
         team_id INT NOT NULL PRIMARY KEY,
         franchiseId INT,
-        shortName varchar(30),
-        teamName varchar(30),
+        shortName varchar(50),
+        teamName varchar(50),
         abbreviation varchar(10)
     )
 '''
@@ -132,16 +132,13 @@ const_df = pd.read_csv('nhl-db/team_info.csv', usecols=[
     'abbreviation'
 ])
 
-# Filter rows based on existing_team_ids
-filtered_team_info_df = const_df[const_df['team_id'].isin(existing_team_ids)]
-
 insert_query = '''
     INSERT INTO team_info
     (team_id, franchiseId, shortName, teamName, abbreviation)
     VALUES (%s, %s, %s, %s, %s)
 '''
-sorted_team_info_df = filtered_team_info_df.sort_values(by=["team_id"], ascending=True)
-team_info_df = sorted_team_info_df.head(50)
+sorted_team_df = const_df.sort_values(by=["team_id"], ascending=True)
+team_info_df = sorted_team_df
 
 data_to_insert = team_info_df.where(pd.notna(team_info_df), None).to_numpy().tolist()
 cursor.executemany(insert_query, data_to_insert)
@@ -155,6 +152,64 @@ ON UPDATE CASCADE
 ON DELETE CASCADE;
 '''
 cursor.execute(foreign_key_query)
+
+#Create game.csv
+
+cursor.execute("DROP TABLE IF EXISTS game")
+game_query = '''
+    CREATE TABLE game(
+        game_id INT NOT NULL PRIMARY KEY,
+        away_team_id INT,
+        home_team_id INT,
+        outcome varchar(50),
+        venue varchar(40)
+    )
+'''
+cursor.execute(game_query)
+
+const_df = pd.read_csv('nhl-db/game.csv', usecols=[
+    'game_id',
+    'away_team_id',
+    'home_team_id',
+    'outcome',
+    'venue'
+])
+
+insert_query = '''
+    INSERT INTO game
+    (game_id, away_team_id, home_team_id, outcome, venue)
+    VALUES (%s, %s, %s, %s, %s)
+    ON DUPLICATE KEY UPDATE
+    away_team_id = VALUES(away_team_id),
+    home_team_id = VALUES(home_team_id),
+    outcome = VALUES(outcome),
+    venue = VALUES(venue)
+'''
+sorted_game_df = const_df.sort_values(by=["game_id"], ascending=True)
+game_df = sorted_game_df
+
+data_to_insert = game_df.where(pd.notna(game_df), None).to_numpy().tolist()
+cursor.executemany(insert_query, data_to_insert)
+
+cursor.execute("DROP VIEW IF EXISTS game_team")
+view_query = '''
+        CREATE VIEW game_team AS
+        SELECT
+        	game.game_id,
+            game.venue,
+            game.away_team_id,
+            team_info.teamName AS away_team_name,
+            game.home_team_id,
+            team_info_home.teamName AS home_team_name,
+            game.outcome
+        FROM
+            game
+        INNER JOIN
+            team_info ON game.away_team_id = team_info.team_id
+        INNER JOIN
+            team_info AS team_info_home ON game.home_team_id = team_info_home.team_id;
+'''
+cursor.execute(view_query)
 
 conn.commit()
 cursor.close()
@@ -178,6 +233,46 @@ def create_goalie_stats(game_id, player_id, team_id, timeOnIce,
 
     conn.commit()
     conn.close()
+
+def get_goalie_info():
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor()
+
+    info_query = '''
+        select game.venue, game.away_team_name, game.home_team_name, game.outcome,
+        player.firstName, player.lastName, player.birthCity, team.shortName, team.teamName
+        from game_goalie_stats goalie
+        inner join player_info player on goalie.player_id = player.player_id
+        inner join team_info team on goalie.team_id = team.team_id
+        inner join game_team game on goalie.game_id = game.game_id 
+    '''
+    cursor.execute(info_query)
+    results = cursor.fetchall()
+
+    conn.commit()
+    conn.close()
+    return results
+
+def get_goalie_info_by_id(id):
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor()
+
+    info_query = '''
+        select game.venue, game.away_team_name, game.home_team_name, game.outcome,
+        player.firstName, player.lastName, player.birthCity, team.shortName, team.teamName
+        from game_goalie_stats goalie
+        inner join player_info player on goalie.player_id = player.player_id
+        inner join team_info team on goalie.team_id = team.team_id
+        inner join game_team game on goalie.game_id = game.game_id 
+        where goalie.id = %s;
+    '''
+    cursor.execute(info_query, (id,))
+    results = cursor.fetchall()
+
+    conn.commit()
+    conn.close()
+    return results
+
 
 def update_goalie_stats(id, game_id, player_id, team_id,
             timeOnIce, shots, saves, powerPlaySaves,

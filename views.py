@@ -2,7 +2,7 @@ from flask import Flask, current_app, abort, render_template, request, redirect,
 import mysql.connector
 import pandas as pd
 from config import MYSQL_CONFIG  # Assuming you have a configuration file
-from game_goalie_stats import delete_goalie_stats_by_id, delete_player_by_id, create_goalie_stats, update_goalie_stats, update_player
+from game_goalie_stats import delete_goalie_stats_by_id, delete_player_by_id, create_goalie_stats, update_goalie_stats, update_player, get_goalie_info, get_goalie_info_by_id
 from game_teams_stats import delete_teams_stats_by_id, create_teams, update_teams
 import os
 
@@ -103,7 +103,8 @@ def get_player_info_by_id(player_id):
 def game_goalie_stats():
     goalie_stats = get_goalie_stats()
     player_info = get_player_info()
-    return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, player_info=player_info, active_page = 'game_goalie_stats')
+    goalie_info = get_goalie_info()
+    return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, player_info=player_info, active_page = 'game_goalie_stats', goalie_info=goalie_info)
 
 def delete_goalie_stats():
     if request.method == 'POST':
@@ -199,6 +200,13 @@ def search_goalie_stats():
         return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, player_info=player_info)
 
     return render_template("game_goalie_stats.html")
+
+def goalie_info(id):
+    if request.method == 'GET':
+        info = get_goalie_info_by_id(id)
+        return render_template('goalie_info.html', id=id, goalie_info=info)
+
+        
 
     
 
