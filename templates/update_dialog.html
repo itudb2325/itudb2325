@@ -1,3 +1,4 @@
+{% if goalie.id >= 0 and (goalie.id-1) < goalie_stats|length %}
 <dialog id="dialog_{{ goalie.id }}" class="dialog-style">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -93,3 +94,7 @@
     <button class="btn btn-outline-secondary btn-sm" onclick="openDialog('{{ goalie.id }}')">Update</button>
   </p>
   <p id="dialogStatus"></p>
+
+  {% else %}
+        <p>Error: Invalid goalie ID</p>
+    {% endif %}

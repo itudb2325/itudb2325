@@ -239,7 +239,7 @@ def get_goalie_info():
     cursor = conn.cursor()
 
     info_query = '''
-        select game.venue, game.away_team_name, game.home_team_name, game.outcome,
+        select goalie.id, game.venue, game.away_team_name, game.home_team_name, game.outcome,
         player.firstName, player.lastName, player.birthCity, team.shortName, team.teamName
         from game_goalie_stats goalie
         inner join player_info player on goalie.player_id = player.player_id
@@ -258,7 +258,7 @@ def get_goalie_info_by_id(id):
     cursor = conn.cursor()
 
     info_query = '''
-        select game.venue, game.away_team_name, game.home_team_name, game.outcome,
+        select goalie.id, game.venue, game.away_team_name, game.home_team_name, game.outcome,
         player.firstName, player.lastName, player.birthCity, team.shortName, team.teamName
         from game_goalie_stats goalie
         inner join player_info player on goalie.player_id = player.player_id
