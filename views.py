@@ -4,6 +4,7 @@ import pandas as pd
 from config import MYSQL_CONFIG  # Assuming you have a configuration file
 from game_goalie_stats import delete_goalie_stats_by_id, delete_player_by_id, create_goalie_stats, update_goalie_stats, update_player, get_goalie_info, get_goalie_info_by_id
 from game_teams_stats import delete_teams_stats_by_id, create_teams, update_teams
+from game_skater_stats import update_game_skater
 import os
 
 def configure_app(app):
@@ -60,21 +61,69 @@ def get_game_plays():
     return results
 
 # Game Skater Stats
-
-def game_skater_stats():
+def get_skater_stats():
     conn = mysql.connector.connect(**MYSQL_CONFIG)
-    cursor = conn.cursor(dictionary=True)
-    query = '''
-        SELECT * FROM game_skater_stats
-    '''
+    cursor = conn.cursor(dictionary=True)  
+    cursor.execute("SELECT * FROM game_skater_stats")
+    results = cursor.fetchall()
+    # for i in results:
+    #     print(i)
+    conn.close()
+    return render_template
 
-
-    cursor.execute(query)
+def get_skater_stats_by_id(id):
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)  # Use dictionary cursor for easier handling of results
+    cursor.execute("SELECT * FROM game_skater_stats WHERE id = %s", (id,))
     results = cursor.fetchall()
     conn.close()
-    #return results
+    return results
 
-    return render_template("game_skater_stats.html",results=results)
+def game_skater_stats():
+
+    try:
+        conn = mysql.connector.connect(**MYSQL_CONFIG)
+        cursor = conn.cursor(dictionary=True)
+        query = '''SELECT * FROM game_skater_stats'''
+
+        cursor.execute(query)
+        results = cursor.fetchall()
+        conn.close()
+    
+        print(results)
+        return render_template("game_skater_stats.html",results=results)
+    except:
+        print("HATA VAR AW")
+
+
+
+def game_skater_stats():
+
+    skater_stats = get_skater_stats()
+    return render_template("game_skater_stats.html", skater_stats=skater_stats)
+
+def update_skater_stats(id):
+    if request.method == 'GET':
+        skater_stats = get_skater_stats_by_id(id)
+        return render_template('update_skater_stats.html', results=skater_stats)
+
+
+    else:
+        game_id = request.form.get('game_id')
+        player_id = request.form.get('player_id')
+        team_id = request.form.get('team_id')
+        timeOnIce  = request.form.get('timeOnIce ')
+        assists  = request.form.get('assists ')
+        goals  = request.form.get('goals ')
+        shots  = request.form.get('shots ')
+        hits  = request.form.get('hits ')
+        powerPlayGoals  = request.form.get('powerPlayGoals ')        
+        powerPlayAssists  = request.form.get('powerPlayAssists ')
+      
+
+        update_skater_stats(id,game_id,player_id,team_id,timeOnIce,assists,goals,shots,goals,shots,hits,powerPlayGoals,powerPlayAssists,powerPlayGoals)
+
+        return redirect(url_for('game_skater_stats'))
 
 
 #Game Goalie Stats Table

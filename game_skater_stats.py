@@ -116,3 +116,19 @@ mycursor.executemany(insert_query, data_to_insert)
 
 # Commit the changes
 mydb.commit()
+
+def update_game_skater (    game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists):
+    connection = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = connection.cursor()
+
+    update = '''
+                    UPDATE game_skater_stats SET game_id = %s, player_id = %s, team_id = %s, timeOnIce = %s, assists = %s, goals = %s, shots = %s, hits = %s, powerPlayGoals = %s, powerPlayAssists = %s
+                    WHERE id = %s
+                '''
+    cursor.execute(update, (game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists))
+
+    connection.commit()
+    cursor.close()
+    connection.close()
+
+
