@@ -57,7 +57,11 @@
                         <td>{{ item.hits }}</td>
                         <td>{{ item.powerPlayGoals }}</td>
                         <td>{{ item.powerPlayAssists }}</td>
-                        
+                        <td>
+                            <a name="game_skater_stats" id="game_skater_stats" class="btn btn-outline-secondary btn-sm" 
+                               href="{{ url_for('game_skater_stats', id=item.id)  }}" role="button">Update</a>
+                         </td>         
+                        <td>
 
 
                         
