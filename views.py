@@ -258,14 +258,15 @@ def search_goalie_stats():
         search_val = request.form.get('search')
         goalie_stats = search_by_game_id(search_val)
         player_info = get_player_info()
-        return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, player_info=player_info)
+        goalie_info = get_goalie_info()
+        return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, player_info=player_info, goalie_info=goalie_info)
 
     return render_template("game_goalie_stats.html")
 
 def goalie_info(id):
     if request.method == 'GET':
         info = get_goalie_info_by_id(id)
-        return render_template('goalie_info.html', id=id, goalie_info=info)
+        return render_template('game_goalie_stats.html', id=id, goalie_info=info)
 
         
 
