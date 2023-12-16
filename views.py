@@ -62,7 +62,19 @@ def get_game_plays():
 # Game Skater Stats
 
 def game_skater_stats():
-    return render_template("game_skater_stats.html")
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)
+    query = '''
+        SELECT * FROM game_skater_stats
+    '''
+
+
+    cursor.execute(query)
+    results = cursor.fetchall()
+    conn.close()
+    #return results
+
+    return render_template("game_skater_stats.html",results=results)
 
 
 #Game Goalie Stats Table
