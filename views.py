@@ -78,6 +78,7 @@ def get_skater_stats_by_id(id):
     results = cursor.fetchall()
     conn.close()
     return results
+
 def update_skater_stats(id):
     if request.method == 'GET':
         skater_stat = get_skater_stats_by_id(id)
