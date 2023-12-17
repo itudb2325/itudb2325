@@ -46,19 +46,33 @@ def game_plays():
     game_plays = get_game_plays()
     return render_template("game_plays.html", active_page = 'game_plays', game_plays = game_plays)
 
+def game_plays_query(querycont):
+    
+    return game_plays_query
+
 def get_game_plays():
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor(dictionary=True)
-    game_plays_query = '''
-        SELECT date_time as game_date, team_id_for as team1, team_id_against as team2 FROM game_plays
-    '''
-
+    game_plays_query = "SELECT game_id, team_id_for as team1, team_id_against as team2 FROM game_plays"
     #, game_schedule_time, game_finish_time, number_of_goals, number_of_face_offs, number_of_shots, number_of_missed_shots, number_of_takeaways
-
     cursor.execute(game_plays_query)
     results = cursor.fetchall()
     conn.close()
     return results
+
+def get_game_plays_by_id(game_id):
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)
+    game_plays_query = "SELECT game_id, team_id_for as team1, team_id_against as team2 FROM game_plays WHERE game_id = %s"
+    cursor.execute(game_plays_query, (game_id,))
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+def update_game_plays(game_id):
+    if request.method == 'GET':
+        game_plays = get_game_plays_by_id(game_id)
+        return render_template('update_game_plays.html', results = game_plays)
 
 # Game Skater Stats
 def get_skater_stats():
