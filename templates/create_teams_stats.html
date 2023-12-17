@@ -28,7 +28,10 @@
     <div class="mb-3 row">
        <label for="HoA" class="col-sm-2 col-form-label text-sm-end">HoA:</label>
        <div class="col-sm-6">
-          <input class="input is-hovered" type="text" name="HoA" id="HoA" value="{{ HoA }}">
+          <input class="input is-hovered" type="radio" name="HoA" id="HoA" value="away">
+          <label for="HoA">away</label><br>
+         <input class="input is-hovered" type="radio" name="HoA" id="HoA" value="home">
+          <label for="HoA">home</label><br>
        </div>
     </div>
     
@@ -42,8 +45,12 @@
     <div class="mb-3 row">
        <label for="settled_in" class="col-sm-2 col-form-label text-sm-end">Settled in:</label>
        <div class="col-sm-6">
-          <input class="input is-hovered" type="text" name="settled_in" id="settled_in" value="{{ settled_in }}">
-       </div>
+          <!-- <input class="input is-hovered" type="text" name="settled_in" id="settled_in" value="{{ settled_in }}"> -->
+          <select class="input is-hovered" type="text" name="settled_in" id="settled_in">
+            <option value="REG">REG</option>
+            <option value="OT">OT</option>
+          </select>
+         </div>
     </div>
     
     <div class="mb-3 row">
@@ -126,8 +133,11 @@
      <div class="mb-3 row">
         <label for="startRinkSide" class="col-sm-2 col-form-label text-sm-end">Start Rink Side:</label>
         <div class="col-sm-6">
-           <input class="input is-hovered" type="text" name="startRinkSide" id="startRinkSide" value="{{ startRinkSide }}">
-        </div>
+           <input class="input is-hovered" type="checkbox" name="startRinkSide" id="startRinkSide" value="left">
+           <label for="startRinkSide">left</label><br>
+           <input class="input is-hovered" type="checkbox" name="startRinkSide" id="startRinkSide" value="right">
+           <label for="startRinkSide">right</label><br>
+         </div>
      </div>
 
     <button type="submit" class="btn btn-outline-primary">Create Teams</button>
