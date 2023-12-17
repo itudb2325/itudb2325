@@ -107,7 +107,7 @@ def update_skater_stats(id):
         powerPlayGoals = request.form.get('powerPlayGoals')
         powerPlayAssists = request.form.get('powerPlayAssists')
 
-        update_skater_stats(id, game_id, player_id, team_id, timeOnIce, 
+        update_skater_stats( game_id, player_id, team_id, timeOnIce, 
                             assists, goals, shots, hits, 
                             powerPlayGoals, powerPlayAssists)
 
