@@ -34,7 +34,7 @@ create = '''
 
 cursor.execute(create)
 
-const_df = pd.read_csv('nhl-db/game_teams_stats_1.csv', usecols=[
+const_df = pd.read_csv('nhl-db/game_teams_stats.csv', usecols=[
     "game_id",
     "team_id",
     "HoA",
