@@ -8,3 +8,5 @@
     - I connected the project to the database, created my table inside the database, and added my dataset to the project.
 08.12.2023 - Week 10
     - I displayed the data from my table on my webpage and beautified base.html.
+17.12.2023 - Week 11
+    - I added update functionality and html file for it.

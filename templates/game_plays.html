@@ -15,7 +15,7 @@
         <div class="col md-12">
             <table class="table table-striped table-hover" id="game_plays">
                 <tr>
-                    <th>Game Date</th>
+                    <th>Game ID</th>
                     <th>Team 1</th>
                     <th>Team 2</th>
                     <!-- <th>Game Schedule Time</th>
@@ -25,10 +25,11 @@
                     <th>Number of Shots</th>
                     <th>Number of Missed Shots</th>
                     <th>Number of Takeaways</th> -->
+                    <th>Action</th>
                 </tr>
                 {% for game_play in game_plays %}
                 <tr>
-                    <td>{{ game_play.game_date }}</td>
+                    <td>{{ game_play.game_id }}</td>
                     <td>{{ game_play.team1 }}</td>
                     <td>{{ game_play.team2 }}</td>
                     <!-- <td>{{ game_play.game_schedule_time }}</td>
@@ -38,6 +39,11 @@
                     <td>{{ game_play.number_of_shots }}</td>
                     <td>{{ game_play.number_of_missed_shots }}</td>
                     <td>{{ game_play.number_of_takeaways}}</td> -->
+                    <td>
+                        <a  href="{{ url_for('update_game_plays', game_id = game_play.game_id)  }}">
+                        <button class="btn btn-outline-primary">Update</button>
+                        </a>
+                    </td>
                 </tr>
                 {% endfor %}
             </table>
