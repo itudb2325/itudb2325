@@ -13,7 +13,7 @@ def create_app():
     app.add_url_rule("/", view_func=views.index_page, methods=['GET'])
     app.add_url_rule("/game_plays", view_func=views.game_plays)
     app.add_url_rule("/game_goalie_stats", view_func=views.game_goalie_stats)
-    app.add_url_rule("/game_skater_stats", view_func=views.game_skater_stats, methods=['GET'])
+    app.add_url_rule("/game_skater_stats", view_func=views.game_skater_stats)
     app.add_url_rule("/game_teams_stats", view_func=views.game_teams_stats)
 
     
@@ -29,7 +29,7 @@ def create_app():
     app.add_url_rule("/delete_teams_stats", view_func=views.delete_teams_stats, methods=['POST'])
     app.add_url_rule("/create_teams_stats", view_func=views.create_teams_stats, methods=['POST', 'GET'])
 
-
+    app.add_url_rule("/update_skater_stats/<int:id>", view_func=views.update_skater_stats, methods=['POST', 'GET'])
 
     return app
 
