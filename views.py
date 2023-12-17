@@ -78,6 +78,12 @@ def get_skater_stats_by_id(id):
     results = cursor.fetchall()
     conn.close()
     return results
+def update_skater_stats(id):
+    if request.method == 'GET':
+        skater_stat = get_skater_stats_by_id(id)
+        return render_template('update_skater_stats.html', results=skater_stat)
+  
+
 
 def game_skater_stats():
 
@@ -87,7 +93,24 @@ def game_skater_stats():
 def update_skater_stats(id):
     if request.method == 'GET':
         skater_stats = get_skater_stats_by_id(id)
-        return render_template('update_skater_stats.html', results=skater_stats)
+        return render_template('update_skater_stats.html',id=id, results=skater_stats)
+    else:
+        game_id = request.form.get('game_id')
+        player_id = request.form.get('player_id')
+        team_id = request.form.get('team_id')
+        timeOnIce = request.form.get('timeOnIce')
+        assists = request.form.get('assists')
+        goals = request.form.get('goals')
+        shots = request.form.get('shots')
+        hits = request.form.get('hits')
+        powerPlayGoals = request.form.get('powerPlayGoals')
+        powerPlayAssists = request.form.get('powerPlayAssists')
+
+        update_skater_stats(id, game_id, player_id, team_id, timeOnIce, 
+                            assists, goals, shots, hits, 
+                            powerPlayGoals, powerPlayAssists)
+
+        return redirect(url_for('game_skater_stats'))
 
 
 

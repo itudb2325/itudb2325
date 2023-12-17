@@ -1,1 +1,97 @@
-<p> HELLÖÖÖÖÖÖ SELİN</p>S
+{% extends "base.html" %}
+{% block title %} Update Skater Stats {% endblock %}
+
+{% block content %}
+<div class="p-3 mb-2 bg-secondary text-white">
+   <h2>Update Skater Stats <a class="pull-right btn btn-success" href="{{ url_for('game_skater_stats') }}">Back</a></h2>
+</div>
+
+<div class="p-3 mb-2 bg-secondary-subtle text-emphasis-secondary">
+
+    <form action="{{ url_for('update_skater_stats', id=results[0].id) }}" method="POST">
+
+   <div class="mb-3 row">
+   <label for="game_id" class="col-sm-2 col-form-label text-sm-end">Game ID:</label>
+   <div class="col-sm-6">
+      <input class="input is-hovered" type="text" name="game_id" id="game_id" value="{{ results[0].game_id }}">
+   </div>
+</div>
+
+<div class="mb-3 row">
+   <label for="player_id" class="col-sm-2 col-form-label text-sm-end">Player ID:</label>
+   <div class="col-sm-6">
+      <input class="input is-hovered" type="text" name="player_id" id="player_id" value="{{ results[0].player_id }}">
+   </div>
+</div>
+
+<div class="mb-3 row">
+   <label for="team_id" class="col-sm-2 col-form-label text-sm-end">Team ID:</label>
+   <div class="col-sm-6">
+      <input class="input is-hovered" type="text" name="team_id" id="team_id" value="{{ results[0].team_id }}">
+   </div>
+</div>
+
+<div class="mb-3 row">
+   <label for="timeOnIce" class="col-sm-2 col-form-label text-sm-end">Time on Ice:</label>
+   <div class="col-sm-6">
+      <input class="input is-hovered" type="text" name="timeOnIce" id="timeOnIce" value="{{ results[0].timeOnIce }}">
+   </div>
+</div>
+
+<div class="mb-3 row">
+   <label for="assists" class="col-sm-2 col-form-label text-sm-end">Assists:</label>
+   <div class="col-sm-6">
+      <input class="input is-hovered" type="text" name="assists" id="assists" value="{{ results[0].assists }}">
+   </div>
+</div>
+
+<div class="mb-3 row">
+   <label for="goals" class="col-sm-2 col-form-label text-sm-end">Goals:</label>
+   <div class="col-sm-6">
+      <input class="input is-hovered" type="text" name="goals" id="goals" value="{{ results[0].goals }}">
+   </div>
+</div>
+
+<div class="mb-3 row">
+   <label for="shots" class="col-sm-2 col-form-label text-sm-end">Shots:</label>
+   <div class="col-sm-6">
+      <input class="input is-hovered" type="text" name="shots" id="shots" value="{{ results[0].shots }}">
+   </div>
+</div>
+
+<div class="mb-3 row">
+   <label for="hits" class="col-sm-2 col-form-label text-sm-end">Hits:</label>
+   <div class="col-sm-6">
+      <input class="input is-hovered" type="text" name="hits" id="hits" value="{{ results[0].hits }}">
+   </div>
+</div>
+
+<div class="mb-3 row">
+   <label for="powerPlayGoals" class="col-sm-2 col-form-label text-sm-end">Power Play Goals:</label>
+   <div class="col-sm-6">
+      <input class="input is-hovered" type="text" name="powerPlayGoals" id="powerPlayGoals" value="{{ results[0].powerPlayGoals }}">
+   </div>
+</div>
+
+<div class="mb-3 row">
+   <label for="powerPlayAssists" class="col-sm-2 col-form-label text-sm-end">Power Play Assists:</label>
+   <div class="col-sm-6">
+      <input class="input is-hovered" type="text" name="powerPlayAssists" id="powerPlayAssists" value="{{ results[0].powerPlayAssists }}">
+   </div>
+</div>
+
+<button type="submit" class="btn btn-outline-primary">Update Skater Stats</button>
+</form>
+</div> 
+
+<script>
+    const id = window.location.href.split('/')[4]
+    let html = `
+      <div id="update_form">
+          <!-- Additional content or script can be added here -->
+      </div>
+    `;
+    document.querySelector('#update_form').innerHTML = html;
+</script>
+
+{% endblock %}
