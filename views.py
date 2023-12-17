@@ -345,3 +345,20 @@ def create_teams_stats():
         create_teams(game_id,team_id,HoA,won,settled_in,head_coach,goals,shots,hits,pim,powerPlayOpportunities,powerPlayGoals,faceOffWinPercentage,giveaways,takeaways,blocked,startRinkSide)
 
         return redirect(url_for('game_teams_stats'))
+
+def search_teams_by_game_id(game_id):
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)  
+    cursor.execute("SELECT * FROM game_teams_stats WHERE game_id LIKE %s", (str(game_id) + '%',))
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+def search_teams_stats():
+    if request.method == 'POST':
+        search_val = request.form.get('search')
+        teams_stats = search_teams_by_game_id(search_val)
+        player_info = get_player_info()
+        return render_template("game_teams_stats.html", teams_stats=teams_stats, player_info=player_info)
+
+    return render_template("game_teams_stats.html")
