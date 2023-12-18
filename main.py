@@ -35,7 +35,7 @@ def create_app():
     app.add_url_rule("/search_skater_stats", view_func=views.search_skater_stats, methods=['POST', 'GET'])
 
 
-    app.add_url_rule("/update_game/<int:play_id>", view_func=views.update_game_plays, methods=['POST', 'GET'])
+    app.add_url_rule("/update_game/<string:play_id>", view_func=views.update_game_plays, methods=['POST', 'GET'])
 
     return app
 
