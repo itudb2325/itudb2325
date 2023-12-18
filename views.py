@@ -5,6 +5,7 @@ from config import MYSQL_CONFIG  # Assuming you have a configuration file
 from game_goalie_stats import delete_goalie_stats_by_id, delete_player_by_id, create_goalie_stats, update_goalie_stats, update_player, get_goalie_info, get_goalie_info_by_id
 from game_teams_stats import delete_teams_stats_by_id, create_teams, update_teams
 from game_skater_stats import update_game_skater
+from game_plays import update_game
 import os
 
 def configure_app(app):
@@ -46,33 +47,52 @@ def game_plays():
     game_plays = get_game_plays()
     return render_template("game_plays.html", active_page = 'game_plays', game_plays = game_plays)
 
-def game_plays_query(querycont):
-    
-    return game_plays_query
-
 def get_game_plays():
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor(dictionary=True)
-    game_plays_query = "SELECT game_id, team_id_for as team1, team_id_against as team2 FROM game_plays"
+    game_plays_query = "SELECT play_id, game_id, team_id_for as team1, team_id_against as team2 FROM game_plays"
     #, game_schedule_time, game_finish_time, number_of_goals, number_of_face_offs, number_of_shots, number_of_missed_shots, number_of_takeaways
     cursor.execute(game_plays_query)
     results = cursor.fetchall()
     conn.close()
     return results
 
-def get_game_plays_by_id(game_id):
+def get_game_plays_by_id(play_id):
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor(dictionary=True)
-    game_plays_query = "SELECT game_id, team_id_for as team1, team_id_against as team2 FROM game_plays WHERE game_id = %s"
-    cursor.execute(game_plays_query, (game_id,))
+    game_plays_query = "SELECT * FROM game_plays WHERE play_id = %s"
+    cursor.execute(game_plays_query, (play_id,))
     results = cursor.fetchall()
     conn.close()
     return results
 
-def update_game_plays(game_id):
+def update_game_plays(play_id):
     if request.method == 'GET':
-        game_plays = get_game_plays_by_id(game_id)
-        return render_template('update_game_plays.html', results = game_plays)
+        game_plays = get_game_plays_by_id(play_id)
+        return render_template('update_game_plays.html', play_id = play_id, results = game_plays)
+    else:
+        game_id = request.form.get('game_id')
+        team_id_for = request.form.get('team_id_for')
+        team_id_against = request.form.get('team_id_against')
+        event = request.form.get('event')
+        secondary_type = request.form.get('secondary_type')
+        x = request.form.get('x')
+        y = request.form.get('y')
+        period = request.form.get('period')
+        period_type = request.form.get('period_type')
+        period_time = request.form.get('period_time')
+        period_time_remaining = request.form.get('period_time_remaining')
+        date_time = request.form.get('date_time')
+        goals_away = request.form.get('goals_away')
+        goals_home = request.form.get('goals_home')
+        description = request.form.get('description')
+        st_x = request.form.get('st_x')
+        st_y = request.form.get('st_y')
+
+        update_game(play_id, game_id, team_id_for, team_id_against, event, secondary_type,
+                     x, y, period, period_type, period_time, period_time_remaining, date_time,
+                     goals_away, goals_home, description, st_x, st_y)
+        return redirect(url_for('game_plays'))
 
 # Game Skater Stats
 def get_skater_stats():

@@ -91,9 +91,9 @@ mycursor.executemany(insert_query, data_to_insert)
 mydb.commit()
 mydb.close()
 
-def update_game_plays(play_id, game_id, team_id_for, team_id_against, event, secondary_type,
-                      x, y, period, period_type, period_time, period_time_remaining, date_time,
-                      goals_away, goals_home, description, st_x, st_y):
+def update_game(play_id, game_id, team_id_for, team_id_against, event, secondary_type,
+                x, y, period, period_type, period_time, period_time_remaining, date_time,
+                goals_away, goals_home, description, st_x, st_y):
     connection = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = connection.cursor()
 
@@ -117,10 +117,13 @@ def update_game_plays(play_id, game_id, team_id_for, team_id_against, event, sec
             description = %s,
             st_x = %s,
             st_y = %s
-        WHERE play_id = %s
-    '''
+        WHERE
+            play_id = %s
+        '''
 
-    cursor.execute(update_query, (game_id, team_id_for, team_id_against, event, secondary_type, x, y, period, period_type, period_time, period_time_remaining, date_time, goals_away, goals_home, description, st_x, st_y, game_id))
+    cursor.execute(update_query, (game_id, team_id_for, team_id_against, event, secondary_type,
+                                    x, y, period, period_type, period_time, period_time_remaining, date_time,
+                                    goals_away, goals_home, description, st_x, st_y, play_id))
 
     connection.commit()
     cursor.close()

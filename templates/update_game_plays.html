@@ -13,8 +13,101 @@
 <div class="container">
     <div class="row">
         <div class="col md-12">
-            <p>Update game plays</p>
+            <div class="p-3 mb-2 bg-secondary text-white">
+                <h2>Update Game Plays<a class="pull-right btn btn-success" href="{{ url_for('game_plays') }}">Back</a></h2>
+             </div>
+             {% if results %}
+             <div class="p-3 mb-2 bg-secondary-subtle text-emphasis-secondary">
+                
+                 <form action="{{ url_for('update_game_plays', play_id=results[0].play_id) }}" method="POST">
+             
+                <div class="mb-3 row">
+                <label for="game_id" class="col-sm-2 col-form-label text-sm-end">Game ID:</label>
+                <div class="col-sm-6">
+                   <input class="input is-hovered" type="text" name="game_id" id="game_id" value="{{ results[0].game_id }}">
+                </div>
+             </div>
+             
+             <div class="mb-3 row">
+                <label for="team_id_for" class="col-sm-2 col-form-label text-sm-end">Team ID (For):</label>
+                <div class="col-sm-6">
+                   <input class="input is-hovered" type="text" name="team_id_for" id="team_id_for" value="{{ results[0].team_id_for }}">
+                </div>
+             </div>
+             
+             <div class="mb-3 row">
+                <label for="team_id_against" class="col-sm-2 col-form-label text-sm-end">Team ID (Against):</label>
+                <div class="col-sm-6">
+                   <input class="input is-hovered" type="text" name="team_id_against" id="team_id_against" value="{{ results[0].team_id_against }}">
+                </div>
+             </div>
+             
+             <div class="mb-3 row">
+                <label for="event" class="col-sm-2 col-form-label text-sm-end">Event:</label>
+                <div class="col-sm-6">
+                   <input class="input is-hovered" type="text" name="event" id="event" value="{{ results[0].event }}">
+                </div>
+             </div>
+             
+             <div class="mb-3 row">
+                <label for="secondary_type" class="col-sm-2 col-form-label text-sm-end">Secondary Type:</label>
+                <div class="col-sm-6">
+                   <input class="input is-hovered" type="text" name="secondary_type" id="secondary_type" value="{{ results[0].secondary_type }}">
+                </div>
+             </div>
+             
+             <div class="mb-3 row">
+                <label for="x" class="col-sm-2 col-form-label text-sm-end">X:</label>
+                <div class="col-sm-6">
+                   <input class="input is-hovered" type="text" name="x" id="x" value="{{ results[0].x }}">
+                </div>
+             </div>
+             
+             <div class="mb-3 row">
+                <label for="y" class="col-sm-2 col-form-label text-sm-end">y:</label>
+                <div class="col-sm-6">
+                   <input class="input is-hovered" type="text" name="y" id="y" value="{{ results[0].y }}">
+                </div>
+             </div>
+             
+             <div class="mb-3 row">
+                <label for="period" class="col-sm-2 col-form-label text-sm-end">Period:</label>
+                <div class="col-sm-6">
+                   <input class="input is-hovered" type="text" name="period" id="period" value="{{ results[0].period }}">
+                </div>
+             </div>
+             
+             <div class="mb-3 row">
+                <label for="period_type" class="col-sm-2 col-form-label text-sm-end">Period Type:</label>
+                <div class="col-sm-6">
+                   <input class="input is-hovered" type="text" name="period_type" id="period_type" value="{{ results[0].period_type }}">
+                </div>
+             </div>
+             
+             <div class="mb-3 row">
+                <label for="period_time" class="col-sm-2 col-form-label text-sm-end">Period Time:</label>
+                <div class="col-sm-6">
+                   <input class="input is-hovered" type="text" name="period_time" id="period_time" value="{{ results[0].period_time }}">
+                </div>
+             </div>
+             {% else %}
+                    <p>No results found for the specified play ID.</p>
+                {% endif %}
+             <button type="submit" class="btn btn-outline-primary">Update Game Plays</button>
+             </form>
+             </div> 
+             
         </div>
     </div>
 </div>
+
+<script>
+    const id = window.location.href.split('/')[4]
+    let html = `
+    <div id="update_form">
+        <!-- Additional content or script can be added here -->
+    </div>
+    `;
+    document.querySelector('#update_form').innerHTML = html;
+</script>
 {% endblock %}
