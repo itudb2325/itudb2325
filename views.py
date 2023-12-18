@@ -4,7 +4,7 @@ import pandas as pd
 from config import MYSQL_CONFIG  # Assuming you have a configuration file
 from game_goalie_stats import delete_goalie_stats_by_id, delete_player_by_id, create_goalie_stats, update_goalie_stats, update_player, get_goalie_info, get_goalie_info_by_id
 from game_teams_stats import delete_teams_stats_by_id, create_teams, update_teams
-from game_skater_stats import update_game_skater
+from game_skater_stats import update_game_skater , delete_skater_stats_by_id
 from game_plays import update_game
 import os
 
@@ -143,6 +143,13 @@ def update_skater_stats(id):
                             powerPlayGoals, powerPlayAssists)
 
         return redirect(url_for('game_skater_stats'))
+
+def delete_skater_stats():
+    if request.method == 'POST':
+        id = request.form.get('id')
+        delete_skater_stats_by_id(id)
+
+    return redirect(url_for('game_skater_stats'))
 
 
 

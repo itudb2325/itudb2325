@@ -131,4 +131,18 @@ def update_game_skater (  id,  game_id ,player_id , team_id ,timeOnIce , assists
     cursor.close()
     connection.close()
 
+def delete_skater_stats_by_id(id):
+    connection = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = connection.cursor()
+
+    delete = '''
+                    DELETE FROM game_skater_stats 
+                    WHERE id = %s
+                '''
+    cursor.execute(delete, (id,))
+
+    connection.commit()
+    cursor.close()
+    connection.close()
+
 

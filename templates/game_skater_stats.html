@@ -58,6 +58,14 @@
                             <button class="btn btn-outline-primary">Update</button>
                         </a>
                         </td>
+                        <td>
+                            <form method="post" action="{{ url_for('delete_skater_stats') }}">
+                                <input type="hidden" name="id" value="{{ item.id }}">
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                        </td>
+    
+                        </td>
                        
                     </tr>
                 {% endfor %}
