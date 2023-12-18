@@ -156,7 +156,7 @@ def delete_skater_stats():
 def search_skater_by_game_id(game_id):
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor(dictionary=True)  
-    cursor.execute("SELECT * FROM game_skater_stats WHERE game_id LIKE %s", (str(game_id) + '%',))
+    cursor.execute("SELECT id, game_id, player_id, team_id, timeOnIce, assists, goals, shots, hits, powerPlayGoals, powerPlayAssists FROM game_skater_stats WHERE game_id LIKE %s", (str(game_id) + '%',))
     results = cursor.fetchall()
     conn.close()
     return results
@@ -164,6 +164,7 @@ def search_skater_by_game_id(game_id):
 def search_skater_stats():
     if request.method == 'POST':
         search_val = request.form.get('search')
+        print("Search Value:", search_val)  # Add this line for debugging
         skater_stats = search_skater_by_game_id(search_val)
         
         return render_template("game_skater_stats.html", skater_stats=skater_stats)
