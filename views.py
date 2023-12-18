@@ -132,6 +132,22 @@ def delete_game_plays():
 
     return redirect(url_for('game_plays'))
 
+def search_game_plays_by_game_id(game_id):
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)  
+    cursor.execute("SELECT play_id, game_id, team_id_for as team1, team_id_against as team2, date_time, event FROM game_plays WHERE game_id LIKE %s", (str(game_id) + '%',))
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+def search_game_plays():
+    if request.method == 'POST':
+        search_val = request.form.get('search')
+        game_plays = search_game_plays_by_game_id(search_val)
+        return render_template("game_plays.html", game_plays = game_plays)
+
+    return render_template("game_plays.html")
+
 # Game Skater Stats
 def get_skater_stats():
     conn = mysql.connector.connect(**MYSQL_CONFIG)

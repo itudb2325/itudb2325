@@ -15,6 +15,10 @@
         <div class="col md-12">
             <div class="d-flex justify-content-between">
                 <div style="margin-top: 15px;">
+                    <form action="{{ url_for('search_game_plays') }}" method="post" class="input-group mb-3">
+                        <input type="text" class="form-control" value="{{ search }}" placeholder="Game ID.." id="search" name="search">
+                        <button type="submit" class="btn btn-secondary">Search</button>
+                    </form>
                 </div>
                 <div>
                     <td class="button-container"> 
