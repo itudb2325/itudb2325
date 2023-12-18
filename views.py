@@ -120,7 +120,7 @@ def get_skater_stats_by_id(id):
 def game_skater_stats():
 
     skater_stats = get_skater_stats()
-    return render_template("game_skater_stats.html", results=skater_stats)
+    return render_template("game_skater_stats.html", active_page= 'game_skater_stats' ,results=skater_stats)
 
 def update_skater_stats(id):
     if request.method == 'GET':
@@ -153,6 +153,22 @@ def delete_skater_stats():
 
 
 
+def search_skater_by_game_id(game_id):
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)  
+    cursor.execute("SELECT * FROM game_skater_stats WHERE game_id LIKE %s", (str(game_id) + '%',))
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+def search_skater_stats():
+    if request.method == 'POST':
+        search_val = request.form.get('search')
+        skater_stats = search_skater_by_game_id(search_val)
+        
+        return render_template("game_skater_stats.html", skater_stats=skater_stats)
+
+    return render_template("game_skater_stats.html")
 
 #Game Goalie Stats Table
 # Game Goalie Stats
