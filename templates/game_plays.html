@@ -13,6 +13,16 @@
 <div class="container">
     <div class="row">
         <div class="col md-12">
+            <div class="d-flex justify-content-between">
+                <div style="margin-top: 15px;">
+                </div>
+                <div>
+                    <td class="button-container"> 
+                        <a name="create_game_plays" id="create_game_plays" class="btn btn-dark right-button" 
+                           href="{{ url_for('create_game_plays') }}" role="button">Create Game Plays</a>
+                    </td>
+                </div>
+            </div>
             <table class="table table-striped table-hover" id="game_plays">
                 <tr>
                     <th>Play ID</th>
@@ -28,7 +38,7 @@
                     <th>Number of Shots</th>
                     <th>Number of Missed Shots</th>
                     <th>Number of Takeaways</th> -->
-                    <th>Action</th>
+                    <th colspan="2">Operations</th>
                 </tr>
                 {% for game_play in game_plays %}
                 <tr>
@@ -49,6 +59,12 @@
                         <a  href="{{ url_for('update_game_plays', play_id = game_play.play_id) }}">
                         <button class="btn btn-outline-primary">Update</button>
                         </a>
+                    </td>
+                    <td>
+                        <form method="post" action="{{ url_for('delete_game_plays') }}">
+                            <input type="hidden" name="play_id" value="{{ game_play.play_id }}">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
                     </td>
                 </tr>
                 {% endfor %}

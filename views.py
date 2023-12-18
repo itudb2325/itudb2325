@@ -5,7 +5,7 @@ from config import MYSQL_CONFIG  # Assuming you have a configuration file
 from game_goalie_stats import delete_goalie_stats_by_id, delete_player_by_id, create_goalie_stats, update_goalie_stats, update_player, get_goalie_info, get_goalie_info_by_id
 from game_teams_stats import delete_teams_stats_by_id, create_teams, update_teams
 from game_skater_stats import update_game_skater , delete_skater_stats_by_id
-from game_plays import update_game
+from game_plays import update_game, create_game, delete_game_plays_by_id
 import os
 
 def configure_app(app):
@@ -93,6 +93,44 @@ def update_game_plays(play_id):
                      x, y, period, period_type, period_time, period_time_remaining, date_time,
                      goals_away, goals_home, description, st_x, st_y)
         return redirect(url_for('game_plays'))
+
+def create_game_plays():
+    if request.method == 'GET':
+        return render_template('create_game_plays.html')
+
+    else:
+        play_id = request.form.get('play_id')
+        game_id = request.form.get('game_id')
+        team_id_for = request.form.get('team_id_for')
+        team_id_against = request.form.get('team_id_against')
+        event = request.form.get('event')
+        secondary_type = request.form.get('secondary_type')
+        x = request.form.get('x')
+        y = request.form.get('y')
+        period = request.form.get('period')
+        period_type = request.form.get('period_type')
+        period_time = request.form.get('period_time')
+        period_time_remaining = request.form.get('period_time_remaining')
+        date_time = request.form.get('date_time')
+        goals_away = request.form.get('goals_away')
+        goals_home = request.form.get('goals_home')
+        description = request.form.get('description')
+        st_x = request.form.get('st_x')
+        st_y = request.form.get('st_y')
+        play_id =str(game_id) + '_' + play_id
+
+        create_game(play_id, game_id, team_id_for, team_id_against, event, secondary_type,
+                     x, y, period, period_type, period_time, period_time_remaining, date_time,
+                     goals_away, goals_home, description, st_x, st_y)
+
+        return redirect(url_for('game_plays'))
+
+def delete_game_plays():
+    if request.method == 'POST':
+        play_id = request.form.get('play_id')
+        delete_game_plays_by_id(play_id)
+
+    return redirect(url_for('game_plays'))
 
 # Game Skater Stats
 def get_skater_stats():

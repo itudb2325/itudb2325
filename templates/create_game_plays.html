@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+{% block title %} Create Game Plays {% endblock %}
+{% block content %}
+
+<!-- Gülşah Yorulmaz 150200093 -->
+
+<!-- Header -->
+<h2 class="shadow2">Create Game Plays</h2>
+
+<!-- Create Game Plays -->
+
+<div class="container">
+    <div class="row">
+        <div class="col md-12">
+            <div class="p-3 mb-2 bg-secondary text-white">
+                <a class="pull-right btn btn-success" href="{{ url_for('game_plays') }}">Back</a>
+            </div>
+            <div class="p-3 mb-2 bg-secondary-subtle text-emphasis-secondary">
+            
+                <form action="{{ url_for('create_game_plays') }}" method="POST">
+            
+            <div class="mb-3 row">
+            <label for="play_id" class="col-sm-2 col-form-label text-sm-end">Play ID:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="play_id" id="play_id" value="{{ play_id }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="game_id" class="col-sm-2 col-form-label text-sm-end">Game ID:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="game_id" id="game_id" value="{{ game_id }}">
+            </div>
+            </div>
+            
+            <div class="mb-3 row">
+            <label for="team_id_for" class="col-sm-2 col-form-label text-sm-end">Team ID (For):</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="team_id_for" id="team_id_for" value="{{ team_id_for }}">
+            </div>
+            </div>
+            
+            <div class="mb-3 row">
+            <label for="team_id_against" class="col-sm-2 col-form-label text-sm-end">Team ID (Against):</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="team_id_against" id="team_id_against" value="{{ team_id_against }}">
+            </div>
+            </div>
+            
+            <div class="mb-3 row">
+            <label for="event" class="col-sm-2 col-form-label text-sm-end">Event:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="event" id="event" value="{{ event }}">
+            </div>
+            </div>
+            
+            <div class="mb-3 row">
+            <label for="secondary_type" class="col-sm-2 col-form-label text-sm-end">Secondary Type:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="secondary_type" id="secondary_type" value="{{ secondary_type }}">
+            </div>
+            </div>
+            
+            <div class="mb-3 row">
+            <label for="x" class="col-sm-2 col-form-label text-sm-end">X:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="x" id="x" value="{{ x }}">
+            </div>
+            </div>
+            
+            <div class="mb-3 row">
+            <label for="y" class="col-sm-2 col-form-label text-sm-end">y:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="y" id="y" value="{{ y }}">
+            </div>
+            </div>
+            
+            <div class="mb-3 row">
+            <label for="period" class="col-sm-2 col-form-label text-sm-end">Period:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="period" id="period" value="{{ period }}">
+            </div>
+            </div>
+            
+            <div class="mb-3 row">
+            <label for="period_type" class="col-sm-2 col-form-label text-sm-end">Period Type:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="period_type" id="period_type" value="{{ period_type }}">
+            </div>
+            </div>
+            
+            <div class="mb-3 row">
+            <label for="period_time" class="col-sm-2 col-form-label text-sm-end">Period Time:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="period_time" id="period_time" value="{{ period_time }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="period_time_remaining" class="col-sm-2 col-form-label text-sm-end">Period Time Remaining:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="period_time_remaining" id="period_time_remaining" value="{{ period_time_remaining }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="date_time" class="col-sm-2 col-form-label text-sm-end">Date Time:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="date_time" id="date_time" value="{{ date_time }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="goals_away" class="col-sm-2 col-form-label text-sm-end">Goals Away:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="goals_away" id="goals_away" value="{{ goals_away }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="goals_home" class="col-sm-2 col-form-label text-sm-end">Goals Home:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="goals_home" id="goals_home" value="{{ goals_home }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="description" class="col-sm-2 col-form-label text-sm-end">Description:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="description" id="description" value="{{ description }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="st_x" class="col-sm-2 col-form-label text-sm-end">ST X:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="st_x" id="st_x" value="{{ st_x }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="st_y" class="col-sm-2 col-form-label text-sm-end">ST Y:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="st_y" id="st_y" value="{{ st_y }}">
+            </div>
+            </div>
+            <button type="submit" class="btn btn-outline-primary">Create Game Plays</button>
+            </form>
+            </div> 
+             
+        </div>
+    </div>
+</div>
+
+<script>
+    const id = window.location.href.split('/')[4]
+    document.querySelector('#update_form').innerHTML = html;
+</script>
+{% endblock %}

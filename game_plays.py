@@ -120,11 +120,63 @@ def update_game(play_id, game_id, team_id_for, team_id_against, event, secondary
             st_y = %s
         WHERE
             play_id = %s
-        '''
+    '''
 
     cursor.execute(update_query, (game_id, team_id_for, team_id_against, event, secondary_type,
                                     x, y, period, period_type, period_time, period_time_remaining, date_time,
                                     goals_away, goals_home, description, st_x, st_y, play_id))
+
+    connection.commit()
+    cursor.close()
+    connection.close()
+
+def create_game(play_id, game_id, team_id_for, team_id_against, event, secondary_type,
+                x, y, period, period_type, period_time, period_time_remaining, date_time,
+                goals_away, goals_home, description, st_x, st_y):
+    connection = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = connection.cursor()
+
+    create_query = '''
+        INSERT INTO game_plays
+        SET
+            play_id = %s,
+            game_id = %s,
+            team_id_for = %s,
+            team_id_against = %s,
+            event = %s,
+            secondary_type = %s,
+            x = %s,
+            y = %s,
+            period = %s,
+            period_type = %s,
+            period_time = %s,
+            period_time_remaining = %s,
+            date_time = %s,
+            goals_away = %s,
+            goals_home = %s,
+            description = %s,
+            st_x = %s,
+            st_y = %s
+    '''
+
+    cursor.execute(create_query, (play_id, game_id, team_id_for, team_id_against, event, secondary_type,
+                                    x, y, period, period_type, period_time, period_time_remaining, date_time,
+                                    goals_away, goals_home, description, st_x, st_y))
+
+    connection.commit()
+    cursor.close()
+    connection.close()
+
+def delete_game_plays_by_id(play_id):
+    connection = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = connection.cursor()
+
+    delete_query = '''
+        DELETE FROM game_plays
+        WHERE play_id = %s
+    '''
+
+    cursor.execute(delete_query, (play_id,))
 
     connection.commit()
     cursor.close()
