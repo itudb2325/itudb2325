@@ -50,7 +50,7 @@ def game_plays():
 def get_game_plays():
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor(dictionary=True)
-    game_plays_query = "SELECT play_id, game_id, team_id_for as team1, team_id_against as team2 FROM game_plays"
+    game_plays_query = "SELECT play_id, game_id, team_id_for as team1, team_id_against as team2, date_time, event FROM game_plays ORDER BY date_time"
     #, game_schedule_time, game_finish_time, number_of_goals, number_of_face_offs, number_of_shots, number_of_missed_shots, number_of_takeaways
     cursor.execute(game_plays_query)
     results = cursor.fetchall()

@@ -98,3 +98,403 @@
 "2016020045_97","2016020045","16","4","Goal","Backhand",-76,1,"1","REGULAR",1046,154,2016-10-19 02:12:13,0,2,"Dennis Rasmussen (1) Backhand, assists: none",76,-1
 "2016020045_98","2016020045","4","16","Faceoff",NA,0,0,"1","REGULAR",1046,154,2016-10-19 02:12:37,0,2,"Sean Couturier faceoff won against Artem Anisimov",0,0
 "2016020045_99","2016020045","4","16","Blocked Shot",NA,-72,-14,"1","REGULAR",1068,132,2016-10-19 02:13:35,0,2,"Shayne Gostisbehere blocked shot from Michal Kempny",-72,-14
+"2016020045_100","2016020045","4","16","Giveaway",NA,-63,39,"1","REGULAR",1079,121,2016-10-19 02:13:44,0,2,"Giveaway by Jakub Voracek",-63,39
+"2016020045_101","2016020045","4","16","Penalty","Closing hand on puck",-78,1,"1","REGULAR",1079,121,2016-10-19 02:13:51,0,2,"Shayne Gostisbehere Closing hand on puck",-78,1
+"2016020045_102","2016020045","16","4","Faceoff",NA,-69,-22,"1","REGULAR",1079,121,2016-10-19 02:14:11,0,2,"Jonathan Toews faceoff won against Boyd Gordon",69,22
+"2016020045_103","2016020045","16","4","Goal","Slap Shot",-67,-28,"1","REGULAR",1092,108,2016-10-19 02:14:30,0,3,"Artemi Panarin (1) Slap Shot, assists: Brent Seabrook (3), Duncan Keith (4)",67,28
+"2016020045_104","2016020045","16","4","Faceoff",NA,0,0,"1","REGULAR",1092,108,2016-10-19 02:15:14,0,3,"Jonathan Toews faceoff won against Claude Giroux",0,0
+"2016020045_105","2016020045","16","4","Giveaway",NA,57,-34,"1","REGULAR",1132,68,2016-10-19 02:15:58,0,3,"Giveaway by Duncan Keith",-57,34
+"2016020045_106","2016020045","4","16","Giveaway",NA,-94,-21,"1","REGULAR",1152,48,2016-10-19 02:16:19,0,3,"Giveaway by Nick Schultz",-94,-21
+"2016020045_107","2016020045","4","16","Hit",NA,42,-36,"1","REGULAR",1165,35,2016-10-19 02:16:31,0,3,"Pierre-Edouard Bellemare hit Michal Kempny",42,-36
+"2016020045_108","2016020045",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",1181,19,2016-10-19 02:16:49,0,3,"Offside",NA,NA
+"2016020045_109","2016020045","16","4","Faceoff",NA,20,-22,"1","REGULAR",1181,19,2016-10-19 02:17:03,0,3,"Artem Anisimov faceoff won against Sean Couturier",-20,22
+"2016020045_110","2016020045",NA,NA,"Period End",NA,NA,NA,"1","REGULAR",1200,0,2016-10-19 02:17:35,0,3,"End of 1st Period",NA,NA
+"2016020045_111","2016020045",NA,NA,"Period Official",NA,NA,NA,"1","REGULAR",1200,0,2016-10-19 02:17:44,0,3,"Period Official",NA,NA
+"2016020045_112","2016020045",NA,NA,"Period Ready",NA,NA,NA,"2","REGULAR",0,1200,2016-10-19 02:34:02,0,3,"Period Ready",NA,NA
+"2016020045_113","2016020045",NA,NA,"Period Start",NA,NA,NA,"2","REGULAR",0,1200,2016-10-19 02:36:04,0,3,"Period Start",NA,NA
+"2016020045_114","2016020045","4","16","Faceoff",NA,0,0,"2","REGULAR",0,1200,2016-10-19 02:36:04,0,3,"Claude Giroux faceoff won against Jonathan Toews",0,0
+"2016020045_115","2016020045",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",14,1186,2016-10-19 02:36:23,0,3,"Offside",NA,NA
+"2016020045_116","2016020045","16","4","Faceoff",NA,-69,-22,"2","REGULAR",14,1186,2016-10-19 02:36:39,0,3,"Jonathan Toews faceoff won against Claude Giroux",-69,-22
+"2016020045_117","2016020045","16","4","Shot","Slap Shot",42,-2,"2","REGULAR",35,1165,2016-10-19 02:37:08,0,3,"Duncan Keith Slap Shot saved by Michal Neuvirth",42,-2
+"2016020045_118","2016020045","16","4","Shot","Wrist Shot",57,-17,"2","REGULAR",41,1159,2016-10-19 02:37:14,0,3,"Tyler Motte Wrist Shot saved by Michal Neuvirth",57,-17
+"2016020045_119","2016020045","16","4","Hit",NA,96,25,"2","REGULAR",46,1154,2016-10-19 02:37:19,0,3,"Jonathan Toews hit Andrew MacDonald",96,25
+"2016020045_120","2016020045","16","4","Shot","Wrist Shot",84,-6,"2","REGULAR",49,1151,2016-10-19 02:37:23,0,3,"Jonathan Toews Wrist Shot saved by Michal Neuvirth",84,-6
+"2016020045_121","2016020045",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",53,1147,2016-10-19 02:37:30,0,3,"Icing",NA,NA
+"2016020045_122","2016020045","16","4","Faceoff",NA,69,-22,"2","REGULAR",53,1147,2016-10-19 02:37:45,0,3,"Artem Anisimov faceoff won against Claude Giroux",69,-22
+"2016020045_123","2016020045",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",61,1139,2016-10-19 02:38:05,0,3,"Icing",NA,NA
+"2016020045_124","2016020045","4","16","Faceoff",NA,69,-22,"2","REGULAR",61,1139,2016-10-19 02:38:16,0,3,"Claude Giroux faceoff won against Patrick Kane",-69,22
+"2016020045_125","2016020045","4","16","Blocked Shot",NA,79,-7,"2","REGULAR",79,1121,2016-10-19 02:38:52,0,3,"Sean Couturier blocked shot from Brent Seabrook",-79,7
+"2016020045_126","2016020045",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",79,1121,2016-10-19 02:38:53,0,3,"Puck in Netting",NA,NA
+"2016020045_127","2016020045","16","4","Faceoff",NA,69,-22,"2","REGULAR",79,1121,2016-10-19 02:39:09,0,3,"Nick Schmaltz faceoff won against Sean Couturier",69,-22
+"2016020045_128","2016020045","4","16","Takeaway",NA,67,37,"2","REGULAR",106,1094,2016-10-19 02:39:42,0,3,"Takeaway by Sean Couturier",-67,-37
+"2016020045_129","2016020045",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",106,1094,2016-10-19 02:39:45,0,3,"Offside",NA,NA
+"2016020045_130","2016020045","4","16","Faceoff",NA,20,22,"2","REGULAR",106,1094,2016-10-19 02:39:59,0,3,"Pierre-Edouard Bellemare faceoff won against Artem Anisimov",-20,-22
+"2016020045_131","2016020045","4","16","Takeaway",NA,-50,17,"2","REGULAR",119,1081,2016-10-19 02:40:16,0,3,"Takeaway by Matt Read",50,-17
+"2016020045_132","2016020045","16","4","Hit",NA,-92,27,"2","REGULAR",132,1068,2016-10-19 02:40:30,0,3,"Gustav Forsling hit Pierre-Edouard Bellemare",-92,27
+"2016020045_133","2016020045","4","16","Takeaway",NA,-91,36,"2","REGULAR",146,1054,2016-10-19 02:40:44,0,3,"Takeaway by Dale Weise",91,-36
+"2016020045_134","2016020045","4","16","Penalty","Hooking",82,-10,"2","REGULAR",187,1013,2016-10-19 02:41:30,0,3,"Boyd Gordon Hooking against Dennis Rasmussen",-82,10
+"2016020045_135","2016020045","4","16","Faceoff",NA,69,22,"2","REGULAR",187,1013,2016-10-19 02:41:48,0,3,"Claude Giroux faceoff won against Jonathan Toews",-69,-22
+"2016020045_136","2016020045","16","4","Hit",NA,97,10,"2","REGULAR",202,998,2016-10-19 02:42:19,0,3,"Jonathan Toews hit Ivan Provorov",97,10
+"2016020045_137","2016020045","16","4","Shot","Wrist Shot",58,17,"2","REGULAR",232,968,2016-10-19 02:42:50,0,3,"Patrick Kane Wrist Shot saved by Michal Neuvirth",58,17
+"2016020045_138","2016020045","4","16","Blocked Shot",NA,59,3,"2","REGULAR",240,960,2016-10-19 02:42:57,0,3,"Matt Read blocked shot from Duncan Keith",-59,-3
+"2016020045_139","2016020045","4","16","Hit",NA,-96,7,"2","REGULAR",288,912,2016-10-19 02:43:45,0,3,"Wayne Simmonds hit Gustav Forsling",96,-7
+"2016020045_140","2016020045","16","4","Goal","Backhand",83,-11,"2","REGULAR",304,896,2016-10-19 02:44:03,0,4,"Marian Hossa (1) Backhand, assists: Artem Anisimov (3), Brian Campbell (1)",83,-11
+"2016020045_141","2016020045","16","4","Faceoff",NA,0,0,"2","REGULAR",304,896,2016-10-19 02:45:42,0,4,"Jonathan Toews faceoff won against Claude Giroux",0,0
+"2016020045_142","2016020045","16","4","Hit",NA,47,-38,"2","REGULAR",320,880,2016-10-19 02:46:05,0,4,"Richard Panik hit Michael Raffl",47,-38
+"2016020045_143","2016020045","4","16","Hit",NA,25,36,"2","REGULAR",366,834,2016-10-19 02:47:00,0,4,"Brandon Manning hit Tyler Motte",-25,-36
+"2016020045_144","2016020045","4","16","Hit",NA,-95,20,"2","REGULAR",413,787,2016-10-19 02:47:38,0,4,"Chris VandeVelde hit Michal Kempny",95,-20
+"2016020045_145","2016020045","16","4","Giveaway",NA,-53,38,"2","REGULAR",429,771,2016-10-19 02:47:54,0,4,"Giveaway by Artemi Panarin",-53,38
+"2016020045_146","2016020045","4","16","Shot","Wrist Shot",-46,-2,"2","REGULAR",431,769,2016-10-19 02:47:56,0,4,"Chris VandeVelde Wrist Shot saved by Corey Crawford",46,2
+"2016020045_147","2016020045","16","4","Hit",NA,-86,-38,"2","REGULAR",435,765,2016-10-19 02:48:00,0,4,"Brent Seabrook hit Roman Lyubimov",-86,-38
+"2016020045_148","2016020045","16","4","Giveaway",NA,-94,-7,"2","REGULAR",449,751,2016-10-19 02:48:14,0,4,"Giveaway by Brent Seabrook",-94,-7
+"2016020045_149","2016020045","16","4","Giveaway",NA,-78,25,"2","REGULAR",458,742,2016-10-19 02:48:23,0,4,"Giveaway by Michal Kempny",-78,25
+"2016020045_150","2016020045","4","16","Shot","Wrist Shot",-57,3,"2","REGULAR",460,740,2016-10-19 02:48:26,0,4,"Pierre-Edouard Bellemare Wrist Shot saved by Corey Crawford",57,-3
+"2016020045_151","2016020045","4","16","Takeaway",NA,72,-38,"2","REGULAR",475,725,2016-10-19 02:48:40,0,4,"Takeaway by Dale Weise",-72,38
+"2016020045_152","2016020045","4","16","Blocked Shot",NA,79,2,"2","REGULAR",507,693,2016-10-19 02:49:12,0,4,"Pierre-Edouard Bellemare blocked shot from Gustav Forsling",-79,-2
+"2016020045_153","2016020045","4","16","Shot","Wrist Shot",-80,17,"2","REGULAR",514,686,2016-10-19 02:49:19,0,4,"Wayne Simmonds Wrist Shot saved by Corey Crawford",80,-17
+"2016020045_154","2016020045",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",514,686,2016-10-19 02:49:20,0,4,"Goalie Stopped",NA,NA
+"2016020045_155","2016020045","16","4","Faceoff",NA,-69,22,"2","REGULAR",514,686,2016-10-19 02:51:39,0,4,"Jonathan Toews faceoff won against Claude Giroux",-69,22
+"2016020045_156","2016020045","16","4","Blocked Shot",NA,-70,4,"2","REGULAR",529,671,2016-10-19 02:51:59,0,4,"Duncan Keith blocked shot from Brandon Manning",-70,4
+"2016020045_157","2016020045","4","16","Missed Shot",NA,-37,-18,"2","REGULAR",539,661,2016-10-19 02:52:09,0,4,"Nick Schultz - Over Net",37,18
+"2016020045_158","2016020045",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",543,657,2016-10-19 02:52:14,0,4,"Goalie Stopped",NA,NA
+"2016020045_159","2016020045","4","16","Faceoff",NA,-69,22,"2","REGULAR",543,657,2016-10-19 02:52:35,0,4,"Sean Couturier faceoff won against Marcus Kruger",69,-22
+"2016020045_160","2016020045","16","4","Hit",NA,-96,15,"2","REGULAR",557,643,2016-10-19 02:52:58,0,4,"Michal Kempny hit Travis Konecny",-96,15
+"2016020045_161","2016020045","4","16","Hit",NA,10,36,"2","REGULAR",568,632,2016-10-19 02:53:09,0,4,"Mark Streit hit Dennis Rasmussen",-10,-36
+"2016020045_162","2016020045","4","16","Hit",NA,98,29,"2","REGULAR",578,622,2016-10-19 02:53:18,0,4,"Ivan Provorov hit Jordin Tootoo",-98,-29
+"2016020045_163","2016020045","4","16","Giveaway",NA,58,-38,"2","REGULAR",599,601,2016-10-19 02:53:40,0,4,"Giveaway by Mark Streit",-58,38
+"2016020045_164","2016020045","16","4","Shot","Wrist Shot",70,15,"2","REGULAR",602,598,2016-10-19 02:53:43,0,4,"Artemi Panarin Wrist Shot saved by Steve Mason",70,15
+"2016020045_165","2016020045","16","4","Shot","Backhand",79,7,"2","REGULAR",623,577,2016-10-19 02:54:04,0,4,"Patrick Kane Backhand saved by Steve Mason",79,7
+"2016020045_166","2016020045","16","4","Missed Shot",NA,48,-27,"2","REGULAR",638,562,2016-10-19 02:54:19,0,4,"Brian Campbell - Wide of Net",48,-27
+"2016020045_167","2016020045",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",679,521,2016-10-19 02:55:01,0,4,"Puck in Benches",NA,NA
+"2016020045_168","2016020045","4","16","Faceoff",NA,-20,22,"2","REGULAR",679,521,2016-10-19 02:56:52,0,4,"Claude Giroux faceoff won against Jonathan Toews",20,-22
+"2016020045_169","2016020045","4","16","Hit",NA,-97,17,"2","REGULAR",720,480,2016-10-19 02:57:54,0,4,"Wayne Simmonds hit Niklas Hjalmarsson",97,-17
+"2016020045_170","2016020045","16","4","Shot","Slap Shot",61,25,"2","REGULAR",731,469,2016-10-19 02:58:05,0,4,"Michal Kempny Slap Shot saved by Steve Mason",61,25
+"2016020045_171","2016020045",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",731,469,2016-10-19 02:58:08,0,4,"Goalie Stopped",NA,NA
+"2016020045_172","2016020045","4","16","Faceoff",NA,69,22,"2","REGULAR",731,469,2016-10-19 02:58:26,0,4,"Sean Couturier faceoff won against Artem Anisimov",-69,-22
+"2016020045_173","2016020045","4","16","Takeaway",NA,5,-29,"2","REGULAR",749,451,2016-10-19 02:58:51,0,4,"Takeaway by Nick Schultz",-5,29
+"2016020045_174","2016020045","4","16","Penalty","Interference",44,13,"2","REGULAR",768,432,2016-10-19 02:59:17,0,4,"Brandon Manning Interference against Artemi Panarin",-44,-13
+"2016020045_175","2016020045","4","16","Faceoff",NA,69,-22,"2","REGULAR",768,432,2016-10-19 02:59:38,0,4,"Pierre-Edouard Bellemare faceoff won against Jonathan Toews",-69,22
+"2016020045_176","2016020045","4","16","Giveaway",NA,97,0,"2","REGULAR",851,349,2016-10-19 03:01:15,0,4,"Giveaway by Steve Mason",-97,0
+"2016020045_177","2016020045","4","16","Blocked Shot",NA,45,-3,"2","REGULAR",863,337,2016-10-19 03:01:27,0,4,"Wayne Simmonds blocked shot from Duncan Keith",-45,3
+"2016020045_178","2016020045","16","4","Shot","Wrist Shot",78,25,"2","REGULAR",882,318,2016-10-19 03:01:46,0,4,"Patrick Kane Wrist Shot saved by Steve Mason",78,25
+"2016020045_179","2016020045","16","4","Takeaway",NA,-55,-38,"2","REGULAR",893,307,2016-10-19 03:02:04,0,4,"Takeaway by Artemi Panarin",-55,-38
+"2016020045_180","2016020045","4","16","Giveaway",NA,98,-20,"2","REGULAR",915,285,2016-10-19 03:02:19,0,4,"Giveaway by Shayne Gostisbehere",-98,20
+"2016020045_181","2016020045","4","16","Hit",NA,98,26,"2","REGULAR",920,280,2016-10-19 03:02:25,0,4,"Nick Schultz hit Dennis Rasmussen",-98,-26
+"2016020045_182","2016020045","16","4","Hit",NA,-84,36,"2","REGULAR",997,203,2016-10-19 03:03:41,0,4,"Gustav Forsling hit Travis Konecny",-84,36
+"2016020045_183","2016020045","4","16","Shot","Wrist Shot",-60,-33,"2","REGULAR",1016,184,2016-10-19 03:04:01,0,4,"Travis Konecny Wrist Shot saved by Corey Crawford",60,33
+"2016020045_184","2016020045",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",1016,184,2016-10-19 03:04:03,0,4,"Goalie Stopped",NA,NA
+"2016020045_185","2016020045","16","4","Faceoff",NA,-69,-22,"2","REGULAR",1016,184,2016-10-19 03:06:02,0,4,"Jonathan Toews faceoff won against Claude Giroux",-69,-22
+"2016020045_186","2016020045","4","16","Shot","Wrist Shot",-55,29,"2","REGULAR",1031,169,2016-10-19 03:06:35,0,4,"Wayne Simmonds Wrist Shot saved by Corey Crawford",55,-29
+"2016020045_187","2016020045",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",1038,162,2016-10-19 03:06:44,0,4,"Hand Pass",NA,NA
+"2016020045_188","2016020045","4","16","Faceoff",NA,69,22,"2","REGULAR",1038,162,2016-10-19 03:07:02,0,4,"Pierre-Edouard Bellemare faceoff won against Patrick Kane",-69,-22
+"2016020045_189","2016020045","16","4","Penalty","Interference",-57,-38,"2","REGULAR",1051,149,2016-10-19 03:07:46,0,4,"Patrick Kane Interference against Pierre-Edouard Bellemare",-57,-38
+"2016020045_190","2016020045","4","16","Faceoff",NA,-69,22,"2","REGULAR",1051,149,2016-10-19 03:07:56,0,4,"Claude Giroux faceoff won against Marcus Kruger",69,-22
+"2016020045_191","2016020045","4","16","Shot","Tip-In",-79,2,"2","REGULAR",1062,138,2016-10-19 03:08:37,0,4,"Matt Read Tip-In saved by Corey Crawford",79,-2
+"2016020045_192","2016020045",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",1063,137,2016-10-19 03:08:34,0,4,"Goalie Stopped",NA,NA
+"2016020045_193","2016020045","16","4","Faceoff",NA,-69,22,"2","REGULAR",1063,137,2016-10-19 03:08:47,0,4,"Jonathan Toews faceoff won against Claude Giroux",-69,22
+"2016020045_194","2016020045","16","4","Giveaway",NA,-95,-21,"2","REGULAR",1069,131,2016-10-19 03:09:01,0,4,"Giveaway by Dennis Rasmussen",-95,-21
+"2016020045_195","2016020045","16","4","Takeaway",NA,24,2,"2","REGULAR",1092,108,2016-10-19 03:09:24,0,4,"Takeaway by Dennis Rasmussen",24,2
+"2016020045_196","2016020045","4","16","Missed Shot",NA,-66,11,"2","REGULAR",1101,99,2016-10-19 03:09:36,0,4,"Jakub Voracek - Wide of Net",66,-11
+"2016020045_197","2016020045","4","16","Goal","Wrist Shot",-76,-11,"2","REGULAR",1103,97,2016-10-19 03:09:40,1,4,"Matt Read (2) Wrist Shot, assists: Jakub Voracek (2), Claude Giroux (2)",76,11
+"2016020045_198","2016020045","4","16","Faceoff",NA,0,0,"2","REGULAR",1103,97,2016-10-19 03:10:19,1,4,"Sean Couturier faceoff won against Artem Anisimov",0,0
+"2016020045_199","2016020045","4","16","Shot","Wrist Shot",-78,-22,"2","REGULAR",1112,88,2016-10-19 03:10:35,1,4,"Sean Couturier Wrist Shot saved by Corey Crawford",78,22
+"2016020045_200","2016020045","4","16","Takeaway",NA,-35,1,"2","REGULAR",1124,76,2016-10-19 03:10:47,1,4,"Takeaway by Travis Konecny",35,-1
+"2016020045_201","2016020045","4","16","Shot","Slap Shot",-72,-30,"2","REGULAR",1125,75,2016-10-19 03:10:48,1,4,"Travis Konecny Slap Shot saved by Corey Crawford",72,30
+"2016020045_202","2016020045","4","16","Giveaway",NA,72,26,"2","REGULAR",1142,58,2016-10-19 03:11:06,1,4,"Giveaway by Steve Mason",-72,-26
+"2016020045_203","2016020045","16","4","Shot","Wrist Shot",67,29,"2","REGULAR",1143,57,2016-10-19 03:11:06,1,4,"Artemi Panarin Wrist Shot saved by Steve Mason",67,29
+"2016020045_204","2016020045","16","4","Shot","Wrist Shot",84,-8,"2","REGULAR",1163,37,2016-10-19 03:11:26,1,4,"Jonathan Toews Wrist Shot saved by Steve Mason",84,-8
+"2016020045_205","2016020045",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",1168,32,2016-10-19 03:11:35,1,4,"Offside",NA,NA
+"2016020045_206","2016020045","16","4","Faceoff",NA,-20,22,"2","REGULAR",1168,32,2016-10-19 03:11:57,1,4,"Jonathan Toews faceoff won against Claude Giroux",-20,22
+"2016020045_207","2016020045","4","16","Shot","Snap Shot",-39,0,"2","REGULAR",1187,13,2016-10-19 03:12:21,1,4,"Shayne Gostisbehere Snap Shot saved by Corey Crawford",39,0
+"2016020045_208","2016020045",NA,NA,"Period End",NA,NA,NA,"2","REGULAR",1200,0,2016-10-19 03:12:36,1,4,"End of 2nd Period",NA,NA
+"2016020045_209","2016020045",NA,NA,"Period Official",NA,NA,NA,"2","REGULAR",1200,0,2016-10-19 03:12:46,1,4,"Period Official",NA,NA
+"2016020045_210","2016020045",NA,NA,"Period Ready",NA,NA,NA,"3","REGULAR",0,1200,2016-10-19 03:29:02,1,4,"Period Ready",NA,NA
+"2016020045_211","2016020045",NA,NA,"Period Start",NA,NA,NA,"3","REGULAR",0,1200,2016-10-19 03:31:11,1,4,"Period Start",NA,NA
+"2016020045_212","2016020045","16","4","Faceoff",NA,0,0,"3","REGULAR",0,1200,2016-10-19 03:31:11,1,4,"Jonathan Toews faceoff won against Claude Giroux",0,0
+"2016020045_213","2016020045","4","16","Missed Shot",NA,58,-18,"3","REGULAR",13,1187,2016-10-19 03:31:26,1,4,"Wayne Simmonds - Goalpost",58,-18
+"2016020045_214","2016020045","4","16","Goal","Wrist Shot",79,2,"3","REGULAR",37,1163,2016-10-19 03:31:52,2,4,"Matt Read (3) Wrist Shot, assists: Claude Giroux (3), Shayne Gostisbehere (2)",79,2
+"2016020045_215","2016020045","16","4","Faceoff",NA,0,0,"3","REGULAR",37,1163,2016-10-19 03:32:16,2,4,"Marcus Kruger faceoff won against Boyd Gordon",0,0
+"2016020045_216","2016020045","16","4","Takeaway",NA,-53,-35,"3","REGULAR",49,1151,2016-10-19 03:32:44,2,4,"Takeaway by Dennis Rasmussen",53,35
+"2016020045_217","2016020045","16","4","Hit",NA,-67,-41,"3","REGULAR",73,1127,2016-10-19 03:33:08,2,4,"Marcus Kruger hit Ivan Provorov",67,41
+"2016020045_218","2016020045","16","4","Hit",NA,82,-37,"3","REGULAR",96,1104,2016-10-19 03:33:32,2,4,"Gustav Forsling hit Jakub Voracek",-82,37
+"2016020045_219","2016020045","4","16","Goal","Backhand",77,-4,"3","REGULAR",114,1086,2016-10-19 03:33:51,3,4,"Sean Couturier (3) Backhand, assists: Nick Schultz (2), Travis Konecny (4)",77,-4
+"2016020045_220","2016020045",NA,NA,"Stoppage",NA,NA,NA,"3","REGULAR",114,1086,2016-10-19 03:34:31,3,4,"Home Timeout",NA,NA
+"2016020045_221","2016020045","4","16","Faceoff",NA,0,0,"3","REGULAR",114,1086,2016-10-19 03:35:02,3,4,"Claude Giroux faceoff won against Jonathan Toews",0,0
+"2016020045_222","2016020045",NA,NA,"Stoppage",NA,NA,NA,"3","REGULAR",130,1070,2016-10-19 03:35:28,3,4,"Goalie Stopped",NA,NA
+"2016020045_223","2016020045","16","4","Faceoff",NA,69,22,"3","REGULAR",130,1070,2016-10-19 03:35:49,3,4,"Marcus Kruger faceoff won against Sean Couturier",-69,-22
+"2016020045_224","2016020045","4","16","Shot","Backhand",84,-6,"3","REGULAR",156,1044,2016-10-19 03:36:22,3,4,"Jakub Voracek Backhand saved by Corey Crawford",84,-6
+"2016020045_225","2016020045","16","4","Giveaway",NA,78,-23,"3","REGULAR",159,1041,2016-10-19 03:36:29,3,4,"Giveaway by Michal Kempny",-78,23
+"2016020045_226","2016020045","16","4","Penalty","Hi-sticking",90,-37,"3","REGULAR",183,1017,2016-10-19 03:36:53,3,4,"Michal Kempny Hi-sticking against Jakub Voracek",-90,37
+"2016020045_227","2016020045","16","4","Faceoff",NA,69,-22,"3","REGULAR",183,1017,2016-10-19 03:37:14,3,4,"Jonathan Toews faceoff won against Claude Giroux",-69,22
+"2016020045_228","2016020045",NA,NA,"Stoppage",NA,NA,NA,"3","REGULAR",187,1013,2016-10-19 03:37:31,3,4,"Puck in Crowd",NA,NA
+"2016020045_229","2016020045","4","16","Faceoff",NA,69,-22,"3","REGULAR",187,1013,2016-10-19 03:37:38,3,4,"Claude Giroux faceoff won against Jonathan Toews",69,-22
+"2016020045_230","2016020045","16","4","Blocked Shot",NA,46,-1,"3","REGULAR",206,994,2016-10-19 03:38:09,3,4,"Marian Hossa blocked shot from Shayne Gostisbehere",-46,1
+"2016020045_231","2016020045","16","4","Giveaway",NA,79,35,"3","REGULAR",217,983,2016-10-19 03:38:20,3,4,"Giveaway by Niklas Hjalmarsson",-79,-35
+"2016020045_232","2016020045","4","16","Shot","Wrist Shot",78,-5,"3","REGULAR",228,972,2016-10-19 03:38:33,3,4,"Wayne Simmonds Wrist Shot saved by Corey Crawford",78,-5
+"2016020045_233","2016020045","4","16","Goal","Wrist Shot",85,-6,"3","REGULAR",229,971,2016-10-19 03:38:37,4,4,"Wayne Simmonds (2) Wrist Shot, assists: Jakub Voracek (3), Claude Giroux (4)",85,-6
+"2016020045_234","2016020045","4","16","Faceoff",NA,0,0,"3","REGULAR",229,971,2016-10-19 03:39:10,4,4,"Pierre-Edouard Bellemare faceoff won against Artem Anisimov",0,0
+"2016020045_235","2016020045","4","16","Blocked Shot",NA,-72,-8,"3","REGULAR",239,961,2016-10-19 03:39:32,4,4,"Pierre-Edouard Bellemare blocked shot from Gustav Forsling",-72,-8
+"2016020045_236","2016020045","4","16","Hit",NA,92,35,"3","REGULAR",256,944,2016-10-19 03:39:49,4,4,"Chris VandeVelde hit Brian Campbell",92,35
+"2016020045_237","2016020045","4","16","Hit",NA,-88,-38,"3","REGULAR",286,914,2016-10-19 03:40:18,4,4,"Brandon Manning hit Tyler Motte",-88,-38
+"2016020045_238","2016020045","16","4","Takeaway",NA,-33,-28,"3","REGULAR",291,909,2016-10-19 03:40:23,4,4,"Takeaway by Vinnie Hinostroza",33,28
+"2016020045_239","2016020045","4","16","Blocked Shot",NA,-58,23,"3","REGULAR",296,904,2016-10-19 03:40:29,4,4,"Brandon Manning blocked shot from Vinnie Hinostroza",-58,23
+"2016020045_240","2016020045","16","4","Blocked Shot",NA,44,0,"3","REGULAR",343,857,2016-10-19 03:41:16,4,4,"Dennis Rasmussen blocked shot from Andrew MacDonald",-44,0
+"2016020045_241","2016020045","4","16","Takeaway",NA,-39,-27,"3","REGULAR",351,849,2016-10-19 03:41:24,4,4,"Takeaway by Shayne Gostisbehere",-39,-27
+"2016020045_242","2016020045","16","4","Blocked Shot",NA,85,-16,"3","REGULAR",356,844,2016-10-19 03:41:39,4,4,"Duncan Keith blocked shot from Claude Giroux",-85,16
+"2016020045_243","2016020045","16","4","Hit",NA,-40,39,"3","REGULAR",364,836,2016-10-19 03:41:37,4,4,"Richard Panik hit Wayne Simmonds",40,-39
+"2016020045_244","2016020045","4","16","Shot","Backhand",83,-29,"3","REGULAR",375,825,2016-10-19 03:41:48,4,4,"Chris VandeVelde Backhand saved by Corey Crawford",83,-29
+"2016020045_245","2016020045",NA,NA,"Stoppage",NA,NA,NA,"3","REGULAR",402,798,2016-10-19 03:42:18,4,4,"Hand Pass",NA,NA
+"2016020045_246","2016020045","16","4","Faceoff",NA,20,-22,"3","REGULAR",402,798,2016-10-19 03:44:12,4,4,"Artem Anisimov faceoff won against Sean Couturier",-20,22
+"2016020045_247","2016020045","16","4","Giveaway",NA,51,-32,"3","REGULAR",409,791,2016-10-19 03:44:37,4,4,"Giveaway by Artemi Panarin",-51,32
+"2016020045_248","2016020045","4","16","Shot","Slap Shot",66,-29,"3","REGULAR",411,789,2016-10-19 03:44:40,4,4,"Jakub Voracek Slap Shot saved by Corey Crawford",66,-29
+"2016020045_249","2016020045","4","16","Hit",NA,-14,21,"3","REGULAR",419,781,2016-10-19 03:44:47,4,4,"Nick Schultz hit Artem Anisimov",-14,21
+"2016020045_250","2016020045","16","4","Shot","Slap Shot",-35,-35,"3","REGULAR",427,773,2016-10-19 03:44:55,4,4,"Michal Kempny Slap Shot saved by Steve Mason",35,35
+"2016020045_251","2016020045","4","16","Hit",NA,-56,-40,"3","REGULAR",429,771,2016-10-19 03:45:04,4,4,"Brandon Manning hit Artemi Panarin",-56,-40
+"2016020045_252","2016020045","4","16","Blocked Shot",NA,-70,-8,"3","REGULAR",465,735,2016-10-19 03:45:33,4,4,"Shayne Gostisbehere blocked shot from Duncan Keith",-70,-8
+"2016020045_253","2016020045",NA,NA,"Stoppage",NA,NA,NA,"3","REGULAR",469,731,2016-10-19 03:45:40,4,4,"Offside",NA,NA
+"2016020045_254","2016020045","4","16","Faceoff",NA,20,22,"3","REGULAR",469,731,2016-10-19 03:45:55,4,4,"Pierre-Edouard Bellemare faceoff won against Nick Schmaltz",20,22
+"2016020045_255","2016020045","16","4","Missed Shot",NA,-76,-20,"3","REGULAR",569,631,2016-10-19 03:47:37,4,4,"Jonathan Toews - Wide of Net",76,20
+"2016020045_256","2016020045",NA,NA,"Stoppage",NA,NA,NA,"3","REGULAR",594,606,2016-10-19 03:48:05,4,4,"Puck in Benches",NA,NA
+"2016020045_257","2016020045","4","16","Faceoff",NA,20,22,"3","REGULAR",594,606,2016-10-19 03:48:32,4,4,"Claude Giroux faceoff won against Artem Anisimov",20,22
+"2016020045_258","2016020045","16","4","Goal","Wrist Shot",-75,0,"3","REGULAR",624,576,2016-10-19 03:49:07,4,5,"Artem Anisimov (1) Wrist Shot, assists: Artemi Panarin (1), Patrick Kane (3)",75,0
+"2016020045_259","2016020045","4","16","Faceoff",NA,0,0,"3","REGULAR",624,576,2016-10-19 03:49:48,4,5,"Pierre-Edouard Bellemare faceoff won against Nick Schmaltz",0,0
+"2016020045_260","2016020045",NA,NA,"Stoppage",NA,NA,NA,"3","REGULAR",631,569,2016-10-19 03:50:10,4,5,"Icing",NA,NA
+"2016020045_261","2016020045","16","4","Faceoff",NA,-69,22,"3","REGULAR",631,569,2016-10-19 03:50:20,4,5,"Nick Schmaltz faceoff won against Pierre-Edouard Bellemare",69,-22
+"2016020045_262","2016020045","16","4","Blocked Shot",NA,51,5,"3","REGULAR",678,522,2016-10-19 03:51:19,4,5,"Vinnie Hinostroza blocked shot from Claude Giroux",-51,-5
+"2016020045_263","2016020045",NA,NA,"Stoppage",NA,NA,NA,"3","REGULAR",680,520,2016-10-19 03:51:25,4,5,"TV timeout",NA,NA
+"2016020045_264","2016020045","16","4","Penalty","Hooking",78,2,"3","REGULAR",680,520,2016-10-19 03:51:27,4,5,"Tyler Motte Hooking against Dale Weise",-78,-2
+"2016020045_265","2016020045","16","4","Faceoff",NA,69,22,"3","REGULAR",680,520,2016-10-19 03:53:13,4,5,"Marcus Kruger faceoff won against Claude Giroux",-69,-22
+"2016020045_266","2016020045","4","16","Giveaway",NA,-93,20,"3","REGULAR",711,489,2016-10-19 03:54:18,4,5,"Giveaway by Shayne Gostisbehere",-93,20
+"2016020045_267","2016020045","4","16","Missed Shot",NA,60,25,"3","REGULAR",734,466,2016-10-19 03:54:32,4,5,"Claude Giroux - Wide of Net",60,25
+"2016020045_268","2016020045","16","4","Blocked Shot",NA,80,1,"3","REGULAR",746,454,2016-10-19 03:54:44,4,5,"Brent Seabrook blocked shot from Shayne Gostisbehere",-80,-1
+"2016020045_269","2016020045","16","4","Hit",NA,57,-41,"3","REGULAR",786,414,2016-10-19 03:55:24,4,5,"Duncan Keith hit Travis Konecny",-57,41
+"2016020045_270","2016020045","16","4","Giveaway",NA,97,-13,"3","REGULAR",806,394,2016-10-19 03:55:44,4,5,"Giveaway by Brent Seabrook",-97,13
+"2016020045_271","2016020045","4","16","Giveaway",NA,-82,9,"3","REGULAR",829,371,2016-10-19 03:56:10,4,5,"Giveaway by Brandon Manning",-82,9
+"2016020045_272","2016020045","16","4","Shot","Slap Shot",-69,1,"3","REGULAR",833,367,2016-10-19 03:56:11,4,5,"Patrick Kane Slap Shot saved by Steve Mason",69,-1
+"2016020045_273","2016020045","16","4","Giveaway",NA,54,-35,"3","REGULAR",868,332,2016-10-19 03:56:46,4,5,"Giveaway by Nick Schmaltz",-54,35
+"2016020045_274","2016020045","16","4","Hit",NA,65,-38,"3","REGULAR",879,321,2016-10-19 03:56:57,4,5,"Brian Campbell hit Andrew MacDonald",-65,38
+"2016020045_275","2016020045","16","4","Shot","Wrist Shot",-38,-20,"3","REGULAR",891,309,2016-10-19 03:57:09,4,5,"Tyler Motte Wrist Shot saved by Steve Mason",38,20
+"2016020045_276","2016020045",NA,NA,"Stoppage",NA,NA,NA,"3","REGULAR",891,309,2016-10-19 03:57:11,4,5,"Goalie Stopped",NA,NA
+"2016020045_277","2016020045","16","4","Faceoff",NA,-69,-22,"3","REGULAR",891,309,2016-10-19 03:59:02,4,5,"Jonathan Toews faceoff won against Claude Giroux",69,22
+"2016020045_278","2016020045","4","16","Hit",NA,-56,37,"3","REGULAR",903,297,2016-10-19 03:59:36,4,5,"Andrew MacDonald hit Jonathan Toews",-56,37
+"2016020045_279","2016020045","4","16","Hit",NA,93,-39,"3","REGULAR",927,273,2016-10-19 04:00:01,4,5,"Wayne Simmonds hit Duncan Keith",93,-39
+"2016020045_280","2016020045","16","4","Takeaway",NA,40,3,"3","REGULAR",958,242,2016-10-19 04:00:43,4,5,"Takeaway by Patrick Kane",-40,-3
+"2016020045_281","2016020045","16","4","Goal","Slap Shot",-72,-13,"3","REGULAR",963,237,2016-10-19 04:00:38,4,6,"Artemi Panarin (2) Slap Shot, assists: Patrick Kane (4)",72,13
+"2016020045_282","2016020045","4","16","Faceoff",NA,0,0,"3","REGULAR",963,237,2016-10-19 04:01:28,4,6,"Pierre-Edouard Bellemare faceoff won against Nick Schmaltz",0,0
+"2016020045_283","2016020045","16","4","Missed Shot",NA,-72,12,"3","REGULAR",1020,180,2016-10-19 04:02:28,4,6,"Tyler Motte - Wide of Net",72,-12
+"2016020045_284","2016020045","4","16","Hit",NA,-52,-38,"3","REGULAR",1023,177,2016-10-19 04:02:32,4,6,"Shayne Gostisbehere hit Tyler Motte",-52,-38
+"2016020045_285","2016020045","4","16","Hit",NA,-88,-38,"3","REGULAR",1036,164,2016-10-19 04:02:44,4,6,"Andrew MacDonald hit Marcus Kruger",-88,-38
+"2016020045_286","2016020045","4","16","Takeaway",NA,93,-5,"3","REGULAR",1042,158,2016-10-19 04:02:59,4,6,"Takeaway by Matt Read",93,-5
+"2016020045_287","2016020045","4","16","Shot","Wrist Shot",87,-18,"3","REGULAR",1044,156,2016-10-19 04:02:53,4,6,"Wayne Simmonds Wrist Shot saved by Corey Crawford",87,-18
+"2016020045_288","2016020045","16","4","Hit",NA,91,-35,"3","REGULAR",1065,135,2016-10-19 04:03:13,4,6,"Michal Kempny hit Sean Couturier",-91,35
+"2016020045_289","2016020045","4","16","Blocked Shot",NA,-72,3,"3","REGULAR",1112,88,2016-10-19 04:04:00,4,6,"Andrew MacDonald blocked shot from Niklas Hjalmarsson",-72,3
+"2016020045_290","2016020045","16","4","Hit",NA,11,-35,"3","REGULAR",1116,84,2016-10-19 04:04:04,4,6,"Marcus Kruger hit Travis Konecny",-11,35
+"2016020045_291","2016020045","16","4","Missed Shot",NA,-54,34,"3","REGULAR",1130,70,2016-10-19 04:04:18,4,6,"Marcus Kruger - Goalpost",54,-34
+"2016020045_292","2016020045","4","16","Shot","Wrist Shot",37,25,"3","REGULAR",1143,57,2016-10-19 04:04:32,4,6,"Shayne Gostisbehere Wrist Shot saved by Corey Crawford",37,25
+"2016020045_293","2016020045","16","4","Hit",NA,67,36,"3","REGULAR",1149,51,2016-10-19 04:04:50,4,6,"Patrick Kane hit Matt Read",-67,-36
+"2016020045_294","2016020045","16","4","Goal","Wrist Shot",-49,-36,"3","REGULAR",1155,45,2016-10-19 04:04:45,4,7,"Artem Anisimov (2) Wrist Shot, assists: Patrick Kane (5), Brent Seabrook (4)",49,36
+"2016020045_295","2016020045","4","16","Faceoff",NA,0,0,"3","REGULAR",1155,45,2016-10-19 04:05:19,4,7,"Pierre-Edouard Bellemare faceoff won against Nick Schmaltz",0,0
+"2016020045_296","2016020045","4","16","Hit",NA,-95,12,"3","REGULAR",1164,36,2016-10-19 04:05:39,4,7,"Shayne Gostisbehere hit Vinnie Hinostroza",-95,12
+"2016020045_297","2016020045",NA,NA,"Period End",NA,NA,NA,"3","REGULAR",1200,0,2016-10-19 04:06:16,4,7,"End of 3rd Period",NA,NA
+"2016020045_298","2016020045",NA,NA,"Period Official",NA,NA,NA,"3","REGULAR",1200,0,2016-10-19 04:06:18,4,7,"Period Official",NA,NA
+"2016020045_299","2016020045",NA,NA,"Game End",NA,NA,NA,"3","REGULAR",1200,0,2016-10-19 04:06:19,4,7,"Game End",NA,NA
+"2017020812_1","2017020812",NA,NA,"Game Scheduled",NA,NA,NA,"1","REGULAR",0,1200,2018-02-06 23:23:37,0,0,"Game Scheduled",NA,NA
+"2017020812_2","2017020812",NA,NA,"Period Ready",NA,NA,NA,"1","REGULAR",0,1200,2018-02-07 00:06:53,0,0,"Period Ready",NA,NA
+"2017020812_3","2017020812",NA,NA,"Period Start",NA,NA,NA,"1","REGULAR",0,1200,2018-02-07 00:09:43,0,0,"Period Start",NA,NA
+"2017020812_4","2017020812","24","7","Faceoff",NA,0,0,"1","REGULAR",0,1200,2018-02-07 00:09:43,0,0,"Ryan Getzlaf faceoff won against Jack Eichel",0,0
+"2017020812_5","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",13,1187,2018-02-07 00:10:42,0,0,"Hand Pass",NA,NA
+"2017020812_6","2017020812","7","24","Faceoff",NA,20,-22,"1","REGULAR",13,1187,2018-02-07 00:10:44,0,0,"Jack Eichel faceoff won against Ryan Kesler",20,-22
+"2017020812_7","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",35,1165,2018-02-07 00:11:23,0,0,"Puck in Crowd",NA,NA
+"2017020812_8","2017020812","7","24","Faceoff",NA,69,22,"1","REGULAR",35,1165,2018-02-07 00:11:32,0,0,"Ryan O'Reilly faceoff won against Ryan Getzlaf",69,22
+"2017020812_9","2017020812","7","24","Hit",NA,-36,41,"1","REGULAR",41,1159,2018-02-07 00:11:56,0,0,"Justin Falk hit Corey Perry",-36,41
+"2017020812_10","2017020812","24","7","Giveaway",NA,-43,28,"1","REGULAR",47,1153,2018-02-07 00:12:01,0,0,"Giveaway by Ryan Getzlaf",43,-28
+"2017020812_11","2017020812","7","24","Shot","Wrist Shot",61,26,"1","REGULAR",50,1150,2018-02-07 00:12:08,0,0,"Ryan O'Reilly Wrist Shot saved by Ryan Miller",61,26
+"2017020812_12","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",51,1149,2018-02-07 00:12:07,0,0,"Goalie Stopped",NA,NA
+"2017020812_13","2017020812","24","7","Faceoff",NA,69,22,"1","REGULAR",51,1149,2018-02-07 00:12:24,0,0,"Ryan Getzlaf faceoff won against Ryan O'Reilly",-69,-22
+"2017020812_14","2017020812","7","24","Missed Shot",NA,61,31,"1","REGULAR",80,1120,2018-02-07 00:13:09,0,0,"Evander Kane - Wide of Net",61,31
+"2017020812_15","2017020812","24","7","Blocked Shot",NA,59,-23,"1","REGULAR",116,1084,2018-02-07 00:13:44,0,0,"Korbinian Holzer blocked shot from Jason Pominville",-59,23
+"2017020812_16","2017020812","24","7","Hit",NA,57,41,"1","REGULAR",117,1083,2018-02-07 00:13:45,0,0,"Brandon Montour hit Evan Rodrigues",-57,-41
+"2017020812_17","2017020812","7","24","Penalty","Interference",-84,3,"1","REGULAR",143,1057,2018-02-07 00:14:22,0,0,"Rasmus Ristolainen Interference against Nick Ritchie",-84,3
+"2017020812_18","2017020812","24","7","Faceoff",NA,-69,-22,"1","REGULAR",143,1057,2018-02-07 00:14:39,0,0,"Adam Henrique faceoff won against Ryan O'Reilly",69,22
+"2017020812_19","2017020812","24","7","Shot","Slap Shot",-34,-29,"1","REGULAR",169,1031,2018-02-07 00:15:16,0,0,"Ryan Getzlaf Slap Shot saved by Robin Lehner",34,29
+"2017020812_20","2017020812","7","24","Shot","Snap Shot",84,32,"1","REGULAR",200,1000,2018-02-07 00:15:47,0,0,"Zemgus Girgensons Snap Shot saved by Ryan Miller",84,32
+"2017020812_21","2017020812","7","24","Goal","Wrist Shot",90,8,"1","REGULAR",202,998,2018-02-07 00:16:06,0,1,"Zemgus Girgensons (6) Wrist Shot, assists: Casey Nelson (1)",90,8
+"2017020812_22","2017020812","24","7","Faceoff",NA,0,0,"1","REGULAR",202,998,2018-02-07 00:16:27,0,1,"Ryan Kesler faceoff won against Jacob Josefson",0,0
+"2017020812_23","2017020812","7","24","Blocked Shot",NA,-70,1,"1","REGULAR",246,954,2018-02-07 00:17:10,0,1,"Jake McCabe blocked shot from Brandon Montour",-70,1
+"2017020812_24","2017020812","24","7","Missed Shot",NA,-67,-15,"1","REGULAR",253,947,2018-02-07 00:17:17,0,1,"Jakob Silfverberg - Wide of Net",67,15
+"2017020812_25","2017020812","24","7","Missed Shot",NA,-34,12,"1","REGULAR",259,941,2018-02-07 00:17:23,0,1,"Jakob Silfverberg - Wide of Net",34,-12
+"2017020812_26","2017020812","24","7","Shot","Tip-In",-76,-1,"1","REGULAR",267,933,2018-02-07 00:17:31,0,1,"Ryan Kesler Tip-In saved by Robin Lehner",76,1
+"2017020812_27","2017020812","24","7","Missed Shot",NA,-32,33,"1","REGULAR",320,880,2018-02-07 00:18:24,0,1,"Kevin Bieksa - Wide of Net",32,-33
+"2017020812_28","2017020812","24","7","Shot","Wrist Shot",-69,-22,"1","REGULAR",326,874,2018-02-07 00:18:30,0,1,"Cam Fowler Wrist Shot saved by Robin Lehner",69,22
+"2017020812_29","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",332,868,2018-02-07 00:18:37,0,1,"Offside",NA,NA
+"2017020812_30","2017020812","7","24","Faceoff",NA,20,22,"1","REGULAR",332,868,2018-02-07 00:18:49,0,1,"Ryan O'Reilly faceoff won against Ryan Getzlaf",20,22
+"2017020812_31","2017020812","7","24","Shot","Wrist Shot",75,23,"1","REGULAR",340,860,2018-02-07 00:19:07,0,1,"Evander Kane Wrist Shot saved by Ryan Miller",75,23
+"2017020812_32","2017020812","24","7","Shot","Slap Shot",-41,-27,"1","REGULAR",356,844,2018-02-07 00:19:22,0,1,"Hampus Lindholm Slap Shot saved by Robin Lehner",41,27
+"2017020812_33","2017020812","7","24","Missed Shot",NA,53,1,"1","REGULAR",383,817,2018-02-07 00:19:50,0,1,"Scott Wilson - Wide of Net",53,1
+"2017020812_34","2017020812","24","7","Blocked Shot",NA,74,-14,"1","REGULAR",388,812,2018-02-07 00:19:54,0,1,"Adam Henrique blocked shot from Scott Wilson",-74,14
+"2017020812_35","2017020812","7","24","Blocked Shot",NA,-64,-14,"1","REGULAR",395,805,2018-02-07 00:20:02,0,1,"Jake McCabe blocked shot from Nick Ritchie",-64,-14
+"2017020812_36","2017020812","7","24","Shot","Wrist Shot",59,16,"1","REGULAR",402,798,2018-02-07 00:20:09,0,1,"Evan Rodrigues Wrist Shot saved by Ryan Miller",59,16
+"2017020812_37","2017020812","24","7","Hit",NA,69,40,"1","REGULAR",427,773,2018-02-07 00:20:34,0,1,"Brandon Montour hit Jordan Nolan",-69,-40
+"2017020812_38","2017020812","24","7","Shot","Backhand",-76,0,"1","REGULAR",434,766,2018-02-07 00:20:40,0,1,"Jakob Silfverberg Backhand saved by Robin Lehner",76,0
+"2017020812_39","2017020812","7","24","Hit",NA,-97,-17,"1","REGULAR",439,761,2018-02-07 00:20:45,0,1,"Nathan Beaulieu hit Andrew Cogliano",-97,-17
+"2017020812_40","2017020812","7","24","Shot","Wrist Shot",82,-6,"1","REGULAR",448,752,2018-02-07 00:22:12,0,1,"Jordan Nolan Wrist Shot saved by Ryan Miller",82,-6
+"2017020812_41","2017020812","24","7","Shot","Snap Shot",-62,18,"1","REGULAR",459,741,2018-02-07 00:21:06,0,1,"Jakob Silfverberg Snap Shot saved by Robin Lehner",62,-18
+"2017020812_42","2017020812","24","7","Hit",NA,99,-6,"1","REGULAR",473,727,2018-02-07 00:21:19,0,1,"Kevin Bieksa hit Rasmus Ristolainen",-99,6
+"2017020812_43","2017020812","24","7","Hit",NA,99,26,"1","REGULAR",480,720,2018-02-07 00:21:27,0,1,"Chris Wagner hit Zemgus Girgensons",-99,-26
+"2017020812_44","2017020812","7","24","Blocked Shot",NA,-55,35,"1","REGULAR",485,715,2018-02-07 00:21:32,0,1,"Marco Scandella blocked shot from J.T. Brown",-55,35
+"2017020812_45","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",491,709,2018-02-07 00:21:40,0,1,"Offside",NA,NA
+"2017020812_46","2017020812","7","24","Faceoff",NA,20,-22,"1","REGULAR",491,709,2018-02-07 00:23:46,0,1,"Jack Eichel faceoff won against Ryan Getzlaf",20,-22
+"2017020812_47","2017020812","24","7","Blocked Shot",NA,45,-18,"1","REGULAR",508,692,2018-02-07 00:24:10,0,1,"Rickard Rakell blocked shot from Rasmus Ristolainen",-45,18
+"2017020812_48","2017020812","7","24","Blocked Shot",NA,-49,-21,"1","REGULAR",520,680,2018-02-07 00:24:22,0,1,"Marco Scandella blocked shot from Corey Perry",-49,-21
+"2017020812_49","2017020812","24","7","Blocked Shot",NA,49,21,"1","REGULAR",536,664,2018-02-07 00:24:38,0,1,"Ryan Getzlaf blocked shot from Jake McCabe",-49,-21
+"2017020812_50","2017020812","7","24","Shot","Wrist Shot",79,10,"1","REGULAR",544,656,2018-02-07 00:24:46,0,1,"Sam Reinhart Wrist Shot saved by Ryan Miller",79,10
+"2017020812_51","2017020812","7","24","Shot","Wrist Shot",66,6,"1","REGULAR",553,647,2018-02-07 00:24:58,0,1,"Zemgus Girgensons Wrist Shot saved by Ryan Miller",66,6
+"2017020812_52","2017020812","7","24","Hit",NA,-89,-39,"1","REGULAR",574,626,2018-02-07 00:25:16,0,1,"Jake McCabe hit Nick Ritchie",-89,-39
+"2017020812_53","2017020812","7","24","Blocked Shot",NA,-77,8,"1","REGULAR",579,621,2018-02-07 00:25:21,0,1,"Jake McCabe blocked shot from Nick Ritchie",-77,8
+"2017020812_54","2017020812","7","24","Blocked Shot",NA,-75,-11,"1","REGULAR",605,595,2018-02-07 00:25:47,0,1,"Casey Nelson blocked shot from Cam Fowler",-75,-11
+"2017020812_55","2017020812","7","24","Takeaway",NA,-12,-30,"1","REGULAR",615,585,2018-02-07 00:25:57,0,1,"Takeaway by Jake McCabe",-12,-30
+"2017020812_56","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",640,560,2018-02-07 00:26:24,0,1,"Offside",NA,NA
+"2017020812_57","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",640,560,2018-02-07 00:27:07,0,1,"TV timeout",NA,NA
+"2017020812_58","2017020812","7","24","Faceoff",NA,69,-22,"1","REGULAR",640,560,2018-02-07 00:28:54,0,1,"Jack Eichel faceoff won against Ryan Kesler",69,-22
+"2017020812_59","2017020812","24","7","Penalty","Roughing",99,-8,"1","REGULAR",656,544,2018-02-07 00:29:39,0,1,"Ryan Kesler Roughing against Sam Reinhart",-99,8
+"2017020812_60","2017020812","7","24","Faceoff",NA,69,-22,"1","REGULAR",656,544,2018-02-07 00:30:13,0,1,"Ryan O'Reilly faceoff won against Derek Grant",69,-22
+"2017020812_61","2017020812","7","24","Shot","Wrist Shot",44,-23,"1","REGULAR",663,537,2018-02-07 00:30:25,0,1,"Kyle Okposo Wrist Shot saved by Ryan Miller",44,-23
+"2017020812_62","2017020812","7","24","Missed Shot",NA,66,30,"1","REGULAR",667,533,2018-02-07 00:30:30,0,1,"Jack Eichel - Wide of Net",66,30
+"2017020812_63","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",667,533,2018-02-07 00:30:36,0,1,"Puck in Netting",NA,NA
+"2017020812_64","2017020812","24","7","Faceoff",NA,69,22,"1","REGULAR",667,533,2018-02-07 00:30:40,0,1,"Ryan Getzlaf faceoff won against Ryan O'Reilly",-69,-22
+"2017020812_65","2017020812","7","24","Takeaway",NA,-72,-22,"1","REGULAR",696,504,2018-02-07 00:31:22,0,1,"Takeaway by Ryan O'Reilly",-72,-22
+"2017020812_66","2017020812","24","7","Shot","Wrist Shot",-19,-27,"1","REGULAR",705,495,2018-02-07 00:31:36,0,1,"Andrew Cogliano Wrist Shot saved by Robin Lehner",19,27
+"2017020812_67","2017020812","24","7","Blocked Shot",NA,63,-7,"1","REGULAR",725,475,2018-02-07 00:31:51,0,1,"Kevin Bieksa blocked shot from Jason Pominville",-63,7
+"2017020812_68","2017020812","24","7","Blocked Shot",NA,74,9,"1","REGULAR",749,451,2018-02-07 00:32:16,0,1,"Adam Henrique blocked shot from Marco Scandella",-74,-9
+"2017020812_69","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",776,424,2018-02-07 00:32:48,0,1,"Icing",NA,NA
+"2017020812_70","2017020812","24","7","Faceoff",NA,-69,-22,"1","REGULAR",776,424,2018-02-07 00:32:59,0,1,"Derek Grant faceoff won against Jacob Josefson",69,22
+"2017020812_71","2017020812","7","24","Blocked Shot",NA,-78,-8,"1","REGULAR",779,421,2018-02-07 00:33:30,0,1,"Casey Nelson blocked shot from Korbinian Holzer",-78,-8
+"2017020812_72","2017020812","24","7","Shot","Backhand",-76,-12,"1","REGULAR",782,418,2018-02-07 00:33:24,0,1,"Derek Grant Backhand saved by Robin Lehner",76,12
+"2017020812_73","2017020812","7","24","Hit",NA,99,35,"1","REGULAR",812,388,2018-02-07 00:33:54,0,1,"Jordan Nolan hit Korbinian Holzer",99,35
+"2017020812_74","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",843,357,2018-02-07 00:34:27,0,1,"Offside",NA,NA
+"2017020812_75","2017020812","7","24","Faceoff",NA,20,-22,"1","REGULAR",843,357,2018-02-07 00:36:01,0,1,"Jack Eichel faceoff won against Ryan Getzlaf",20,-22
+"2017020812_76","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",914,286,2018-02-07 00:37:45,0,1,"Icing",NA,NA
+"2017020812_77","2017020812","7","24","Faceoff",NA,-69,-22,"1","REGULAR",914,286,2018-02-07 00:37:54,0,1,"Ryan O'Reilly faceoff won against Ryan Kesler",-69,-22
+"2017020812_78","2017020812","7","24","Blocked Shot",NA,-61,-14,"1","REGULAR",918,282,2018-02-07 00:38:15,0,1,"Kyle Okposo blocked shot from Cam Fowler",-61,-14
+"2017020812_79","2017020812","7","24","Shot","Wrist Shot",75,-21,"1","REGULAR",946,254,2018-02-07 00:38:43,0,1,"Evander Kane Wrist Shot saved by Ryan Miller",75,-21
+"2017020812_80","2017020812","7","24","Shot","Wrist Shot",85,-6,"1","REGULAR",949,251,2018-02-07 00:39:16,0,1,"Ryan O'Reilly Wrist Shot saved by Ryan Miller",85,-6
+"2017020812_81","2017020812","7","24","Shot","Backhand",90,-7,"1","REGULAR",950,250,2018-02-07 00:38:48,0,1,"Jason Pominville Backhand saved by Ryan Miller",90,-7
+"2017020812_82","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",950,250,2018-02-07 00:38:49,0,1,"Goalie Stopped",NA,NA
+"2017020240_1","2017020240",NA,NA,"Game Scheduled",NA,NA,NA,"1","REGULAR",0,1200,2017-11-10 00:00:17,0,0,"Game Scheduled",NA,NA
+"2017020812_83","2017020812","24","7","Faceoff",NA,69,-22,"1","REGULAR",950,250,2018-02-07 00:39:22,0,1,"Adam Henrique faceoff won against Evan Rodrigues",-69,22
+"2017020812_84","2017020812","7","24","Penalty","Hi-sticking",4,20,"1","REGULAR",963,237,2018-02-07 00:39:45,0,1,"Evan Rodrigues Hi-sticking against Ondrej Kase",4,20
+"2017020812_85","2017020812","7","24","Faceoff",NA,-69,22,"1","REGULAR",963,237,2018-02-07 00:40:07,0,1,"Ryan O'Reilly faceoff won against Adam Henrique",-69,22
+"2017020812_86","2017020812","24","7","Shot","Tip-In",-78,0,"1","REGULAR",1048,152,2018-02-07 00:42:08,0,1,"Ondrej Kase Tip-In saved by Robin Lehner",78,0
+"2017020812_87","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",1049,151,2018-02-07 00:42:10,0,1,"Goalie Stopped",NA,NA
+"2017020812_88","2017020812","24","7","Faceoff",NA,-69,-22,"1","REGULAR",1049,151,2018-02-07 00:42:33,0,1,"Ryan Kesler faceoff won against Ryan O'Reilly",69,22
+"2017020812_89","2017020812","7","24","Shot","Wrist Shot",69,-36,"1","REGULAR",1083,117,2018-02-07 00:43:23,0,1,"Rasmus Ristolainen Wrist Shot saved by Ryan Miller",69,-36
+"2017020812_90","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",1084,116,2018-02-07 00:43:28,0,1,"Goalie Stopped",NA,NA
+"2017020812_91","2017020812","24","7","Faceoff",NA,69,-22,"1","REGULAR",1084,116,2018-02-07 00:44:08,0,1,"Rickard Rakell faceoff won against Jack Eichel",-69,22
+"2017020812_92","2017020812","24","7","Giveaway",NA,-57,16,"1","REGULAR",1107,93,2018-02-07 00:44:36,0,1,"Giveaway by Ryan Getzlaf",57,-16
+"2017020812_93","2017020812","24","7","Shot","Wrist Shot",-63,-30,"1","REGULAR",1119,81,2018-02-07 00:44:48,0,1,"Rickard Rakell Wrist Shot saved by Robin Lehner",63,30
+"2017020812_94","2017020812",NA,NA,"Stoppage",NA,NA,NA,"1","REGULAR",1120,80,2018-02-07 00:44:50,0,1,"Goalie Stopped",NA,NA
+"2017020812_95","2017020812","24","7","Faceoff",NA,-69,-22,"1","REGULAR",1120,80,2018-02-07 00:45:36,0,1,"Adam Henrique faceoff won against Ryan O'Reilly",69,22
+"2017020812_96","2017020812","7","24","Penalty","Slashing",-58,-14,"1","REGULAR",1122,78,2018-02-07 00:45:58,0,1,"Kyle Okposo Slashing against Ondrej Kase",-58,-14
+"2017020812_97","2017020812","24","7","Faceoff",NA,-69,-22,"1","REGULAR",1122,78,2018-02-07 00:46:14,0,1,"Ryan Kesler faceoff won against Ryan O'Reilly",69,22
+"2017020812_98","2017020812","24","7","Missed Shot",NA,-73,1,"1","REGULAR",1129,71,2018-02-07 00:46:37,0,1,"Ryan Kesler - Wide of Net",73,-1
+"2017020812_99","2017020812","24","7","Shot","Tip-In",-71,-1,"1","REGULAR",1161,39,2018-02-07 00:47:10,0,1,"Ryan Kesler Tip-In saved by Robin Lehner",71,1
+"2017020812_100","2017020812","24","7","Missed Shot",NA,-83,7,"1","REGULAR",1162,38,2018-02-07 00:47:20,0,1,"Ryan Kesler - Wide of Net",83,-7
+"2017020812_101","2017020812","24","7","Missed Shot",NA,38,-29,"1","REGULAR",1199,1,2018-02-07 00:47:49,0,1,"Cam Fowler - Wide of Net",-38,29
+"2017020812_102","2017020812",NA,NA,"Period End",NA,NA,NA,"1","REGULAR",1200,0,2018-02-07 00:47:52,0,1,"End of 1st Period",NA,NA
+"2017020812_103","2017020812",NA,NA,"Period Official",NA,NA,NA,"1","REGULAR",1200,0,2018-02-07 00:47:54,0,1,"Period Official",NA,NA
+"2017020812_104","2017020812",NA,NA,"Period Ready",NA,NA,NA,"2","REGULAR",0,1200,2018-02-07 01:04:41,0,1,"Period Ready",NA,NA
+"2017020812_105","2017020812",NA,NA,"Period Start",NA,NA,NA,"2","REGULAR",0,1200,2018-02-07 01:06:19,0,1,"Period Start",NA,NA
+"2017020812_106","2017020812","24","7","Faceoff",NA,0,0,"2","REGULAR",0,1200,2018-02-07 01:06:19,0,1,"Adam Henrique faceoff won against Ryan O'Reilly",0,0
+"2017020812_107","2017020812","24","7","Shot","Slap Shot",37,-21,"2","REGULAR",18,1182,2018-02-07 01:06:40,0,1,"Ryan Getzlaf Slap Shot saved by Robin Lehner",37,-21
+"2017020812_108","2017020812","24","7","Goal","Backhand",84,-7,"2","REGULAR",21,1179,2018-02-07 01:06:49,1,1,"Rickard Rakell (22) Backhand, assists: Ryan Getzlaf (27), Cam Fowler (18)",84,-7
+"2017020812_109","2017020812","7","24","Faceoff",NA,0,0,"2","REGULAR",21,1179,2018-02-07 01:07:21,1,1,"Jack Eichel faceoff won against Ryan Kesler",0,0
+"2017020812_110","2017020812","7","24","Shot","Wrist Shot",-63,38,"2","REGULAR",42,1158,2018-02-07 01:08:12,1,1,"Zemgus Girgensons Wrist Shot saved by Ryan Miller",63,-38
+"2017020812_111","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",43,1157,2018-02-07 01:07:58,1,1,"Goalie Stopped",NA,NA
+"2017020812_112","2017020812","24","7","Faceoff",NA,-69,22,"2","REGULAR",43,1157,2018-02-07 01:08:18,1,1,"Adam Henrique faceoff won against Jack Eichel",-69,22
+"2017020812_113","2017020812","24","7","Takeaway",NA,54,3,"2","REGULAR",67,1133,2018-02-07 01:08:18,1,1,"Takeaway by Adam Henrique",54,3
+"2017020812_114","2017020812","7","24","Faceoff",NA,-69,-22,"2","REGULAR",94,1106,2018-02-07 01:09:28,1,1,"Evander Kane faceoff won against Adam Henrique",69,22
+"2017020812_115","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",94,1106,2018-02-07 01:09:28,1,1,"Icing",NA,NA
+"2017020812_116","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",107,1093,2018-02-07 01:10:22,1,1,"Offside",NA,NA
+"2017020812_117","2017020812","7","24","Faceoff",NA,20,-22,"2","REGULAR",107,1093,2018-02-07 01:10:28,1,1,"Ryan O'Reilly faceoff won against Ryan Getzlaf",-20,22
+"2017020812_118","2017020812","7","24","Blocked Shot",NA,46,-2,"2","REGULAR",131,1069,2018-02-07 01:11:12,1,1,"Rasmus Ristolainen blocked shot from Cam Fowler",-46,2
+"2017020812_119","2017020812","24","7","Shot","Snap Shot",38,-3,"2","REGULAR",137,1063,2018-02-07 01:11:17,1,1,"Cam Fowler Snap Shot saved by Robin Lehner",38,-3
+"2017020812_120","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",138,1062,2018-02-07 01:11:19,1,1,"Goalie Stopped",NA,NA
+"2017020812_121","2017020812","24","7","Faceoff",NA,69,-22,"2","REGULAR",138,1062,2018-02-07 01:11:33,1,1,"Derek Grant faceoff won against Ryan O'Reilly",69,-22
+"2017020812_122","2017020812","24","7","Shot","Wrist Shot",79,21,"2","REGULAR",145,1055,2018-02-07 01:11:56,1,1,"J.T. Brown Wrist Shot saved by Robin Lehner",79,21
+"2017020812_123","2017020812","7","24","Missed Shot",NA,-32,34,"2","REGULAR",178,1022,2018-02-07 01:12:28,1,1,"Casey Nelson - Wide of Net",32,-34
+"2017020812_124","2017020812","24","7","Giveaway",NA,-29,-27,"2","REGULAR",183,1017,2018-02-07 01:12:33,1,1,"Giveaway by J.T. Brown",-29,-27
+"2017020812_125","2017020812","7","24","Giveaway",NA,-23,-20,"2","REGULAR",190,1010,2018-02-07 01:12:40,1,1,"Giveaway by Jason Pominville",23,20
+"2017020812_126","2017020812","24","7","Hit",NA,31,39,"2","REGULAR",201,999,2018-02-07 01:12:54,1,1,"Chris Wagner hit Evan Rodrigues",31,39
+"2017020812_127","2017020812","7","24","Giveaway",NA,-23,8,"2","REGULAR",226,974,2018-02-07 01:13:19,1,1,"Giveaway by Benoit Pouliot",23,-8
+"2017020812_128","2017020812","24","7","Shot","Snap Shot",77,11,"2","REGULAR",230,970,2018-02-07 01:13:20,1,1,"Nick Ritchie Snap Shot saved by Robin Lehner",77,11
+"2017020812_129","2017020812","7","24","Blocked Shot",NA,52,25,"2","REGULAR",260,940,2018-02-07 01:13:50,1,1,"Jacob Josefson blocked shot from Ryan Kesler",-52,-25
+"2017020812_130","2017020812","24","7","Missed Shot",NA,60,-12,"2","REGULAR",279,921,2018-02-07 01:14:09,1,1,"Ryan Kesler - Wide of Net",60,-12
+"2017020812_131","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",300,900,2018-02-07 01:14:32,1,1,"Goalie Stopped",NA,NA
+"2017020812_132","2017020812","7","24","Faceoff",NA,69,-22,"2","REGULAR",300,900,2018-02-07 01:14:47,1,1,"Ryan O'Reilly faceoff won against Rickard Rakell",-69,22
+"2017020812_133","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",324,876,2018-02-07 01:15:38,1,1,"Offside",NA,NA
+"2017020812_134","2017020812","24","7","Faceoff",NA,0,0,"2","REGULAR",324,876,2018-02-07 01:15:54,1,1,"Derek Grant faceoff won against Evan Rodrigues",0,0
+"2017020812_135","2017020812","7","24","Blocked Shot",NA,48,-16,"2","REGULAR",360,840,2018-02-07 01:16:41,1,1,"Justin Falk blocked shot from J.T. Brown",-48,16
+"2017020812_136","2017020812","7","24","Hit",NA,98,29,"2","REGULAR",424,776,2018-02-07 01:17:45,1,1,"Rasmus Ristolainen hit Nick Ritchie",-98,-29
+"2017020812_137","2017020812","24","7","Hit",NA,19,-41,"2","REGULAR",430,770,2018-02-07 01:17:52,1,1,"Kevin Bieksa hit Benoit Pouliot",19,-41
+"2017020812_138","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",439,761,2018-02-07 01:18:02,1,1,"Icing",NA,NA
+"2017020812_139","2017020812","7","24","Faceoff",NA,-69,-22,"2","REGULAR",439,761,2018-02-07 01:18:11,1,1,"Jack Eichel faceoff won against Adam Henrique",69,22
+"2017020812_140","2017020812","24","7","Shot","Wrist Shot",64,25,"2","REGULAR",450,750,2018-02-07 01:18:48,1,1,"Nick Ritchie Wrist Shot saved by Robin Lehner",64,25
+"2017020812_141","2017020812","7","24","Shot","Wrist Shot",-73,-9,"2","REGULAR",458,742,2018-02-07 01:18:54,1,1,"Sam Reinhart Wrist Shot saved by Ryan Miller",73,9
+"2017020812_142","2017020812","7","24","Giveaway",NA,-87,-9,"2","REGULAR",460,740,2018-02-07 01:18:56,1,1,"Giveaway by Jack Eichel",87,9
+"2017020812_143","2017020812","7","24","Takeaway",NA,63,39,"2","REGULAR",472,728,2018-02-07 01:19:07,1,1,"Takeaway by Sam Reinhart",-63,-39
+"2017020812_144","2017020812","24","7","Hit",NA,-88,-29,"2","REGULAR",482,718,2018-02-07 01:19:17,1,1,"Ryan Kesler hit Jack Eichel",-88,-29
+"2017020812_145","2017020812","24","7","Takeaway",NA,-17,-6,"2","REGULAR",496,704,2018-02-07 01:19:32,1,1,"Takeaway by Andrew Cogliano",-17,-6
+"2017020812_146","2017020812","24","7","Shot","Wrist Shot",40,15,"2","REGULAR",501,699,2018-02-07 01:19:36,1,1,"Hampus Lindholm Wrist Shot saved by Robin Lehner",40,15
+"2017020812_147","2017020812","7","24","Hit",NA,74,40,"2","REGULAR",506,694,2018-02-07 01:19:41,1,1,"Rasmus Ristolainen hit Hampus Lindholm",-74,-40
+"2017020812_148","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",526,674,2018-02-07 01:20:03,1,1,"High Stick",NA,NA
+"2017020812_149","2017020812","24","7","Faceoff",NA,69,-22,"2","REGULAR",526,674,2018-02-07 01:22:08,1,1,"Ryan Getzlaf faceoff won against Ryan O'Reilly",69,-22
+"2017020812_150","2017020812","7","24","Takeaway",NA,43,-38,"2","REGULAR",531,669,2018-02-07 01:22:22,1,1,"Takeaway by Evander Kane",-43,38
+"2017020812_151","2017020812","24","7","Takeaway",NA,73,-38,"2","REGULAR",538,662,2018-02-07 01:22:29,1,1,"Takeaway by Ryan Getzlaf",73,-38
+"2017020812_152","2017020812","24","7","Shot","Slap Shot",56,-21,"2","REGULAR",551,649,2018-02-07 01:22:42,1,1,"Corey Perry Slap Shot saved by Robin Lehner",56,-21
+"2017020812_153","2017020812","24","7","Hit",NA,-97,4,"2","REGULAR",567,633,2018-02-07 01:22:58,1,1,"Ryan Getzlaf hit Evander Kane",-97,4
+"2017020812_154","2017020812","24","7","Giveaway",NA,-75,39,"2","REGULAR",589,611,2018-02-07 01:23:19,1,1,"Giveaway by Josh Manson",-75,39
+"2017020812_155","2017020812","7","24","Blocked Shot",NA,52,-18,"2","REGULAR",593,607,2018-02-07 01:23:25,1,1,"Marco Scandella blocked shot from J.T. Brown",-52,18
+"2017020812_156","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",594,606,2018-02-07 01:23:26,1,1,"Puck in Netting",NA,NA
+"2017020812_157","2017020812","24","7","Faceoff",NA,69,-22,"2","REGULAR",594,606,2018-02-07 01:23:44,1,1,"Derek Grant faceoff won against Jacob Josefson",69,-22
+"2017020812_158","2017020812","24","7","Hit",NA,35,40,"2","REGULAR",602,598,2018-02-07 01:24:08,1,1,"Chris Wagner hit Rasmus Ristolainen",35,40
+"2017020812_159","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",602,598,2018-02-07 01:24:16,1,1,"Puck in Benches",NA,NA
+"2017020812_160","2017020812","24","7","Faceoff",NA,69,22,"2","REGULAR",602,598,2018-02-07 01:25:51,1,1,"Adam Henrique faceoff won against Evan Rodrigues",69,22
+"2017020812_161","2017020812","24","7","Shot","Wrist Shot",36,-34,"2","REGULAR",607,593,2018-02-07 01:26:25,1,1,"Kevin Bieksa Wrist Shot saved by Robin Lehner",36,-34
+"2017020812_162","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",608,592,2018-02-07 01:26:27,1,1,"Goalie Stopped",NA,NA
+"2017020812_163","2017020812","7","24","Faceoff",NA,69,-22,"2","REGULAR",608,592,2018-02-07 01:26:57,1,1,"Ryan O'Reilly faceoff won against Adam Henrique",-69,22
+"2017020812_164","2017020812","7","24","Shot","Backhand",-70,2,"2","REGULAR",620,580,2018-02-07 01:27:09,1,1,"Benoit Pouliot Backhand saved by Ryan Miller",70,-2
+"2017020812_165","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",621,579,2018-02-07 01:27:30,1,1,"Goalie Stopped",NA,NA
+"2017020812_166","2017020812","24","7","Faceoff",NA,-69,22,"2","REGULAR",621,579,2018-02-07 01:27:30,1,1,"Ryan Kesler faceoff won against Jacob Josefson",-69,22
+"2017020812_167","2017020812","24","7","Shot","Backhand",77,16,"2","REGULAR",633,567,2018-02-07 01:28:04,1,1,"Brandon Montour Backhand saved by Robin Lehner",77,16
+"2017020812_168","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",634,566,2018-02-07 01:28:06,1,1,"Goalie Stopped",NA,NA
+"2017020812_169","2017020812","7","24","Faceoff",NA,69,22,"2","REGULAR",634,566,2018-02-07 01:28:20,1,1,"Ryan O'Reilly faceoff won against Ryan Getzlaf",-69,-22
+"2017020812_170","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",663,537,2018-02-07 01:29:09,1,1,"Puck Frozen",NA,NA
+"2017020812_171","2017020812","7","24","Faceoff",NA,-69,-22,"2","REGULAR",663,537,2018-02-07 01:29:31,1,1,"Ryan O'Reilly faceoff won against Ryan Kesler",69,22
+"2017020812_172","2017020812","7","24","Missed Shot",NA,-36,6,"2","REGULAR",747,453,2018-02-07 01:31:24,1,1,"Jack Eichel - Wide of Net",36,-6
+"2017020812_173","2017020812","24","7","Penalty","Holding",-96,1,"2","REGULAR",748,452,2018-02-07 01:31:15,1,1,"Korbinian Holzer Holding against Evander Kane",-96,1
+"2017020812_174","2017020812","7","24","Penalty","Tripping",-86,29,"2","REGULAR",748,452,2018-02-07 01:31:42,1,1,"Justin Falk Tripping against Korbinian Holzer",86,-29
+"2017020812_175","2017020812","7","24","Faceoff",NA,-69,22,"2","REGULAR",748,452,2018-02-07 01:32:06,1,1,"Jack Eichel faceoff won against Adam Henrique",69,-22
+"2017020812_176","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",773,427,2018-02-07 01:33:05,1,1,"Offside",NA,NA
+"2017020812_177","2017020812","7","24","Faceoff",NA,20,22,"2","REGULAR",773,427,2018-02-07 01:33:39,1,1,"Ryan O'Reilly faceoff won against Ryan Getzlaf",-20,-22
+"2017020812_178","2017020812","24","7","Takeaway",NA,-71,39,"2","REGULAR",795,405,2018-02-07 01:33:32,1,1,"Takeaway by Ryan Getzlaf",-71,39
+"2017020812_179","2017020812","7","24","Hit",NA,19,39,"2","REGULAR",806,394,2018-02-07 01:33:42,1,1,"Ryan O'Reilly hit Ryan Getzlaf",-19,-39
+"2017020812_180","2017020812","24","7","Shot","Wrist Shot",68,2,"2","REGULAR",820,380,2018-02-07 01:33:56,1,1,"Ryan Getzlaf Wrist Shot saved by Robin Lehner",68,2
+"2017020812_181","2017020812","24","7","Shot","Slap Shot",42,-8,"2","REGULAR",864,336,2018-02-07 01:34:40,1,1,"Hampus Lindholm Slap Shot saved by Robin Lehner",42,-8
+"2017020812_182","2017020812","24","7","Missed Shot",NA,75,-1,"2","REGULAR",878,322,2018-02-07 01:34:55,1,1,"Ryan Kesler - Wide of Net",75,-1
+"2017020812_183","2017020812","24","7","Hit",NA,97,2,"2","REGULAR",890,310,2018-02-07 01:35:06,1,1,"Ryan Kesler hit Marco Scandella",97,2
+"2017020812_184","2017020812","7","24","Hit",NA,-77,41,"2","REGULAR",952,248,2018-02-07 01:36:08,1,1,"Jordan Nolan hit Derek Grant",77,-41
+"2017020812_185","2017020812","7","24","Hit",NA,32,-41,"2","REGULAR",1009,191,2018-02-07 01:37:11,1,1,"Rasmus Ristolainen hit Ryan Kesler",-32,41
+"2017020812_186","2017020812","24","7","Penalty","Slashing",33,-41,"2","REGULAR",1030,170,2018-02-07 01:37:46,1,1,"J.T. Brown Slashing against Rasmus Ristolainen",33,-41
+"2017020812_187","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",1030,170,2018-02-07 01:38:28,1,1,"TV timeout",NA,NA
+"2017020812_188","2017020812","7","24","Faceoff",NA,-69,-22,"2","REGULAR",1030,170,2018-02-07 01:39:11,1,1,"Ryan O'Reilly faceoff won against Ryan Kesler",69,22
+"2017020812_189","2017020812","7","24","Goal","Wrist Shot",-81,-5,"2","REGULAR",1038,162,2018-02-07 01:39:51,1,2,"Jack Eichel (21) Wrist Shot, assists: Sam Reinhart (12), Kyle Okposo (22)",81,5
+"2017020812_190","2017020812","7","24","Faceoff",NA,0,0,"2","REGULAR",1038,162,2018-02-07 01:40:32,1,2,"Jack Eichel faceoff won against Ryan Getzlaf",0,0
+"2017020812_191","2017020812","7","24","Shot","Wrist Shot",-50,-29,"2","REGULAR",1116,84,2018-02-07 01:42:03,1,2,"Evander Kane Wrist Shot saved by Ryan Miller",50,29
+"2017020812_192","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",1125,75,2018-02-07 01:42:14,1,2,"Icing",NA,NA
+"2017020812_193","2017020812","24","7","Faceoff",NA,-69,22,"2","REGULAR",1125,75,2018-02-07 01:42:43,1,2,"Adam Henrique faceoff won against Ryan O'Reilly",-69,22
+"2017020812_194","2017020812","7","24","Takeaway",NA,-18,36,"2","REGULAR",1144,56,2018-02-07 01:43:16,1,2,"Takeaway by Kyle Okposo",18,-36
+"2017020812_195","2017020812",NA,NA,"Stoppage",NA,NA,NA,"2","REGULAR",1144,56,2018-02-07 01:43:41,1,2,"Offside",NA,NA
+"2017020812_196","2017020812","24","7","Faceoff",NA,-20,22,"2","REGULAR",1144,56,2018-02-07 01:43:41,1,2,"Adam Henrique faceoff won against Evan Rodrigues",-20,22
+"2017020812_197","2017020812","24","7","Missed Shot",NA,66,9,"2","REGULAR",1157,43,2018-02-07 01:44:04,1,2,"Nick Ritchie - Wide of Net",66,9
+"2017020812_198","2017020812","24","7","Shot","Wrist Shot",34,-29,"2","REGULAR",1159,41,2018-02-07 01:44:22,1,2,"Josh Manson Wrist Shot saved by Robin Lehner",34,-29
+"2017020812_199","2017020812","24","7","Goal","Backhand",84,-7,"2","REGULAR",1161,39,2018-02-07 01:44:10,2,2,"Ondrej Kase (14) Backhand, assists: Josh Manson (22), Nick Ritchie (12)",84,-7

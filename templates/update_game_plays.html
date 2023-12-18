@@ -91,6 +91,56 @@
                 <input class="input is-hovered" type="text" name="period_time" id="period_time" value="{{ results[0].period_time }}">
             </div>
             </div>
+
+            <div class="mb-3 row">
+            <label for="period_time_remaining" class="col-sm-2 col-form-label text-sm-end">Period Time Remaining:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="period_time_remaining" id="period_time_remaining" value="{{ results[0].period_time_remaining }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="date_time" class="col-sm-2 col-form-label text-sm-end">Date Time:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="date_time" id="date_time" value="{{ results[0].date_time }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="goals_away" class="col-sm-2 col-form-label text-sm-end">Goals Away:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="goals_away" id="goals_away" value="{{ results[0].goals_away }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="goals_home" class="col-sm-2 col-form-label text-sm-end">Goals Home:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="goals_home" id="goals_home" value="{{ results[0].goals_home }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="description" class="col-sm-2 col-form-label text-sm-end">Description:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="description" id="description" value="{{ results[0].description }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="st_x" class="col-sm-2 col-form-label text-sm-end">ST X:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="st_x" id="st_x" value="{{ results[0].st_x }}">
+            </div>
+            </div>
+
+            <div class="mb-3 row">
+            <label for="st_y" class="col-sm-2 col-form-label text-sm-end">ST Y:</label>
+            <div class="col-sm-6">
+                <input class="input is-hovered" type="text" name="st_y" id="st_y" value="{{ results[0].st_y }}">
+            </div>
+            </div>
+
             {% else %}
                 <p>No results found for the specified play ID.</p>
             {% endif %}

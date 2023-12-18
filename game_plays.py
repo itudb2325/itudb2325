@@ -25,7 +25,7 @@ create_game_plays_table = '''
         period_type VARCHAR(255),
         period_time INT,
         period_time_remaining INT,
-        date_time DATETIME,
+        date_time VARCHAR(255),
         goals_away INT,
         goals_home INT,
         description VARCHAR(255),
@@ -58,9 +58,10 @@ csv_file = pd.read_csv('nhl-db/game_plays.csv', usecols=[
     'st_y'
 ])
 
-csv_file.replace(['', 'NA'], None, inplace=True)
+csv_file.replace(['', 'NA'], None, inplace = True)
 csv_file = csv_file.where(pd.notna(csv_file), None)
-data_to_insert = csv_file.to_records(index=False).tolist()
+csv_file = csv_file.sort_values(by = 'dateTime', ascending = True)
+data_to_insert = csv_file.to_records(index = False).tolist()
 data_to_insert = [tuple(None if pd.isna(value) else value for value in row) for row in data_to_insert]
 
 insert_query = '''

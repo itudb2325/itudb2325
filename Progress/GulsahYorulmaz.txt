@@ -10,3 +10,5 @@
     - I displayed the data from my table on my webpage and beautified base.html.
 17.12.2023 - Week 11
     - I added update functionality and html file for it.
+18.12.2023 - Week 12
+    - I finished update operation from CRUD operations.
