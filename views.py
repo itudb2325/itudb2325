@@ -93,10 +93,7 @@ def get_skater_stats_by_id(id):
     conn.close()
     return results
 
-def update_skater_stats(id):
-    if request.method == 'GET':
-        skater_stat = get_skater_stats_by_id(id)
-        return render_template('update_skater_stats.html', results=skater_stat)
+
   
 
 
@@ -121,7 +118,7 @@ def update_skater_stats(id):
         powerPlayGoals = request.form.get('powerPlayGoals')
         powerPlayAssists = request.form.get('powerPlayAssists')
 
-        update_skater_stats( game_id, player_id, team_id, timeOnIce, 
+        update_game_skater(id, game_id, player_id, team_id, timeOnIce, 
                             assists, goals, shots, hits, 
                             powerPlayGoals, powerPlayAssists)
 
