@@ -2,6 +2,7 @@ import mysql.connector
 import pandas as pd
 import numpy as np
 from config import MYSQL_CONFIG
+from team_info import create_team_info
 
 # connection details
 mydb = mysql.connector.connect(**MYSQL_CONFIG)
@@ -35,6 +36,26 @@ create_game_plays_table = '''
 '''
 
 mycursor.execute(create_game_plays_table)
+
+#create_team_info();
+#
+#foreign_key_query = '''
+#    ALTER TABLE game_plays
+#    FOREIGN KEY (team_id_for)
+#    REFERENCES team_info(team_id)
+#    ON UPDATE CASCADE
+#    ON DELETE CASCADE;
+#'''
+#mycursor.execute(foreign_key_query)
+#
+#foreign_key_query = '''
+#    ALTER TABLE game_plays
+#    FOREIGN KEY (team_id_against)
+#    REFERENCES team_info(team_id)
+#    ON UPDATE CASCADE
+#    ON DELETE CASCADE;
+#'''
+#mycursor.execute(foreign_key_query)
 
 # read the data file
 csv_file = pd.read_csv('nhl-db/game_plays.csv', usecols=[
