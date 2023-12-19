@@ -58,6 +58,6 @@ Tried to implement search button
 December 19:
 Search button problem is fixed and now the button working correctly
 Create button is created
-(SEARCH, CREATE, READ, UPDATE, DELETE operations are fully implemented
+(SEARCH, CREATE, READ, UPDATE, DELETE operations are fully implemented)
 
 
