@@ -162,7 +162,7 @@ def get_skater_stats():
 def get_skater_stats_by_id(id):
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor(dictionary=True)  # Use dictionary cursor for easier handling of results
-    cursor.execute("SELECT id, game_id, player_id, team_id, timeOnIce, assists, goals, shots, hits, powerPlayGoals, powerPlayAssists FROM game_skater_stats WHERE id = %s", (id,))
+    cursor.execute("SELECT * FROM game_skater_stats WHERE id = %s", (id,))
     results = cursor.fetchall()
     conn.close()
     return results
