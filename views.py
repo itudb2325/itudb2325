@@ -4,7 +4,7 @@ import pandas as pd
 from config import MYSQL_CONFIG  # Assuming you have a configuration file
 from game_goalie_stats import delete_goalie_stats_by_id, delete_player_by_id, create_goalie_stats, update_goalie_stats, update_player, get_goalie_info, get_goalie_info_by_id
 from game_teams_stats import delete_teams_stats_by_id, create_teams, update_teams
-from game_skater_stats import update_game_skater , delete_skater_stats_by_id
+from game_skater_stats import update_game_skater , delete_skater_stats_by_id, create_skater
 from game_plays import update_game, create_game, delete_game_plays_by_id
 import os
 
@@ -225,6 +225,28 @@ def search_skater_stats():
 
     return render_template("game_skater_stats.html")
 
+def create_skater_stats():
+    if request.method == 'GET':
+        return render_template('create_skater_stats.html')
+
+    else:
+        game_id = request.form.get('game_id')
+        player_id = request.form.get('player_id')
+        
+        team_id = request.form.get('team_id')
+        timeOnIce = request.form.get('timeOnIce')
+        assists = request.form.get('assists')
+        goals = request.form.get('goals')
+        shots = request.form.get('shots')
+        hits = request.form.get('hits')
+        powerPlayGoals = request.form.get('powerPlayGoals')
+        powerPlayAssists = request.form.get('powerPlayAssists')
+
+
+        create_skater(game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists)
+
+        return redirect(url_for('game_skater_stats'))
+    
 #Game Goalie Stats Table
 # Game Goalie Stats
 

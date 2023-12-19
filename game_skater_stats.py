@@ -145,4 +145,17 @@ def delete_skater_stats_by_id(id):
     cursor.close()
     connection.close()
 
+def create_skater(game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists):
+    connection = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = connection.cursor()
+
+    create = '''
+                    INSERT INTO game_skater_stats(game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                '''
+    cursor.execute(create, (game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists))
+
+    connection.commit()
+    cursor.close()
+    connection.close()
 
