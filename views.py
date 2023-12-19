@@ -221,7 +221,7 @@ def search_skater_stats():
         print("Search Value:", search_val)  # Add this line for debugging
         skater_stats = search_skater_by_game_id(search_val)
         
-        return render_template("game_skater_stats.html", skater_stats=skater_stats)
+        return render_template("game_skater_stats.html", results=skater_stats)
 
     return render_template("game_skater_stats.html")
 
