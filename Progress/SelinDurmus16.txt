@@ -1,0 +1,63 @@
+COMMITS OF SelinDurmus16:
+
+November 1:
+game_skater_stats first commits ( simple buttons),
+
+
+November 8:
+updated home page buttpn and colored it as orange
+added NHL logo and wrote the logo's name = National Hockey league (cursive)
+Uploaded the NHL logo to the created image folder to be used all together
+
+
+November 11:
+I created a CSS file for design purposes and transferred the necessay parts from skater_stats to
+that file 
+Colored the webpage
+Linked the CSS file and game_skater_stats
+Added navigation bar
+
+November 19:
+Added the official links for NHL youtube, instagram, X( twitter) and facebook
+
+November 27:
+I created python file and implemented the necessary connections (flask)
+Imported the necesarry libraries
+
+December 3:
+I wrote the initial code connections to game_skater_stats.py 
+Started table creations
+Edited my first html page so that it is connected to base html
+
+December 7:
+I created my tables according to my csv and set the types of the columns
+I added id with AUTO_INCREMENT to set it as primary key
+I have added the NHL HOCKEY THEME MUSIC to the webpage
+edited the paragraph
+edited the style of css and repositioned the socials
+
+December  15:
+My files were deleted from my computer so I fixed the connection problem with my github
+
+December 16:
+I have pulled the necessary data from the csv file to be shown on the webpage 
+( I used first 10 columns and id that I have implemented as primary key)
+
+December 17:
+Implemented update button and fixed the bugs of it.
+Adjusted the rest of the files for my update button (added the url link etc)
+Created my txt to write my progress inside of it.
+
+
+December 18:
+Update button is fully and correctly implemented
+Delete button is added
+Set the active page coloring for my page 
+Tried to implement search button
+
+December 19:
+Search button problem is fixed and now the button working correctly
+Create button is created
+(SEARCH, CREATE, READ, UPDATE, DELETE operations are fully implemented
+
+
