@@ -4,8 +4,6 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 
-
-
 <div class="container" style="margin-top: 15px;">
     <div class="row">
         <div class="col md-12">
@@ -39,7 +37,9 @@
                 </tr>
                 {% for goalie in goalie_stats %}
                 <tr>
-                    <td>{% include 'goalie_info.html' %}</td>
+                    <td>
+                        {% include 'goalie_info.html' %}
+                    </td>
                     <td>{{ goalie.id }}</td>
                     <td>{{ goalie.game_id }}</td>
                     <td>{{ goalie.player_id }}</td>
@@ -71,6 +71,12 @@
 <div class="container">
     <div class="row">
         <div class="col md-12">
+            <div>
+                <form action="{{ url_for('search_player_stats') }}#search-results" method="post" class="input-group mb-3">
+                    <input type="text" class="form-control" value="{{ search }}" placeholder="Player name.." id="search" name="search">
+                    <button type="submit" class="btn btn-secondary">Search</button>
+                </form>
+            </div>
             <table class="table table-striped table-hover" id="player_info" style="margin-top: 20px;">
                 <tr>
                     <th>Player ID</th>
@@ -93,9 +99,8 @@
                     <td>{{ player.primaryPosition }}</td>
                     <td>{{ player.height_cm }}</td>
                     <td>
-                        <a name="update_player_info" id="update_player_info" class="btn btn-outline-secondary btn-sm" 
-                           href="{{ url_for('update_player_info', player_id=player.player_id)  }}" role="button">Update</a>
-                     </td> 
+                        {% include 'update_player_info.html' %}    
+                    </td> 
                     <td>
                         <form method="post" action="{{ url_for('delete_player') }}">
                             <input type="hidden" name="player_id" value="{{ player.player_id }}">
@@ -156,13 +161,22 @@
     }
 </script>
 
-
+<div>
+    {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-warning alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                {{message}}
+              </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
 
 {% endblock %}
-
 
 
 <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
 
 <script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
-

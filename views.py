@@ -1,4 +1,4 @@
-from flask import Flask, current_app, abort, render_template, request, redirect, url_for
+from flask import Flask, current_app, abort, render_template, request, redirect, url_for, flash
 import mysql.connector
 import pandas as pd
 from config import MYSQL_CONFIG  # Assuming you have a configuration file
@@ -7,13 +7,19 @@ from game_teams_stats import delete_teams_stats_by_id, create_teams, update_team
 from game_skater_stats import update_game_skater , delete_skater_stats_by_id, create_skater
 from game_plays import update_game, create_game, delete_game_plays_by_id
 import os
+import secrets
+
 
 def configure_app(app):
     img = os.path.join('static', 'img')
     app.config['UPLOAD_FOLDER'] = img
+    app
+    app.secret_key = secrets.token_hex(16)
 
 app = Flask(__name__)
 configure_app(app)
+
+
 
 def generate_image_paths():
     img_logo_path = '05_NHL_Shield.svg.webp' 
@@ -282,11 +288,14 @@ def get_player_info_by_id(player_id):
     conn.close()
     return results
 
+
 def game_goalie_stats():
     goalie_stats = get_goalie_stats()
     player_info = get_player_info()
-    goalie_info = get_goalie_info()
-    return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, player_info=player_info, active_page = 'game_goalie_stats', goalie_info=goalie_info)
+    return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, 
+                           player_info=player_info, active_page = 'game_goalie_stats', 
+                           get_goalie_info_by_id=get_goalie_info_by_id,
+                           get_goalie_stats_by_id=get_goalie_stats_by_id)
 
 def delete_goalie_stats():
     if request.method == 'POST':
@@ -328,7 +337,7 @@ def update_goalie(id):
 def update_player_info(player_id):
     if request.method == 'GET':
         player_info = get_player_info_by_id(player_id)
-        return render_template('update_player.html', player_id=player_id, player_info=player_info)
+        return render_template('update_player_info.html', player_id=player_id, player_info=player_info)
 
     else:
         firstName = request.form.get('firstName')
@@ -364,7 +373,7 @@ def create_goalie():
                             evenShotsAgainst, powerPlayShotsAgainst)
 
         return redirect(url_for('game_goalie_stats'))
-    
+     
     
 def search_by_game_id(game_id):
     conn = mysql.connector.connect(**MYSQL_CONFIG)
@@ -380,17 +389,35 @@ def search_goalie_stats():
         goalie_stats = search_by_game_id(search_val)
         player_info = get_player_info()
         goalie_info = get_goalie_info()
-        return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, player_info=player_info, goalie_info=goalie_info)
+        return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, 
+                               player_info=player_info, goalie_info=goalie_info,
+                               get_goalie_info_by_id=get_goalie_info_by_id)
+
+    return redirect(url_for('game_goalie_stats'))
+
+def search_by_player_name(player_name):
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
+    cursor = conn.cursor(dictionary=True)  
+    cursor.execute("SELECT * FROM player_info WHERE firstName LIKE %s", (str(player_name),))
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+def search_player_stats():
+    if request.method == 'POST':
+        player_name = request.form.get('search')
+        goalie_stats = get_goalie_stats()
+        player_info = search_by_player_name(player_name)
+        goalie_info = get_goalie_info()
+        return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, player_info=player_info, goalie_info=goalie_info + '#search-results')
 
     return render_template("game_goalie_stats.html")
 
 def goalie_info(id):
     if request.method == 'GET':
         info = get_goalie_info_by_id(id)
-        return render_template('game_goalie_stats.html', id=id, goalie_info=info)
-
-        
-
+        return render_template("goalie_info.html", goalie_info_=info)
+    
     
 
 # Game Teams Stats

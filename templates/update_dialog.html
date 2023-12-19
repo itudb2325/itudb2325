@@ -1,4 +1,4 @@
-{% if goalie.id >= 0 and (goalie.id-1) < goalie_stats|length %}
+{% set update_goalie = get_goalie_stats_by_id(goalie.id)%}
 <dialog id="dialog_{{ goalie.id }}" class="dialog-style">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -14,70 +14,70 @@
         <div class="input-group mb-3">
         <label for="game_id" class="input-group-text">Game ID:</label>
         <div class="col-6">
-           <input class="form-control" type="text" name="game_id" id="game_id" value="{{ goalie_stats[goalie.id-1].game_id }}">
+           <input class="form-control" type="text" name="game_id" id="game_id" value="{{ update_goalie[0].game_id }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="player_id" class="input-group-text">Player ID:</label>
         <div class="col-sm-6">
-           <input class="form-control" type="text" name="player_id" id="player_id" value="{{ goalie_stats[goalie.id-1].player_id }}">
+           <input class="form-control" type="text" name="player_id" id="player_id" value="{{ update_goalie[0].player_id }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="team_id" class="input-group-text">Team ID:</label>
         <div class="col-sm-6">
-           <input class="form-control" type="text" name="team_id" id="team_id" value="{{ goalie_stats[goalie.id-1].team_id }}">
+           <input class="form-control" type="text" name="team_id" id="team_id" value="{{ update_goalie[0].team_id }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="timeOnIce" class="input-group-text">Time On Ice:</label>
         <div class="col-sm-6">
-           <input class="form-control" type="text" name="timeOnIce" id="timeOnIce" value="{{ goalie_stats[goalie.id-1].timeOnIce }}">
+           <input class="form-control" type="text" name="timeOnIce" id="timeOnIce" value="{{ update_goalie[0].timeOnIce }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="shots" class="input-group-text">Shots:</label>
         <div class="col-sm-6">
-           <input class="form-control" type="text" name="shots" id="shots" value="{{ goalie_stats[goalie.id-1].shots }}">
+           <input class="form-control" type="text" name="shots" id="shots" value="{{ update_goalie[0].shots }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="saves" class="input-group-text">Saves:</label>
         <div class="col-sm-6">
-           <input class="form-control" type="text" name="saves" id="saves" value="{{ goalie_stats[goalie.id-1].saves }}">
+           <input class="form-control" type="text" name="saves" id="saves" value="{{ update_goalie[0].saves }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="powerPlaySaves" class="input-group-text">Power Play Saves:</label>
         <div class="col-sm-6">
-           <input class="form-control" type="text" name="powerPlaySaves" id="powerPlaySaves" value="{{ goalie_stats[goalie.id-1].powerPlaySaves }}">
+           <input class="form-control" type="text" name="powerPlaySaves" id="powerPlaySaves" value="{{ update_goalie[0].powerPlaySaves }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="evenSaves" class="input-group-text">Even Saves:</label>
         <div class="col-sm-6">
-           <input class="form-control" type="text" name="evenSaves" id="evenSaves" value="{{ goalie_stats[goalie.id-1].evenSaves }}">
+           <input class="form-control" type="text" name="evenSaves" id="evenSaves" value="{{ update_goalie[0].evenSaves }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="evenShotsAgainst" class="input-group-text">Even Shots Against:</label>
         <div class="col-sm-6">
-           <input class="form-control" type="text" name="evenShotsAgainst" id="evenShotsAgainsy" value="{{ goalie_stats[goalie.id-1].evenShotsAgainst }}">
+           <input class="form-control" type="text" name="evenShotsAgainst" id="evenShotsAgainsy" value="{{ update_goalie[0].evenShotsAgainst }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="powerPlayShotsAgainst" class="input-group-text">Power Play Shots Against:</label>
         <div class="col-sm-6">
-           <input class="form-control" type="text" name="powerPlayShotsAgainst" id="powerPlayShotsAgainst" value="{{ goalie_stats[goalie.id-1].powerPlayShotsAgainst }}">
+           <input class="form-control" type="text" name="powerPlayShotsAgainst" id="powerPlayShotsAgainst" value="{{ update_goalie[0].powerPlayShotsAgainst }}">
         </div>
      </div>
      <div class="modal-footer">
@@ -95,6 +95,3 @@
   </p>
   <p id="dialogStatus"></p>
 
-  {% else %}
-        <p>Error: Invalid goalie ID</p>
-    {% endif %}

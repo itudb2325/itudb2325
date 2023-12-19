@@ -7,26 +7,38 @@
     </h2>
     <form action="{{ url_for('create_goalie') }}" method="POST" class="form-style">
         
-        <div class="input-group mb-3">
-        <label for="game_id" class="input-group-text">Game ID:</label>
-        <div class="col-6">
-           <input class="form-control" type="text" name="game_id" id="game_id" value="{{ game_id }}">
-        </div>
+      <div class="input-group mb-3">
+         <label for="game_id" class="input-group-text">Game ID:</label>
+         <div class="col-6">
+             <select class="form-control" name="game_id" id="game_id">
+                 {% for game_id_option in goalie_stats %}
+                     <option value="{{ game_id_option }}">{{ game_id_option.game_id }}</option>
+                 {% endfor %}
+             </select>
+         </div>
      </div>
      
      <div class="input-group mb-3">
-        <label for="player_id" class="input-group-text">Player ID:</label>
-        <div class="col-6">
-           <input class="form-control" type="text" name="player_id" id="player_id" value="{{ player_id }}">
-        </div>
-     </div>
+      <label for="player_id" class="input-group-text">Player ID:</label>
+      <div class="col-6">
+          <select class="form-control" name="player_id" id="player_id">
+              {% for player_id_option in goalie_stats %}
+                  <option value="{{ player_id_option }}">{{ player_id_option.player_id }}</option>
+              {% endfor %}
+          </select>
+      </div>
+  </div>
      
-     <div class="input-group mb-3">
-        <label for="team_id" class="input-group-text">Team ID:</label>
-        <div class="col-6">
-           <input class="form-control" type="text" name="team_id" id="team_id" value="{{ team_id }}">
+      <div class="input-group mb-3">
+            <label for="team_id" class="input-group-text">Team ID:</label>
+            <div class="col-6">
+                <select class="form-control" name="team_id" id="team_id">
+                    {% for team_id_option in goalie_stats %}
+                        <option value="{{ team_id_option }}">{{ team_id_option.team_id }}</option>
+                    {% endfor %}
+                </select>
+            </div>
         </div>
-     </div>
      
      <div class="input-group mb-3">
         <label for="timeOnIce" class="input-group-text">Time On Ice:</label>
@@ -78,6 +90,12 @@
      </div>
      <button type="submit" class="btn btn-dark">Create Goalie</button>
      </form>
+     
+     {% if error_message %}
+        <div class="alert alert-danger" role="alert">
+            {{ error_message }}
+        </div>
+      {% endif %}
      
   </dialog>
 
