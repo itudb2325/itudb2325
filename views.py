@@ -8,6 +8,7 @@ from game_skater_stats import update_game_skater , delete_skater_stats_by_id, cr
 from game_plays import update_game, create_game, delete_game_plays_by_id
 import os
 import secrets
+import random
 
 
 def configure_app(app):
@@ -33,6 +34,12 @@ def generate_image_paths():
     full_img_path3 = os.path.join(current_app.config['UPLOAD_FOLDER'], img_x_path)
     full_img_path4 = os.path.join(current_app.config['UPLOAD_FOLDER'], img_instagram_path)
     full_img_path5 = os.path.join(current_app.config['UPLOAD_FOLDER'], img_facebook_path)
+
+    image_folder = os.path.join(os.getcwd(), 'static/news')
+    image_files = [f for f in os.listdir(image_folder) if f.endswith(('.jpg', '.jpeg', '.png'))]
+    num_images_in_carousel = min(3, len(image_files))
+    carousel_images = random.sample(image_files, num_images_in_carousel)
+    carousel_image_paths = [os.path.join('/static/news', img) for img in carousel_images]
     
     return {
         'icon': full_img_path1,
@@ -41,6 +48,7 @@ def generate_image_paths():
         'x': full_img_path3,
         'instagram': full_img_path4,
         'facebook': full_img_path5,
+        'carousel_images': carousel_image_paths
     }
 
 def index_page():

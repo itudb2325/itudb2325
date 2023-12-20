@@ -20,6 +20,41 @@
             <source src="{{ url_for('static', filename='nhlmusic.mp3') }}" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
+        <!-- Image Carousel -->
+        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" style="margin-bottom: 30px;">
+                {% for image in carousel_images %}
+                    <div class="carousel-item {% if loop.first %}active{% endif %}">
+                        <div class="d-flex justify-content-center align-items-center carousel-image-container">
+                            <img src="{{ image }}" class="d-block fixed-width-image" alt="Image">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <a class="carousel-control-prev" href="#imageCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+            <a class="carousel-control-next" href="#imageCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+            <div class="info-container">
+                <p class="info">
+                    In Memory of Adam Johnson                
+                </p>
+            </div>
+        </div>
+        <div class="biography-container">
+            <div class="biography">
+                <p>
+                    Adam Robert Johnson (June 22, 1994 – October 28, 2023) was an American professional ice hockey forward. He played 13 games in the National Hockey League with the Pittsburgh Penguins during the 2018–19 and 2019–20 seasons. He also played in Europe with the Malmö Redhawks, Augsburger Panther, and Nottingham Panthers. Johnson died after his neck was cut by an opposing player's skate blade in an on-ice collision, causing him to bleed out.
+                </p>
+                <p>
+                    For more NHL news, go to <a href="https://www.nhl.com/" target="_blank" rel="noopener noreferrer">NHL Official Website</a>.
+                </p>
+            </div>
+        </div>
     </div>
 
     <div class="column1 side2">
