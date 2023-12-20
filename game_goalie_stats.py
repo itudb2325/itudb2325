@@ -66,7 +66,8 @@ player_info_query = '''
         nationality varchar(10),
         birthCity varchar(40),
         primaryPosition varchar(10),
-        height_cm double
+        height_cm double,
+        shootsCatches char
     )
 '''
 cursor.execute(player_info_query)
@@ -78,7 +79,8 @@ const_df = pd.read_csv('nhl-db/player_info.csv', usecols=[
     'nationality',
     'birthCity',
     'primaryPosition',
-    'height_cm'
+    'height_cm',
+    'shootsCatches'
 ])
 
 # Filter rows based on existing_player_ids
@@ -87,8 +89,8 @@ filtered_player_info_df = const_df[const_df['player_id'].isin(existing_player_id
 insert_query = '''
     INSERT INTO player_info
     (player_id, firstName, lastName, nationality, birthCity, 
-    primaryPosition, height_cm)
-    VALUES (%s, %s, %s, %s, %s, %s, %s)
+    primaryPosition, height_cm, shootsCatches)
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
 '''
 sorted_player_info_df = filtered_player_info_df.sort_values(by=["player_id"], ascending=True)
 player_info_df = sorted_player_info_df
@@ -293,14 +295,14 @@ def update_goalie_stats(id, game_id, player_id, team_id,
     conn.close()
 
 def update_player(player_id, firstName, lastName, nationality, birthCity, 
-    primaryPosition, height_cm):
+    primaryPosition, height_cm, shootsCatches):
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor()
 
     update_query = '''UPDATE player_info SET firstName = %s, lastName = %s, nationality = %s, birthCity = %s, 
-    primaryPosition = %s, height_cm = %s WHERE player_id = %s'''
+    primaryPosition = %s, height_cm = %s, shootsCatches = %s WHERE player_id = %s'''
     cursor.execute(update_query, (firstName, lastName, nationality, birthCity, 
-    primaryPosition, height_cm, player_id,))
+    primaryPosition, height_cm, shootsCatches, player_id,))
 
     conn.commit()
     conn.close()

@@ -1,61 +1,80 @@
-{% if player.player_id >= 0 %}
+{% set update_player = get_player_info_by_id(player.player_id)%}
 <dialog id="dialog_{{ player.player_id }}" class="dialog-style">
         <div class="modal-dialog">
           <div class="modal-content">
 
             <h2 class="goalie-info-header">
                 <div data-bs-theme="dark" class="d-flex justify-content-around align-items-center">
-                    <h2 class="modal-title">Update Player number {{player.player_id}}</h2>
+                    <h2 class="modal-title">Update Player with id {{player.player_id}}</h2>
                     <button id="closeDialog_{{ player.player_id }}" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
             </h2>
-            <form action="{{ url_for('update_player_info', player_id=player.player_id) }}" method="POST">
+            <form action="{{ url_for('update_player_info', player_id=player.player_id) }}" method="POST" class="form-style">
 
-               <div class="mb-3 row">
-               <label for="firstName" class="col-sm-2 col-form-label text-sm-end">First Name:</label>
+            <div class="input-group mb-3">
+               <label for="firstName" class="input-group-text">First Name:</label>
                <div class="col-sm-6">
-                  <input class="input is-hovered" type="text" name="firstName" id="firstName" value="{{ player_info[0].firstName }}">
+                  <input class="form-control" type="text" name="firstName" id="firstName" value="{{ update_player[0].firstName }}">
                </div>
             </div>
             
-            <div class="mb-3 row">
-               <label for="lastName" class="col-sm-2 col-form-label text-sm-end">Last Name:</label>
+            <div class="input-group mb-3">
+               <label for="lastName" class="input-group-text">Last Name:</label>
                <div class="col-sm-6">
-                  <input class="input is-hovered" type="text" name="lastName" id="lastName" value="{{ player_info[0].lastName }}">
+                  <input class="form-control" type="text" name="lastName" id="lastName" value="{{ update_player[0].lastName }}">
                </div>
             </div>
             
-            <div class="mb-3 row">
-               <label for="nationality" class="col-sm-2 col-form-label text-sm-end">Nationality:</label>
+            <div class="input-group mb-3">
+               <label for="nationality" class="input-group-text">Nationality:</label>
                <div class="col-sm-6">
-                  <input class="input is-hovered" type="text" name="nationality" id="nationality" value="{{ player_info[0].nationality }}">
+                  <input class="form-control" type="text" name="nationality" id="nationality" value="{{ update_player[0].nationality }}">
                </div>
             </div>
             
-            <div class="mb-3 row">
-               <label for="birthCity" class="col-sm-2 col-form-label text-sm-end">Birth City:</label>
+            <div class="input-group mb-3">
+               <label for="birthCity" class="input-group-text">Birth City:</label>
                <div class="col-sm-6">
-                  <input class="input is-hovered" type="text" name="birthCity" id="birthCity" value="{{ player_info[0].birthCity }}">
+                  <input class="form-control" type="text" name="birthCity" id="birthCity" value="{{ update_player[0].birthCity }}">
                </div>
             </div>
             
-            <div class="mb-3 row">
-               <label for="primaryPosition" class="col-sm-2 col-form-label text-sm-end">Primary Position:</label>
+            <div class="input-group mb-3">
+               <label for="primaryPosition" class="input-group-text">Primary Position:</label>
                <div class="col-sm-6">
-                  <input class="input is-hovered" type="text" name="primaryPosition" id="primaryPosition" value="{{ player_info[0].primaryPosition }}">
+                  <input class="form-control" type="text" name="primaryPosition" id="primaryPosition" value="{{ update_player[0].primaryPosition }}">
                </div>
             </div>
             
-            <div class="mb-3 row">
-               <label for="height_cm" class="col-sm-2 col-form-label text-sm-end">Height in Cm:</label>
+            <div class="input-group mb-3">
+               <label for="height_cm" class="input-group-text">Height in Cm:</label>
                <div class="col-sm-6">
-                  <input class="input is-hovered" type="text" name="height_cm" id="height_cm" value="{{ player_info[0].height_cm }}">
+                  <input class="form-control" type="text" name="height_cm" id="height_cm" value="{{ update_player[0].height_cm }}">
                </div>
             </div>
-            
-            <button type="submit" class="btn btn-outline-primary">Update Player</button>
-            </form>
-</div>
+
+
+
+            <div class="input-group mb-3 d-flex justify-content-start">
+               <label for="shootsCatches" class="input-group-text">Shoots Catches:</label>
+               <h2>  </h2>
+               <div clas="col-sm-5">
+               <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="shootsCatches" id="shootsCatchesLeft" value="L" {% if update_player[0].shootsCatches == 'L' %}checked{% endif %}>
+                  <span class="btn btn-dark">Left</span>
+               </div>
+               <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="shootsCatches" id="shootsCatchesRight" value="R" {% if update_player[0].shootsCatches == 'R' %}checked{% endif %}>
+                  <span class="btn btn-dark">Right</span>
+               </div>
+               </div>
+            </div>
+
+            <div class="modal-footer fixed-footer">
+               <button type="submit" class="btn btn-dark">Update Player</button>
+            </div>
+         </form>
+   </div>
 </div>
     
   </dialog>
@@ -65,7 +84,3 @@
     <button class="btn btn-outline-secondary btn-sm" onclick="openDialog('{{ player.player_id }}')">Update</button>
   </p>
   <p id="dialogStatus"></p>
-
-  {% else %}
-        <p>Error: Invalid player ID</p>
-    {% endif %}

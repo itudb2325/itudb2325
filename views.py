@@ -295,7 +295,8 @@ def game_goalie_stats():
     return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, 
                            player_info=player_info, active_page = 'game_goalie_stats', 
                            get_goalie_info_by_id=get_goalie_info_by_id,
-                           get_goalie_stats_by_id=get_goalie_stats_by_id)
+                           get_goalie_stats_by_id=get_goalie_stats_by_id,
+                           get_player_info_by_id=get_player_info_by_id)
 
 def delete_goalie_stats():
     if request.method == 'POST':
@@ -337,7 +338,7 @@ def update_goalie(id):
 def update_player_info(player_id):
     if request.method == 'GET':
         player_info = get_player_info_by_id(player_id)
-        return render_template('update_player_info.html', player_id=player_id, player_info=player_info)
+        return render_template('update_player_info.html', player_id=player_id, player_info=player_info, get_goalie_stats_by_id=get_goalie_stats_by_id)
 
     else:
         firstName = request.form.get('firstName')
@@ -346,9 +347,10 @@ def update_player_info(player_id):
         birthCity = request.form.get('birthCity')
         primaryPosition = request.form.get('primaryPosition')
         height_cm = request.form.get('height_cm')
+        shootsCatches = request.form.get('shootsCatches')
         
         update_player(player_id, firstName, lastName, nationality, birthCity, 
-    primaryPosition, height_cm)
+    primaryPosition, height_cm, shootsCatches)
 
         return redirect(url_for('game_goalie_stats'))
 
@@ -391,14 +393,16 @@ def search_goalie_stats():
         goalie_info = get_goalie_info()
         return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, 
                                player_info=player_info, goalie_info=goalie_info,
-                               get_goalie_info_by_id=get_goalie_info_by_id)
+                               get_goalie_stats_by_id=get_goalie_stats_by_id,
+                               get_goalie_info_by_id=get_goalie_info_by_id,
+                               get_player_info_by_id=get_player_info_by_id)
 
     return redirect(url_for('game_goalie_stats'))
 
 def search_by_player_name(player_name):
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor(dictionary=True)  
-    cursor.execute("SELECT * FROM player_info WHERE firstName LIKE %s", (str(player_name),))
+    cursor.execute("SELECT * FROM player_info WHERE firstName LIKE %s", (str(player_name) + '%',))
     results = cursor.fetchall()
     conn.close()
     return results
@@ -409,7 +413,11 @@ def search_player_stats():
         goalie_stats = get_goalie_stats()
         player_info = search_by_player_name(player_name)
         goalie_info = get_goalie_info()
-        return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, player_info=player_info, goalie_info=goalie_info + '#search-results')
+        return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, 
+                               player_info=player_info, goalie_info=goalie_info,
+                               get_goalie_stats_by_id=get_goalie_stats_by_id,
+                               get_goalie_info_by_id=get_goalie_info_by_id,
+                               get_player_info_by_id=get_player_info_by_id)
 
     return render_template("game_goalie_stats.html")
 
