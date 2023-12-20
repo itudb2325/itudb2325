@@ -440,7 +440,7 @@ def get_teams_stats_by_id(id):
 
 def game_teams_stats():
     teams_stats = get_teams_stats()
-    return render_template("game_teams_stats.html", teams_stats=teams_stats)
+    return render_template("game_teams_stats.html", active_page="game_teams_stats", teams_stats=teams_stats)
 
 def delete_teams_stats():
     if request.method == 'POST':

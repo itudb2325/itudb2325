@@ -67,6 +67,28 @@ insert = '''
 
 cursor.executemany(insert, data_to_insert)
 
+foreign_key_query1 = '''
+                        ALTER TABLE game_teams_stats
+                        ADD CONSTRAINT foreign_key1
+                        FOREIGN KEY (team_id)
+                        REFERENCES team_info(team_id)
+                        ON UPDATE CASCADE
+                        ON DELETE CASCADE;
+                    '''
+
+cursor.execute(foreign_key_query1)
+
+foreign_key_query2 = '''
+                        ALTER TABLE game_teams_stats
+                        ADD CONSTRAINT foreign_key2
+                        FOREIGN KEY (game_id)
+                        REFERENCES game(game_id)
+                        ON UPDATE CASCADE
+                        ON DELETE CASCADE;
+                    '''
+
+cursor.execute(foreign_key_query2)
+
 connection.commit()
 
 cursor.close()

@@ -111,8 +111,9 @@ cursor.execute(foreign_key_query)
 #Doing the same filtering
 cursor.execute("SELECT DISTINCT team_id FROM game_goalie_stats")
 existing_team_ids = [row[0] for row in cursor.fetchall()]
-
+cursor.execute("SET FOREIGN_KEY_CHECKS=0;")
 cursor.execute("DROP TABLE IF EXISTS team_info")
+cursor.execute("SET FOREIGN_KEY_CHECKS=1;")
 team_info_query = '''
     CREATE TABLE team_info(
         team_id INT NOT NULL PRIMARY KEY,
@@ -154,8 +155,9 @@ ON DELETE CASCADE;
 cursor.execute(foreign_key_query)
 
 #Create game.csv
-
+cursor.execute("SET FOREIGN_KEY_CHECKS=0;")
 cursor.execute("DROP TABLE IF EXISTS game")
+cursor.execute("SET FOREIGN_KEY_CHECKS=1;")
 game_query = '''
     CREATE TABLE game(
         game_id INT NOT NULL PRIMARY KEY,
