@@ -284,8 +284,6 @@ def update_goalie_stats(id, game_id, player_id, team_id,
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor()
 
-
-
     update_query = '''UPDATE game_goalie_stats SET game_id = %s, 
         player_id = %s, team_id = %s, timeOnIce = %s, shots = %s, saves = %s, powerPlaySaves = %s, 
         evenSaves = %s, evenShotsAgainst = %s, powerPlayShotsAgainst = %s WHERE id = %s'''

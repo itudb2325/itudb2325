@@ -196,9 +196,9 @@ p, ul {
 /******** Dividing the page into three columns ********/
 .column1.side2 {
 	float: left;
-	width: 15%;
-	padding: 10px;
-	background-color: #f0f8ff50;
+	width: 20%;
+	padding: 20px;
+	background-color: #d7d3c650;
 }
 
 .column1.side2 p, .column1.side2 ul {
@@ -208,7 +208,7 @@ p, ul {
 .column1.middle2 {
 	float: left;
 	margin: auto;
-	width: 70%;
+	width: 60%;
 	padding: 10px;
 }
 
@@ -287,7 +287,7 @@ p, ul {
 
 #imageCarousel {
 	margin-top: 20px;
-	max-width: 600px;
+	max-width: 700px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -337,4 +337,34 @@ p, ul {
 	color: #fff; 
 	padding: 10px;
 	border-radius: 20px;
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.teams-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.division {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.teams {
+	display: none;
+	padding-left: 20px;
+}
+
+.card-size-custom {
+	margin-top: 15px;
+	height: 100px;
+	width:340px;
+}
+
+.right-side-col {
+	margin-top: 0;
+	position: relative;
+	background-color: #d7d3c650;
 }
