@@ -297,14 +297,14 @@ def get_player_info_by_id(player_id):
     return results
 
 
-def game_goalie_stats():
+def game_goalie_stats(message = None):
     goalie_stats = get_goalie_stats()
     player_info = get_player_info()
     return render_template("game_goalie_stats.html", goalie_stats=goalie_stats, 
                            player_info=player_info, active_page = 'game_goalie_stats', 
                            get_goalie_info_by_id=get_goalie_info_by_id,
                            get_goalie_stats_by_id=get_goalie_stats_by_id,
-                           get_player_info_by_id=get_player_info_by_id)
+                           get_player_info_by_id=get_player_info_by_id, message=message)
 
 def delete_goalie_stats():
     if request.method == 'POST':
@@ -336,6 +336,10 @@ def update_goalie(id):
         evenSaves = request.form.get('evenSaves')
         evenShotsAgainst = request.form.get('evenShotsAgainst')
         powerPlayShotsAgainst = request.form.get('powerPlayShotsAgainst')
+
+        if (int(shots) < 0):
+            print("ERROR: Shots cannot be less than 0")
+            return
 
         update_goalie_stats(id, game_id, player_id, team_id, timeOnIce, 
                             shots, saves, powerPlaySaves, evenSaves, 

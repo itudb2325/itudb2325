@@ -104,7 +104,7 @@
                         {% include 'update_player_info.html' %}    
                     </td> 
                     <td>
-                        <form method="post" action="{{ url_for('delete_player') }}">
+                        <form method="post"  action="{{ url_for('delete_player') }}">
                             <input type="hidden" name="player_id" value="{{ player.player_id }}">
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                         </form>
@@ -117,6 +117,7 @@
 </div>
 
 <script>
+
     function openDialog(goalieId) {
         const dialog = document.getElementById("dialog_" + goalieId);
 
