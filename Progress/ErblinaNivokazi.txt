@@ -1,0 +1,41 @@
+Week 5:
+  Added student numbers
+  Added Goalie_Stats.html
+Week 6:
+  Skeleton for Flask Project:
+    I added a main.py file from where the html files will be called. A views.py file which is going to be later used to make interconnections between the html files. A settings.py file which is also still empty but will be needed later. I put the html files in template accordingly to the flask project skeleton.
+  Updated name of folder template -> templates
+Week 7:
+  Merge branch 'main' of https://github.com/GulsahYorulmaz/DatabaseSystems…
+  Slight Changes
+Week 8:
+  Connected the pages through views.py, added a base html page, added table to game_goalie_stats
+    I imported my table in game_goalie_stats through sqlite3, connected the pages in views.py and used them in index page which is our main page
+  Changed Footer
+Week 9:
+  Implementation with mysql.connector
+    I switched my implementation from sqlite3 to mysql.connector, to make this work I made the required changes. I added a config.py which includes the configuration details for the database.
+  fixed the home page
+Week 10:
+  CRUD Operations
+    Implemented Create, Update and Delete operations on table game_goalie_stats
+  Changed the webpage's design a little
+    Added a background for header, made the logos bigger, changed the base background.
+Week 11:
+  Added Search, Foreign Keys and Player_info table to my webpage
+    Search works based on game_id, foreign keys connect my table game_goalie_stats to tables player_info and team_info, I displayed player_info table and implemented delete and update on it.
+  Fixed Delete in player_info
+  Adjustments to the Home Page and Game Goalie Stats page
+  Added dialogs to Game Goalie Stats Page
+    I added a dialog that displays the information of each row, with inner join I display all the information that comes from the foreign keys into my table.
+    I added a dialog for the update and create function.
+    And also I made a few style changes to my page
+  Some minor changes to style
+Week 12:
+  Made some fixes in the Game Goalie Stats page
+    Fixed info section in Game Goalie Stats page, and also the update section
+  Fixed parts of Player_Info table
+    Update and search weren't working properly, I fixed it. Also added a new column Shoots Catches which makes it possible for me to get data from update in the form of checkboxes.
+    
+  
+  
