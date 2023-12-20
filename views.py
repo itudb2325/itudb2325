@@ -1,4 +1,4 @@
-from flask import Flask, current_app, abort, render_template, request, redirect, url_for, flash
+from flask import Flask, current_app, abort, render_template, request, redirect, url_for, flash, session
 import mysql.connector
 import pandas as pd
 from config import MYSQL_CONFIG  # Assuming you have a configuration file
@@ -14,11 +14,11 @@ import random
 def configure_app(app):
     img = os.path.join('static', 'img')
     app.config['UPLOAD_FOLDER'] = img
-    app
-    app.secret_key = secrets.token_hex(16)
 
 app = Flask(__name__)
 configure_app(app)
+app.secret_key = "top secret"
+
 
 
 
@@ -326,9 +326,6 @@ def update_goalie(id):
         return render_template('update_goalie.html', id=id, goalie_stats=goalie_stats)
 
     else:
-        game_id = request.form.get('game_id')
-        player_id = request.form.get('player_id')
-        team_id = request.form.get('team_id')
         timeOnIce = request.form.get('timeOnIce')
         shots = request.form.get('shots')
         saves = request.form.get('saves')
@@ -336,12 +333,8 @@ def update_goalie(id):
         evenSaves = request.form.get('evenSaves')
         evenShotsAgainst = request.form.get('evenShotsAgainst')
         powerPlayShotsAgainst = request.form.get('powerPlayShotsAgainst')
-
-        if (int(shots) < 0):
-            print("ERROR: Shots cannot be less than 0")
-            return
-
-        update_goalie_stats(id, game_id, player_id, team_id, timeOnIce, 
+    
+        update_goalie_stats(id, timeOnIce, 
                             shots, saves, powerPlaySaves, evenSaves, 
                             evenShotsAgainst, powerPlayShotsAgainst)
 

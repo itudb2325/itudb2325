@@ -278,21 +278,22 @@ def get_goalie_info_by_id(id):
     return results
 
 
-def update_goalie_stats(id, game_id, player_id, team_id,
+def update_goalie_stats(id,
             timeOnIce, shots, saves, powerPlaySaves,
             evenSaves, evenShotsAgainst, powerPlayShotsAgainst):
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor()
 
-    update_query = '''UPDATE game_goalie_stats SET game_id = %s, 
-        player_id = %s, team_id = %s, timeOnIce = %s, shots = %s, saves = %s, powerPlaySaves = %s, 
+
+    update_query = '''UPDATE game_goalie_stats SET timeOnIce = %s, shots = %s, saves = %s, powerPlaySaves = %s, 
         evenSaves = %s, evenShotsAgainst = %s, powerPlayShotsAgainst = %s WHERE id = %s'''
-    cursor.execute(update_query, (game_id, player_id, team_id, timeOnIce, 
+    cursor.execute(update_query, (timeOnIce, 
                                   shots, saves, powerPlaySaves, evenSaves, 
                                   evenShotsAgainst, powerPlayShotsAgainst, id))
 
     conn.commit()
     conn.close()
+
 
 def update_player(player_id, firstName, lastName, nationality, birthCity, 
     primaryPosition, height_cm, shootsCatches):
