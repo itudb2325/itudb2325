@@ -260,7 +260,6 @@ def create_skater_stats():
     else:
         game_id = request.form.get('game_id')
         player_id = request.form.get('player_id')
-        
         team_id = request.form.get('team_id')
         timeOnIce = request.form.get('timeOnIce')
         assists = request.form.get('assists')
@@ -269,9 +268,23 @@ def create_skater_stats():
         hits = request.form.get('hits')
         powerPlayGoals = request.form.get('powerPlayGoals')
         powerPlayAssists = request.form.get('powerPlayAssists')
+        penaltyMinutes = request.form.get('penaltyMinutes')
+        faceOffWins = request.form.get('faceOffWins')
+        faceoffTaken = request.form.get('faceoffTaken')
+        takeaways = request.form.get('takeaways')
+        giveaways = request.form.get('giveaways')
+        shortHandedGoals = request.form.get('shortHandedGoals')
+        shortHandedAssists = request.form.get('shortHandedAssists')
+        blocked = request.form.get('blocked')
+        plusMinus = request.form.get('plusMinus')
+        evenTimeOnIce = request.form.get('evenTimeOnIce')
+        shortHandedTimeOnIce = request.form.get('shortHandedTimeOnIce')
+        powerPlayTimeOnIce = request.form.get('powerPlayTimeOnIce')
 
 
-        create_skater(game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists)
+
+        create_skater(game_id, player_id, team_id, timeOnIce, assists, goals, shots, hits, powerPlayGoals, powerPlayAssists, penaltyMinutes, faceOffWins, faceoffTaken, takeaways, giveaways, shortHandedGoals, shortHandedAssists, blocked, plusMinus, evenTimeOnIce, shortHandedTimeOnIce, powerPlayTimeOnIce)
+
 
         return redirect(url_for('game_skater_stats'))
     

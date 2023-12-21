@@ -146,15 +146,22 @@ def delete_skater_stats_by_id(id):
     cursor.close()
     connection.close()
 
-def create_skater(game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists):
+def create_skater(game_id, player_id, team_id, timeOnIce, assists, goals, shots, hits, powerPlayGoals, powerPlayAssists, penaltyMinutes, faceOffWins, faceoffTaken, takeaways, giveaways, shortHandedGoals, shortHandedAssists, blocked, plusMinus, evenTimeOnIce, shortHandedTimeOnIce, powerPlayTimeOnIce):
     connection = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = connection.cursor()
 
     create = '''
-                    INSERT INTO game_skater_stats(game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-                '''
-    cursor.execute(create, (game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists))
+        INSERT INTO game_skater_stats(
+            game_id, player_id, team_id, timeOnIce, assists, goals, shots, hits, 
+            powerPlayGoals, powerPlayAssists, penaltyMinutes, faceOffWins, faceoffTaken, 
+            takeaways, giveaways, shortHandedGoals, shortHandedAssists, blocked, plusMinus, 
+            evenTimeOnIce, shortHandedTimeOnIce, powerPlayTimeOnIce
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    '''
+    cursor.execute(create, (game_id, player_id, team_id, timeOnIce, assists, goals, shots, hits, powerPlayGoals, powerPlayAssists, penaltyMinutes, faceOffWins, faceoffTaken, takeaways, giveaways, shortHandedGoals, shortHandedAssists, blocked, plusMinus, evenTimeOnIce, shortHandedTimeOnIce, powerPlayTimeOnIce))
+
+    
 
     connection.commit()
     cursor.close()
