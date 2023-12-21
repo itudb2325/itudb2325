@@ -39,6 +39,7 @@ create_game_skater_stats_table = '''
 
 
 
+
     )
 
 
@@ -117,15 +118,15 @@ mycursor.executemany(insert_query, data_to_insert)
 # Commit the changes
 mydb.commit()
 
-def update_game_skater (  id,  game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists):
+def update_game_skater (  id,  game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists,penaltyMinutes ,faceOffWins ,faceoffTaken ,takeaways ,giveaways ,shortHandedGoals , shortHandedAssists , blocked , plusMinus ,evenTimeOnIce , shortHandedTimeOnIce ,powerPlayTimeOnIce ):
     connection = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = connection.cursor()
 
     update = '''
-                    UPDATE game_skater_stats SET game_id = %s, player_id = %s, team_id = %s, timeOnIce = %s, assists = %s, goals = %s, shots = %s, hits = %s, powerPlayGoals = %s, powerPlayAssists = %s
+                    UPDATE game_skater_stats SET game_id = %s, player_id = %s, team_id = %s, timeOnIce = %s, assists = %s, goals = %s, shots = %s, hits = %s, powerPlayGoals = %s, powerPlayAssists = %s, penaltyMinutes= %s, faceOffWins= %s, faceoffTaken= %s,takeaways= %s,giveaways= %s,shortHandedGoals= %s,shortHandedAssists= %s,blocked= %s,plusMinus= %s,evenTimeOnIce= %s,shortHandedTimeOnIce= %s,powerPlayTimeOnIce= %s
                     WHERE id = %s
                 '''
-    cursor.execute(update, ( game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists, id))
+    cursor.execute(update, ( game_id ,player_id , team_id ,timeOnIce , assists ,goals ,shots ,hits ,powerPlayGoals ,powerPlayAssists,penaltyMinutes ,faceOffWins ,faceoffTaken ,takeaways ,giveaways ,shortHandedGoals , shortHandedAssists , blocked , plusMinus ,evenTimeOnIce , shortHandedTimeOnIce ,powerPlayTimeOnIce , id))
 
     connection.commit()
     cursor.close()
