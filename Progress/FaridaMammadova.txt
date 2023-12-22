@@ -1,0 +1,30 @@
+Week 5: 01.11.2023
+ - Updated member info, added member names.
+ - Created game_teams_stats.html file.
+ - Updated index.html file.
+
+Week 6: 08.11.2023, 12.11.2023
+ - Added logo image.
+ - Added style changes to index.html file.
+
+Week 7: 19.11.2023
+ - Created game_teams_stat.py and added mysql connection.
+ - Created game_teams_stats table and inserted existing values in the csv file.
+
+Week 8: 26.11.2023
+ - Added and improved select query for game_teams_stats table.
+
+Week 9: 03.12.2023
+ - Modified create table execution.
+ - Added update and delete functions for the table.
+ - Updated game_teams_stats.html, created create_teams_stats.html and update_teams_stats.html files.
+ - Modified views.py file.
+
+Week 10: 10.12.2023
+ - Solved update, delete and create operation errors.
+
+Week 11: 17.12.2023, 20.12.2023
+ - Added search by game_id functionality.
+ - Added style changes.
+ - Modifications done on table for foreign key and constraints.
+ - Added image carousel for news section.
