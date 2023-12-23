@@ -38,15 +38,10 @@ create_game_skater_stats_table = '''
         powerPlayTimeOnIce INT,
         
         FOREIGN KEY (team_id) REFERENCES team_info(team_id) ON UPDATE CASCADE ON DELETE CASCADE,
-        FOREIGN KEY (game_id) REFERENCES game(game_id) ON UPDATE CASCADE ON DELETE CASCADE
+        FOREIGN KEY (game_id) REFERENCES game(game_id) ON UPDATE CASCADE ON DELETE CASCADE,
+        FOREIGN KEY (player_id) REFERENCES player_info(player_id) ON UPDATE CASCADE ON DELETE CASCADE
 
-        
-       
-       
-
-
-
-
+    
 
     )
 
