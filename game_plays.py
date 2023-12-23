@@ -31,7 +31,11 @@ create_game_plays_table = '''
         goals_home INT,
         description VARCHAR(255),
         st_x INT,
-        st_y INT
+        st_y INT,
+
+        CONSTRAINT fk_team_info_for FOREIGN KEY (team_id_for) REFERENCES team_info(team_id) ON UPDATE CASCADE ON DELETE CASCADE,
+        CONSTRAINT fk_team_info_against FOREIGN KEY (team_id_against) REFERENCES team_info(team_id) ON UPDATE CASCADE ON DELETE CASCADE,
+        CONSTRAINT fk_game_info FOREIGN KEY (game_id) REFERENCES game(game_id) ON UPDATE CASCADE ON DELETE CASCADE
     )
 '''
 
