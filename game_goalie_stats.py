@@ -53,14 +53,12 @@ cursor.executemany(insert_query, data_to_insert)
 
 #creating the player_info table
 
-#Filtering the player_id column in player_info
-cursor.execute("SELECT DISTINCT player_id FROM game_goalie_stats")
-existing_player_ids = [row[0] for row in cursor.fetchall()]
-
+cursor.execute("SET FOREIGN_KEY_CHECKS=0;")
 cursor.execute("DROP TABLE IF EXISTS player_info")
+cursor.execute("SET FOREIGN_KEY_CHECKS=1;")
 player_info_query = '''
     CREATE TABLE player_info(
-        player_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+        player_id INT PRIMARY KEY,
         firstName varchar(20),
         lastName varchar(20),
         nationality varchar(10),
@@ -83,8 +81,6 @@ const_df = pd.read_csv('nhl-db/player_info.csv', usecols=[
     'shootsCatches'
 ])
 
-# Filter rows based on existing_player_ids
-filtered_player_info_df = const_df[const_df['player_id'].isin(existing_player_ids)]
 
 insert_query = '''
     INSERT INTO player_info
@@ -92,11 +88,14 @@ insert_query = '''
     primaryPosition, height_cm, shootsCatches)
     VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
 '''
-sorted_player_info_df = filtered_player_info_df.sort_values(by=["player_id"], ascending=True)
-player_info_df = sorted_player_info_df
 
-data_to_insert = player_info_df.where(pd.notna(player_info_df), None).to_numpy().tolist()
+const_df.replace(['', 'NA'], None, inplace = True)
+const_df = const_df.where(pd.notna(const_df), None)
+data_to_insert = const_df.to_records(index = False).tolist()
+data_to_insert = [tuple(None if pd.isna(value) else value for value in row) for row in data_to_insert]
+
 cursor.executemany(insert_query, data_to_insert)
+
 
 foreign_key_query = '''
 ALTER TABLE game_goalie_stats
