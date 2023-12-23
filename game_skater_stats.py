@@ -37,7 +37,9 @@ create_game_skater_stats_table = '''
         shortHandedTimeOnIce INT,
         powerPlayTimeOnIce INT,
         
-        FOREIGN KEY (team_id) REFERENCES team_info(team_id) ON UPDATE CASCADE ON DELETE CASCADE
+        FOREIGN KEY (team_id) REFERENCES team_info(team_id) ON UPDATE CASCADE ON DELETE CASCADE,
+        FOREIGN KEY (game_id) REFERENCES game(game_id) ON UPDATE CASCADE ON DELETE CASCADE
+
         
        
        
