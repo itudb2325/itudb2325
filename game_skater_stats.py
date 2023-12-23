@@ -15,7 +15,7 @@ create_game_skater_stats_table = '''
         id INT AUTO_INCREMENT PRIMARY KEY,
       
         game_id INT,
-        player_id INT NOT NULL, 
+        player_id INT NOT NULL , 
         team_id INT,
         timeOnIce INT,
         assists INT,
@@ -35,7 +35,13 @@ create_game_skater_stats_table = '''
         plusMinus INT,
         evenTimeOnIce INT,
         shortHandedTimeOnIce INT,
-        powerPlayTimeOnIce INT
+        powerPlayTimeOnIce INT,
+        
+        FOREIGN KEY (team_id) REFERENCES team_info(team_id) ON UPDATE CASCADE ON DELETE CASCADE
+        
+       
+       
+
 
 
 
