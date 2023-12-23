@@ -1,9 +1,11 @@
 from flask import Flask
-
+import os
 import views
-from views import index_page, configure_app
+from views import index_page
 
-
+def configure_app(app):
+    img = os.path.join('static', 'img')
+    app.config['UPLOAD_FOLDER'] = img
 
 def create_app():
     app = Flask(__name__)
@@ -48,4 +50,7 @@ def create_app():
 if __name__ == "__main__":
     app = create_app()
     port = app.config.get("PORT", 3306)
+    app.secret_key = 'super secret key'
+    app.config['SESSION_TYPE'] = 'filesystem'
+    app.debug = True
     app.run(host="0.0.0.0", port=port)

@@ -10,20 +10,20 @@
       <div class="input-group mb-3">
          <label for="game_id" class="input-group-text">Game ID:</label>
          <div class="col-6">
-             <select class="form-control" name="game_id" id="game_id">
-                 {% for game_id_option in goalie_stats %}
-                     <option value="{{ game_id_option }}">{{ game_id_option.game_id }}</option>
-                 {% endfor %}
-             </select>
+            <select class="btn btn-light dropdown-toggle col-8" type="button" data-bs-toggle="dropdown" name="game_id" id="game_id">
+               {% for game_id_option in goalie_stats %}
+                   <option value="{{ game_id_option.game_id }}">{{ game_id_option.game_id }}</option>
+               {% endfor %}
+           </select>
          </div>
      </div>
      
      <div class="input-group mb-3">
       <label for="player_id" class="input-group-text">Player ID:</label>
-      <div class="col-6">
-          <select class="form-control" name="player_id" id="player_id">
+      <div class="col-7">
+          <select class="btn btn-light dropdown-toggle col-6" type="button" data-bs-toggle="dropdown" name="player_id" id="player_id">
               {% for player_id_option in goalie_stats %}
-                  <option value="{{ player_id_option }}">{{ player_id_option.player_id }}</option>
+                  <option value="{{ player_id_option.player_id }}">{{ player_id_option.player_id }}</option>
               {% endfor %}
           </select>
       </div>
@@ -32,9 +32,9 @@
       <div class="input-group mb-3">
             <label for="team_id" class="input-group-text">Team ID:</label>
             <div class="col-6">
-                <select class="form-control" name="team_id" id="team_id">
+                <select class="btn btn-light dropdown-toggle col-6" type="button" data-bs-toggle="dropdown" name="team_id" id="team_id">
                     {% for team_id_option in goalie_stats %}
-                        <option value="{{ team_id_option }}">{{ team_id_option.team_id }}</option>
+                        <option value="{{ team_id_option.team_id }}">{{ team_id_option.team_id }}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -43,49 +43,49 @@
      <div class="input-group mb-3">
         <label for="timeOnIce" class="input-group-text">Time On Ice:</label>
         <div class="col-6">
-           <input class="form-control" type="text" name="timeOnIce" id="timeOnIce" value="{{ timeOnIce }}">
+           <input required class="form-control" type="text" name="timeOnIce" id="timeOnIce" value="{{ timeOnIce }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="shots" class="input-group-text">Shots:</label>
         <div class="col-6">
-           <input class="form-control" type="text" name="shots" id="shots" value="{{ shots }}">
+           <input required class="form-control" type="text" name="shots" id="shots" value="{{ shots }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="saves" class="input-group-text">Saves:</label>
         <div class="col-6">
-           <input class="form-control" type="text" name="saves" id="saves" value="{{ saves }}">
+           <input required class="form-control" type="text" name="saves" id="saves" value="{{ saves }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="powerPlaySaves" class="input-group-text">Power Play Saves:</label>
         <div class="col-6">
-           <input class="form-control" type="text" name="powerPlaySaves" id="powerPlaySaves" value="{{ powerPlaySaves }}">
+           <input required class="form-control" type="text" name="powerPlaySaves" id="powerPlaySaves" value="{{ powerPlaySaves }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="evenSaves" class="input-group-text">Even Saves:</label>
         <div class="col-6">
-           <input class="form-control" type="text" name="evenSaves" id="evenSaves" value="{{ evenSaves }}">
+           <input required class="form-control" type="text" name="evenSaves" id="evenSaves" value="{{ evenSaves }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="evenShotsAgainst" class="input-group-text">Even Shots Against:</label>
         <div class="col-6">
-           <input class="form-control" type="text" name="evenShotsAgainst" id="evenShotsAgainst" value="{{ evenShotsAgainst }}">
+           <input required class="form-control" type="text" name="evenShotsAgainst" id="evenShotsAgainst" value="{{ evenShotsAgainst }}">
         </div>
      </div>
      
      <div class="input-group mb-3">
         <label for="powerPlayShotsAgainst" class="input-group-text">Power Play Shots Against:</label>
         <div class="col-6">
-           <input class="form-control" type="text" name="powerPlayShotsAgainst" id="powerPlayShotsAgainst" value="{{ powerPlayShotsAgainst }}">
+           <input required class="form-control" type="text" name="powerPlayShotsAgainst" id="powerPlayShotsAgainst" value="{{ powerPlayShotsAgainst }}">
         </div>
      </div>
      <button type="submit" class="btn btn-dark">Create Goalie</button>
