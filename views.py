@@ -1,4 +1,4 @@
-from flask import Flask, current_app, abort, render_template, request, redirect, url_for, flash, session
+from flask import Flask, current_app, render_template, request, redirect, url_for, flash
 import mysql.connector
 import pandas as pd
 from config import MYSQL_CONFIG  # Assuming you have a configuration file
@@ -7,18 +7,7 @@ from game_teams_stats import delete_teams_stats_by_id, create_teams, update_team
 from game_skater_stats import update_game_skater , delete_skater_stats_by_id, create_skater
 from game_plays import update_game, create_game, delete_game_plays_by_id
 import os
-import secrets
 import random
-
-
-def configure_app(app):
-    img = os.path.join('static', 'img')
-    app.config['UPLOAD_FOLDER'] = img
-
-app = Flask(__name__)
-configure_app(app)
-app.secret_key = "top secret"
-
 
 
 
@@ -291,6 +280,26 @@ def create_skater_stats():
 #Game Goalie Stats Table
 # Game Goalie Stats
 
+def is_positive_integer(value):
+    try:
+        num = int(value)
+        return num > 0
+    except ValueError:
+        return False
+
+def is_positive_double(value):
+    try:
+        num = float(value)
+        return num > 0
+    except ValueError:
+        return False
+
+def is_non_empty_string(value):
+    return isinstance(value, str) and bool(value.strip())
+
+def is_single_char(value):
+    return isinstance(value, str) and len(value) == 1
+
 def get_goalie_stats():
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor(dictionary=True)  
@@ -337,6 +346,7 @@ def delete_goalie_stats():
     if request.method == 'POST':
         id = request.form.get('id')
         delete_goalie_stats_by_id(id)
+        flash("Successfully deleted Goalie!", category="success")
 
     return redirect(url_for('game_goalie_stats'))
 
@@ -344,6 +354,7 @@ def delete_player():
     if request.method == 'POST':
         player_id = request.form.get('player_id')
         delete_player_by_id(player_id)
+        flash("Successfully deleted Player!", category="success")
 
     return redirect(url_for('game_goalie_stats'))
 
@@ -360,10 +371,23 @@ def update_goalie(id):
         evenSaves = request.form.get('evenSaves')
         evenShotsAgainst = request.form.get('evenShotsAgainst')
         powerPlayShotsAgainst = request.form.get('powerPlayShotsAgainst')
-    
-        update_goalie_stats(id, timeOnIce, 
+        
+        if not all([
+            is_positive_integer(shots),
+            is_positive_integer(timeOnIce),
+            is_positive_integer(saves),
+            is_positive_integer(powerPlaySaves),
+            is_positive_integer(evenSaves),
+            is_positive_integer(evenShotsAgainst),
+            is_positive_integer(powerPlayShotsAgainst)
+        ]):
+            flash("Couldn't Update Goalie. Please make sure that the fields in Update Goalie are all positive numbers!", category="error")
+        else:
+            update_goalie_stats(id, timeOnIce, 
                             shots, saves, powerPlaySaves, evenSaves, 
                             evenShotsAgainst, powerPlayShotsAgainst)
+            flash("Successfully Updated Goalie!", category="success")
+            
 
         return redirect(url_for('game_goalie_stats'))
     
@@ -381,19 +405,36 @@ def update_player_info(player_id):
         height_cm = request.form.get('height_cm')
         shootsCatches = request.form.get('shootsCatches')
         
-        update_player(player_id, firstName, lastName, nationality, birthCity, 
-    primaryPosition, height_cm, shootsCatches)
+        if not all([
+            is_non_empty_string(firstName),
+            is_non_empty_string(lastName),
+            is_non_empty_string(nationality),
+            is_non_empty_string(birthCity),
+            is_non_empty_string(primaryPosition),
+            is_positive_double(height_cm),
+            is_single_char(shootsCatches)
+        ]):            
+            flash("Couldn't Update Player. Please make sure you're providing the correct input types", category="error")
+        else:
+            update_player(player_id, firstName, lastName, nationality, birthCity, 
+                        primaryPosition, height_cm, shootsCatches)
+            flash("Successfully Updated Player!", category="success")
+        
+            
 
         return redirect(url_for('game_goalie_stats'))
+
+
+
 
 def create_goalie():
     if request.method == 'GET':
         return render_template('create_goalie.html')
 
     else:
-        game_id = request.form.get('game_id')
-        player_id = request.form.get('player_id')
-        team_id = request.form.get('team_id')
+        selected_game_id = request.form.get('game_id')
+        selected_player_id = request.form.get('player_id')
+        selected_team_id = request.form.get('team_id')
         timeOnIce = request.form.get('timeOnIce')
         shots = request.form.get('shots')
         saves = request.form.get('saves')
@@ -402,10 +443,23 @@ def create_goalie():
         evenShotsAgainst = request.form.get('evenShotsAgainst')
         powerPlayShotsAgainst = request.form.get('powerPlayShotsAgainst')
 
-        create_goalie_stats(game_id, player_id, team_id, timeOnIce, 
+        if not all([
+            is_positive_integer(shots),
+            is_positive_integer(timeOnIce),
+            is_positive_integer(saves),
+            is_positive_integer(powerPlaySaves),
+            is_positive_integer(evenSaves),
+            is_positive_integer(evenShotsAgainst),
+            is_positive_integer(powerPlayShotsAgainst)
+        ]):
+            flash("Couldn't create Goalie. Please make sure that all fields in Create Goalie form are positive numbers!", category="error")
+        else:
+            create_goalie_stats(selected_game_id, selected_player_id, selected_team_id, timeOnIce, 
                             shots, saves, powerPlaySaves, evenSaves, 
                             evenShotsAgainst, powerPlayShotsAgainst)
-
+            flash("Successfully Created Goalie!", category="success")
+        
+            
         return redirect(url_for('game_goalie_stats'))
      
     

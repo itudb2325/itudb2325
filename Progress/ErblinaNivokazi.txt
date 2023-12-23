@@ -36,6 +36,7 @@ Week 12:
     Fixed info section in Game Goalie Stats page, and also the update section
   Fixed parts of Player_Info table
     Update and search weren't working properly, I fixed it. Also added a new column Shoots Catches which makes it possible for me to get data from update in the form of checkboxes.
+  Added validation to the dialogs in game_goalie_stats page
     
   
   
