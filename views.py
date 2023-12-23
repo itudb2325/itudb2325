@@ -310,9 +310,16 @@ def get_goalie_stats():
 
 def get_player_info():
     conn = mysql.connector.connect(**MYSQL_CONFIG)
-    cursor = conn.cursor(dictionary=True)  
+    cursor = conn.cursor(dictionary=True)
+
     cursor.execute("SELECT * FROM player_info")
-    results = cursor.fetchall()
+    player_info_results = cursor.fetchall()
+
+    cursor.execute("SELECT DISTINCT player_id FROM game_goalie_stats")
+    existing_player_ids = [row['player_id'] for row in cursor.fetchall()]
+
+    results = [row for row in player_info_results if row['player_id'] in existing_player_ids]
+
     conn.close()
     return results
 
