@@ -495,7 +495,12 @@ def search_goalie_stats():
 def search_by_player_name(player_name):
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor(dictionary=True)  
-    cursor.execute("SELECT * FROM player_info WHERE firstName LIKE %s", (str(player_name) + '%',))
+    cursor.execute("""
+        SELECT DISTINCT p.*
+        FROM player_info p
+        JOIN game_goalie_stats ggs ON p.player_id = ggs.player_id
+        WHERE p.firstName LIKE %s
+    """, ('%' + str(player_name) + '%',))
     results = cursor.fetchall()
     conn.close()
     return results
