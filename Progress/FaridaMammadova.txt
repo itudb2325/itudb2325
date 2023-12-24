@@ -23,8 +23,9 @@ Week 9: 03.12.2023
 Week 10: 10.12.2023
  - Solved update, delete and create operation errors.
 
-Week 11: 17.12.2023, 20.12.2023
+Week 11: 17.12.2023, 20.12.2023, 24.12.2023
  - Added search by game_id functionality.
  - Added style changes.
  - Modifications done on table for foreign key and constraints.
  - Added image carousel for news section.
+ - Added minor style changes to game_teams_stats table.
