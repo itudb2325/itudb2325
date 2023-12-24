@@ -60,4 +60,12 @@ Search button problem is fixed and now the button working correctly
 Create button is created
 (SEARCH, CREATE, READ, UPDATE, DELETE operations are fully implemented)
 
+December 21:
+I added all of my columns for the operations(You can see some part of them on webpage)
+
+December 23:
+necesarry foreign key constrainst are added for my part
+(game_id from game table, player_id from player_info and team_id from team_info)
+also, checked if they were working correctly which passed all the cases.
+
 
