@@ -25,7 +25,7 @@
                     <th>ID</th>
                     <th>Game ID</th>
                     <th>Team ID</th>
-                    <th>HoA</th>
+                    <th width="60px">HoA</th>
                     <th>Won</th>
                     <th>Settled in</th>
                     <th>Head coach</th>
@@ -33,15 +33,15 @@
                     <th>Shots</th>
                     <th>Hits</th>
                     <th>Pim</th>
-                    <th>Power Play Opportunities</th>
-                    <th>Power Play Goals</th>
-                    <th>FaceOff Win Percentage</th>
+                    <th>PPO</th>
+                    <th>PPG</th>
+                    <th>FWP</th>
                     <th>Giveaways</th>
                     <th>Takeaways</th>
                     <th>Blocked</th>
                     <th>Start Rink Side</th>
-                    <th></th>
-                    <th></th>
+                    <th width="70px"></th>
+                    <th width="70px"></th>
                 </tr>
                 {% for teams in teams_stats %}
                 <tr>
@@ -66,7 +66,7 @@
                     <td>
                         <a name="update_teams_stats" id="update_teams_stats" class="btn btn-outline-secondary btn-sm" 
                            href="{{ url_for('update_teams_stats', id=teams.id)  }}" role="button">Update</a>
-                     </td>         
+                    </td>         
                     <td>
                         <form method="post" action="{{ url_for('delete_teams_stats') }}">
                             <input type="hidden" name="id" value="{{ teams.id }}">

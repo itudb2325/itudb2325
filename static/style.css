@@ -368,3 +368,14 @@ p, ul {
 	position: relative;
 	background-color: #d7d3c650;
 }
+
+#game_teams_stats {
+	table-layout: fixed;
+	overflow: hidden; 
+	text-overflow: ellipsis; 
+	word-wrap: break-word;
+}
+
+#game_teams_stats th{
+	writing-mode: vertical-lr;
+}
